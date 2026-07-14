@@ -1,76 +1,96 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Notifications</title>
+{% extends "base.html" %}
 
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background-color:#f4f4f4;
-            text-align:center;
-            padding-top:50px;
-        }
+{% block title %}Smart Hostel - Notifications{% endblock %}
 
-        .container{
-            background:white;
-            width:70%;
-            margin:auto;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0px 0px 10px gray;
-        }
+{% block page_title %}🔔 System Notifications{% endblock %}
+{% block page_subtitle %}Live alerts and operational telemetry warnings.{% endblock %}
 
-        h1{
-            color:green;
-        }
+{% block content %}
+<style>
+    .note-card {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .note-card:hover {
+        transform: translateX(4px);
+        border-color: var(--accent-primary);
+    }
+    .note-icon {
+        font-size: 24px;
+        min-width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .note-warning {
+        background: rgba(239, 68, 68, 0.1);
+        color: #ef4444;
+    }
+    .note-success {
+        background: rgba(16, 185, 129, 0.1);
+        color: #10b981;
+    }
+    .note-info {
+        background: rgba(14, 165, 233, 0.1);
+        color: #0ea5e9;
+    }
+    .note-content h5 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 4px;
+        color: var(--text-primary);
+    }
+    .note-content p {
+        font-size: 14px;
+        color: var(--text-secondary);
+        margin: 0;
+    }
+</style>
 
-        .note{
-            background:#e8f5e9;
-            padding:15px;
-            margin:15px;
-            border-radius:8px;
-            font-size:18px;
-        }
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="glass-card">
+            <h3 style="margin-bottom: 24px; font-weight: 700;">Active Alerts</h3>
+            
+            <div class="note-card">
+                <div class="note-icon note-warning">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div class="note-content">
+                    <h5>Food Waste Warning</h5>
+                    <p>Food waste metrics registered a 10% increase today. Consider checking predicted attendance margins vs actual turnout.</p>
+                </div>
+            </div>
 
-        button{
-            background:green;
-            color:white;
-            padding:10px 20px;
-            border:none;
-            border-radius:5px;
-            cursor:pointer;
-        }
+            <div class="note-card">
+                <div class="note-icon note-success">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="note-content">
+                    <h5>Model Pipeline Execution Successful</h5>
+                    <p>Machine Learning turnout models successfully trained and loaded. Precision levels scored within acceptable tolerances.</p>
+                </div>
+            </div>
 
-        button:hover{
-            background:darkgreen;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-
-    <h1>🔔 Notifications</h1>
-
-    <div class="note">
-        ⚠️ Food waste increased by 10% today.
+            <div class="note-card">
+                <div class="note-icon note-info">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </div>
+                <div class="note-content">
+                    <h5>Savings Milestone Reached</h5>
+                    <p>Monthly budget savings have reached the ₹4,000 baseline milestone. Keep optimizing raw material purchases.</p>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="note">
-        ✅ Food prediction completed successfully.
-    </div>
-
-    <div class="note">
-        💰 Monthly savings reached ₹4000.
-    </div>
-
-    <br>
-
-    <a href="/">
-        <button>🏠 Home</button>
-    </a>
-
 </div>
-
-</body>
-</html>
+{% endblock %}

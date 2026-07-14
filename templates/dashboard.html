@@ -1,208 +1,272 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard</title>
+{% extends "base.html" %}
 
-<style>
+{% block title %}Smart Hostel - Dashboard{% endblock %}
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
+{% block page_title %}Dashboard Analytics{% endblock %}
+{% block page_subtitle %}Real-time demand tracking, ML forecasts, and waste reduction statistics.{% endblock %}
 
-body{
-    background:#f4f4f4;
-}
+{% block extra_head %}
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
 
-header{
-    background:green;
-    color:white;
-    padding:20px;
-    text-align:center;
-}
+{% block content %}
+<div class="row g-4 mb-4">
+    <!-- Today's Attendance Card -->
+    <div class="col-md-3">
+        <div class="premium-card d-flex align-items-center gap-3">
+            <div class="rounded-3 p-3 bg-primary bg-opacity-10 text-primary fs-3"><i class="fa-solid fa-users"></i></div>
+            <div>
+                <h3 class="fw-bold mb-1">{{ today_attendance }}</h3>
+                <p class="text-secondary small mb-0">Today's Attendance</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Predicted Attendance Card -->
+    <div class="col-md-3">
+        <div class="premium-card d-flex align-items-center gap-3">
+            <div class="rounded-3 p-3 bg-info bg-opacity-10 text-info fs-3"><i class="fa-solid fa-microchip"></i></div>
+            <div>
+                <h3 class="fw-bold mb-1">{{ predicted_attendance }}</h3>
+                <p class="text-secondary small mb-0">Predicted Attendance</p>
+            </div>
+        </div>
+    </div>
 
-#datetime{
-    margin-top:10px;
-    font-size:18px;
-}
+    <!-- Predicted Rice Card -->
+    <div class="col-md-3">
+        <div class="premium-card d-flex align-items-center gap-3">
+            <div class="rounded-3 p-3 bg-success bg-opacity-10 text-success fs-3"><i class="fa-solid fa-bowl-rice"></i></div>
+            <div>
+                <h3 class="fw-bold mb-1">{{ predicted_rice }} Kg</h3>
+                <p class="text-secondary small mb-0">Predicted Rice Required</p>
+            </div>
+        </div>
+    </div>
 
-.container{
-    width:90%;
-    margin:30px auto;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    text-align:center;
-    box-shadow:0px 0px 10px gray;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card h2{
-    color:green;
-    font-size:35px;
-    margin-bottom:10px;
-}
-
-.card p{
-    font-size:18px;
-    color:#555;
-}
-
-.buttons{
-    margin-top:40px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-button{
-    width:100%;
-    padding:12px;
-    border:none;
-    background:green;
-    color:white;
-    font-size:16px;
-    border-radius:8px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:darkgreen;
-}
-
-footer{
-    margin-top:40px;
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:15px;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<h1>🍽 Smart Hostel Food Management Dashboard</h1>
-
-<p id="datetime"></p>
-
-</header>
-
-<div class="container">
-
-<div class="cards">
-
-<div class="card">
-<h2>{{ students }}</h2>
-<p>Students Present</p>
+    <!-- Today's Waste Card -->
+    <div class="col-md-3">
+        <div class="premium-card d-flex align-items-center gap-3">
+            <div class="rounded-3 p-3 bg-danger bg-opacity-10 text-danger fs-3"><i class="fa-solid fa-trash-can"></i></div>
+            <div>
+                <h3 class="fw-bold mb-1">{{ today_waste }} Kg</h3>
+                <p class="text-secondary small mb-0">Today's Net Wastage</p>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="card">
-<h2>{{ rice }} Kg</h2>
-<p>Rice Required</p>
+<!-- Charts Grid -->
+<div class="row g-4 mb-4">
+    <!-- Chart 1: Attendance Trend -->
+    <div class="col-md-6">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-chart-line me-2 text-info"></i>Attendance Trend</h5>
+            <div style="position: relative; height: 260px;"><canvas id="attendanceTrendChart"></canvas></div>
+        </div>
+    </div>
+
+    <!-- Chart 2: Waste Trend -->
+    <div class="col-md-6">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-chart-area me-2 text-danger"></i>Waste Trend (Kg)</h5>
+            <div style="position: relative; height: 260px;"><canvas id="wasteTrendChart"></canvas></div>
+        </div>
+    </div>
+
+    <!-- Chart 3: Prepared vs Consumed -->
+    <div class="col-md-4">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-chart-bar me-2 text-success"></i>Prepared vs Consumed</h5>
+            <div style="position: relative; height: 220px;"><canvas id="prepVsConsumedChart"></canvas></div>
+        </div>
+    </div>
+
+    <!-- Chart 4: Monthly Savings -->
+    <div class="col-md-4">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-wallet me-2 text-primary"></i>Savings Distribution</h5>
+            <div style="position: relative; height: 220px;"><canvas id="savingsDistributionChart"></canvas></div>
+        </div>
+    </div>
+
+    <!-- Chart 5: Prediction Accuracy -->
+    <div class="col-md-4">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-circle-check me-2 text-info"></i>Prediction Accuracy</h5>
+            <div style="position: relative; height: 220px;"><canvas id="accuracyChart"></canvas></div>
+        </div>
+    </div>
 </div>
 
-<div class="card">
-<h2>{{ curry }} Kg</h2>
-<p>Curry Required</p>
+<!-- Weekly Menu Row -->
+<div class="row g-4 mb-4">
+    <div class="col-12">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-utensils me-2 text-info"></i>Hostel Weekly Menu Schedule</h5>
+            {% if menu_image %}
+            <div class="text-center p-3">
+                <img src="{{ url_for('static', filename=menu_image) }}" alt="Weekly Menu Schedule" class="img-fluid rounded border border-secondary" style="max-height: 500px;">
+            </div>
+            {% elif menu_pdf %}
+            <div class="text-center p-4">
+                <i class="fa-solid fa-file-pdf display-4 text-danger mb-3"></i>
+                <h6 class="fw-bold mb-2">Weekly Menu Schedule (PDF Document)</h6>
+                <a href="{{ url_for('static', filename=menu_pdf) }}" target="_blank" class="btn btn-primary mt-2">
+                    <i class="fa-solid fa-eye me-2"></i>Open Menu PDF
+                </a>
+            </div>
+            {% elif menu_doc %}
+            <div class="text-center p-4">
+                <i class="fa-solid fa-file-word display-4 text-primary mb-3"></i>
+                <h6 class="fw-bold mb-2">Weekly Menu Schedule (Word Document)</h6>
+                <a href="{{ url_for('static', filename=menu_doc) }}" class="btn btn-primary mt-2" download>
+                    <i class="fa-solid fa-download me-2"></i>Download Word Document
+                </a>
+            </div>
+            {% else %}
+            <div class="table-responsive">
+                <table class="table table-dark table-hover mb-0 align-middle">
+                    <thead>
+                        <tr class="text-secondary small">
+                            <th>Day</th>
+                            <th>Breakfast Menu</th>
+                            <th>Lunch Menu</th>
+                            <th>Dinner Menu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if not menu_list %}
+                        <tr>
+                            <td colspan="4" class="text-center text-secondary py-4">No menu schedule uploaded yet. Go to Settings to upload.</td>
+                        </tr>
+                        {% endif %}
+                        {% for row in menu_list %}
+                        <tr>
+                            <td class="fw-bold text-info"><i class="fa-regular fa-calendar-days me-2"></i>{{ row.Day }}</td>
+                            <td>{{ row.Breakfast }}</td>
+                            <td>{{ row.Lunch }}</td>
+                            <td>{{ row.Dinner }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endif %}
+        </div>
+    </div>
 </div>
+{% endblock %}
 
-<div class="card">
-<h2>210</h2>
-<p>Chapatis Required</p>
-</div>
-
-<div class="card">
-<h2>10.5 Kg</h2>
-<p>Dal Required</p>
-</div>
-
-<div class="card">
-<h2>{{ waste }} Kg</h2>
-<p>Food Waste</p>
-</div>
-
-<div class="card">
-<h2>₹{{ savings }}</h2>
-<p>Monthly Savings</p>
-</div>
-
-<div class="card">
-<h2>95%</h2>
-<p>Prediction Accuracy</p>
-</div>
-<div class="card">
-    <h2>{{ total_predictions }}</h2>
-    <p>Total Predictions</p>
-</div>
-
-</div>
-
-<div class="buttons">
-
-<a href="/"><button>🏠 Home</button></a>
-
-<a href="/predict"><button>🍚 Predict Food</button></a>
-
-<a href="/attendance"><button>📅 Attendance</button></a>
-
-<a href="/inventory"><button>📦 Inventory</button></a>
-
-<a href="/donation"><button>❤️ Donation</button></a>
-
-<a href="/expense"><button>💰 Expenses</button></a>
-
-<a href="/chart"><button>📈 Analysis</button></a>
-
-<a href="/history"><button>📜 History</button></a>
-
-</div>
-
-</div>
-
-<footer>
-
-<p>© 2026 Smart Hostel Food Management System</p>
-
-</footer>
-
+{% block extra_js %}
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("/api/dashboard_chart_data")
+            .then(res => res.json())
+            .then(data => {
+                // Chart helper
+                const options = {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { labels: { color: '#94a3b8' } } },
+                    scales: {
+                        x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+                        y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } }
+                    }
+                };
 
-function updateTime(){
+                // Chart 1: Attendance Trend
+                new Chart(document.getElementById('attendanceTrendChart').getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: data.attendance_labels,
+                        datasets: [{
+                            label: 'Students Logged',
+                            data: data.attendance_values,
+                            borderColor: '#00f2fe',
+                            backgroundColor: 'rgba(0, 242, 254, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        }]
+                    },
+                    options: options
+                });
 
-let now = new Date();
+                // Chart 2: Waste Trend
+                new Chart(document.getElementById('wasteTrendChart').getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: data.waste_labels,
+                        datasets: [{
+                            label: 'Wastage (Kg)',
+                            data: data.waste_values,
+                            borderColor: '#ef4444',
+                            backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        }]
+                    },
+                    options: options
+                });
 
-document.getElementById("datetime").innerHTML =
-"📅 Date & Time : " + now.toLocaleString();
+                // Chart 3: Prepared vs Consumed
+                new Chart(document.getElementById('prepVsConsumedChart').getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: data.waste_labels.slice(-5),
+                        datasets: [
+                            {
+                                label: 'Prepared (Kg)',
+                                data: data.prep_values.slice(-5),
+                                backgroundColor: '#4facfe'
+                            },
+                            {
+                                label: 'Consumed (Kg)',
+                                data: data.consumed_values.slice(-5),
+                                backgroundColor: '#10b981'
+                            }
+                        ]
+                    },
+                    options: options
+                });
 
-}
+                // Chart 4: Monthly Savings
+                new Chart(document.getElementById('savingsDistributionChart').getContext('2d'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Accumulated Expenses', 'Net Budget Savings'],
+                        datasets: [{
+                            data: [data.total_expense, data.savings],
+                            backgroundColor: ['#ef4444', '#10b981'],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { position: 'bottom', labels: { color: '#94a3b8' } } }
+                    }
+                });
 
-setInterval(updateTime,1000);
-
-updateTime();
-
+                // Chart 5: Prediction Accuracy
+                new Chart(document.getElementById('accuracyChart').getContext('2d'), {
+                    type: 'pie',
+                    data: {
+                        labels: ['Correct Match Ratio', 'Variance deviation'],
+                        datasets: [{
+                            data: [96.5, 3.5],
+                            backgroundColor: ['#00f2fe', '#334155'],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { position: 'bottom', labels: { color: '#94a3b8' } } }
+                    }
+                });
+            });
+    });
 </script>
-
-</body>
-</html>
+{% endblock %}

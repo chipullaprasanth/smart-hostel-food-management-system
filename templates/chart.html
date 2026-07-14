@@ -1,229 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends "base.html" %}
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}Smart Hostel - Data Visualization{% endblock %}
 
-<title>Food Waste Analysis</title>
+{% block page_title %}Operational Analytics{% endblock %}
+{% block page_subtitle %}Real-time visualization of predictions and food consumption trends.{% endblock %}
 
+{% block extra_head %}
+<!-- Chart.js CDN -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
-body{
-    background:#f4f4f4;
-}
-
-header{
-    background:green;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-.container{
-    width:90%;
-    margin:30px auto;
-}
-
-.chart-box{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0px 0px 10px gray;
-    margin-bottom:30px;
-}
-
-canvas{
-    max-width:100%;
-    height:400px;
-}
-
-.buttons{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:15px;
-    margin-top:20px;
-}
-
-button{
-    width:100%;
-    padding:12px;
-    background:green;
-    color:white;
-    border:none;
-    border-radius:6px;
-    font-size:16px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:darkgreen;
-}
-
-footer{
-    margin-top:40px;
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:15px;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<h1>📈 Food Waste Analysis Dashboard</h1>
-
-<p>Weekly Hostel Food Analysis</p>
-
-</header>
-
-<div class="container">
-
-<div class="chart-box">
-
-<h2 style="text-align:center;">📊 Weekly Food Waste (Kg)</h2>
-
-<canvas id="barChart"></canvas>
-
+{% block content %}
+<div class="glass-card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h3 style="font-weight: 700;">Forecast Telemetry Charts</h3>
+        <span style="font-size: 12px; font-weight: 600; color: var(--accent-primary); background: rgba(16, 185, 129, 0.1); padding: 4px 10px; border-radius: 20px;">
+            <i class="fa-solid fa-sync fa-spin"></i> Live Data Link
+        </span>
+    </div>
+    
+    <div style="position: relative; height: 400px; width: 100%;">
+        <canvas id="telemetryChart"></canvas>
+    </div>
 </div>
+{% endblock %}
 
-<div class="chart-box">
-
-<h2 style="text-align:center;">🥧 Food Consumption Ratio</h2>
-
-<canvas id="pieChart"></canvas>
-
-</div>
-
-<div class="buttons">
-
-<a href="/">
-<button>🏠 Home</button>
-</a>
-
-<a href="/dashboard">
-<button>📊 Dashboard</button>
-</a>
-
-<a href="/report">
-<button>📄 Daily Report</button>
-</a>
-
-</div>
-
-</div>
-
-<footer>
-
-<p>© 2026 Smart Hostel Food Management System</p>
-
-</footer>
-
+{% block extra_js %}
 <script>
-
-// Bar Chart
-
-new Chart(document.getElementById("barChart"),{
-
-type:"bar",
-
-data:{
-
-labels:[
-"Mon",
-"Tue",
-"Wed",
-"Thu",
-"Fri",
-"Sat",
-"Sun"
-],
-
-datasets:[{
-
-label:"Food Waste (Kg)",
-
-data:[
-5,
-3,
-4,
-2,
-6,
-3,
-1
-],
-
-backgroundColor:[
-"#4CAF50",
-"#2196F3",
-"#FFC107",
-"#FF5722",
-"#9C27B0",
-"#009688",
-"#795548"
-]
-
-}]
-
-},
-
-options:{
-responsive:true
-}
-
-});
-
-
-// Pie Chart
-
-new Chart(document.getElementById("pieChart"),{
-
-type:"pie",
-
-data:{
-
-labels:[
-"Food Consumed",
-"Food Wasted"
-],
-
-datasets:[{
-
-data:[
-90,
-10
-],
-
-backgroundColor:[
-"#4CAF50",
-"#F44336"
-]
-
-}]
-
-},
-
-options:{
-responsive:true
-}
-
-});
-
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("/api/chart_data")
+            .then(res => res.json())
+            .then(data => {
+                const ctx = document.getElementById('telemetryChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: data.labels,
+                        datasets: [
+                            {
+                                label: 'Student Volume',
+                                data: data.students,
+                                borderColor: '#10b981',
+                                backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                                borderWidth: 3,
+                                fill: true,
+                                tension: 0.4
+                            },
+                            {
+                                label: 'Rice Required (Kg)',
+                                data: data.rice,
+                                borderColor: '#3b82f6',
+                                backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                                borderWidth: 2,
+                                fill: false,
+                                tension: 0.3
+                            },
+                            {
+                                label: 'Curry Required (Kg)',
+                                data: data.curry,
+                                borderColor: '#f59e0b',
+                                backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                                borderWidth: 2,
+                                fill: false,
+                                tension: 0.3
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: '#f8fafc',
+                                    font: {
+                                        family: "'Outfit', sans-serif",
+                                        size: 12
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.05)'
+                                },
+                                ticks: {
+                                    color: '#94a3b8',
+                                    font: {
+                                        family: "'Outfit', sans-serif"
+                                    }
+                                }
+                            },
+                            y: {
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.05)'
+                                },
+                                ticks: {
+                                    color: '#94a3b8',
+                                    font: {
+                                        family: "'Outfit', sans-serif"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            })
+            .catch(err => console.error("Error fetching chart metrics: ", err));
+    });
 </script>
-
-</body>
-</html>
+{% endblock %}

@@ -1,181 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Food Waste Calculator</title>
+{% extends "base.html" %}
 
-<style>
+{% block title %}Smart Hostel - Waste Analysis{% endblock %}
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
+{% block page_title %}Food Waste Telemetry{% endblock %}
+{% block page_subtitle %}Log prepared vs consumed food to analyze daily wastage levels and trigger optimization alerts.{% endblock %}
 
-body{
-    background:#f4f4f4;
-}
+{% block content %}
+<div class="row g-4">
+    <!-- Log daily waste form -->
+    <div class="col-md-4">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-scale-unbalanced text-info me-2"></i>Log Daily Weights</h5>
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="date" class="form-label small text-secondary">Log Date</label>
+                    <input type="date" id="date" name="date" class="form-control" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="prepared" class="form-label small text-secondary">Prepared Food (Kg)</label>
+                    <input type="number" step="0.1" id="prepared" name="prepared" placeholder="e.g. 50.0" class="form-control" required>
+                </div>
 
-header{
-    background:green;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
+                <div class="mb-3">
+                    <label for="consumed" class="form-label small text-secondary">Consumed Food (Kg)</label>
+                    <input type="number" step="0.1" id="consumed" name="consumed" placeholder="e.g. 47.2" class="form-control" required>
+                </div>
 
-.container{
-    width:500px;
-    margin:40px auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 0 10px gray;
-}
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fa-solid fa-calculator me-2"></i>Calculate & Log
+                </button>
+            </form>
+        </div>
+    </div>
 
-label{
-    font-size:18px;
-    font-weight:bold;
-}
-
-input{
-    width:100%;
-    padding:12px;
-    margin-top:10px;
-    margin-bottom:20px;
-    border:1px solid gray;
-    border-radius:5px;
-    font-size:16px;
-}
-
-button{
-    width:100%;
-    padding:12px;
-    background:green;
-    color:white;
-    border:none;
-    border-radius:5px;
-    font-size:18px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:darkgreen;
-}
-
-.result{
-    margin-top:25px;
-    background:#e8f5e9;
-    padding:20px;
-    border-left:6px solid green;
-    border-radius:8px;
-}
-
-.nav{
-    display:flex;
-    justify-content:space-between;
-    margin-top:25px;
-}
-
-.nav a{
-    text-decoration:none;
-    width:48%;
-}
-
-.nav button{
-    width:100%;
-}
-
-footer{
-    margin-top:40px;
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:15px;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<h1>♻️ Food Waste Calculator</h1>
-
-<p>Calculate daily food waste</p>
-
-</header>
-
-<div class="container">
-
-<form method="POST">
-
-<label>Food Prepared (Kg)</label>
-
-<input
-type="number"
-step="0.1"
-name="prepared"
-placeholder="Example: 30"
-required>
-
-<label>Food Consumed (Kg)</label>
-
-<input
-type="number"
-step="0.1"
-name="consumed"
-placeholder="Example: 28"
-required>
-
-<button type="submit">
-Calculate Waste
-</button>
-
-</form>
-
-{% if waste is not none %}
-
-<div class="result">
-
-<h2>Result</h2>
-
-<p><strong>Food Waste:</strong> {{ waste }} Kg</p>
-
-{% if waste == 0 %}
-<p style="color:green;">Excellent! No food waste today.</p>
-{% elif waste < 5 %}
-<p style="color:orange;">Good! Waste is under control.</p>
-{% else %}
-<p style="color:red;">High food waste. Try reducing food preparation.</p>
-{% endif %}
-
+    <!-- History log table -->
+    <div class="col-md-8">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-triangle-exclamation text-info me-2"></i>Telemetry Logs</h5>
+            
+            <div class="table-responsive">
+                <table class="table table-dark table-hover align-middle mb-0">
+                    <thead>
+                        <tr class="text-secondary small">
+                            <th>Log Date</th>
+                            <th>Prepared</th>
+                            <th>Consumed</th>
+                            <th>Wasted Weight</th>
+                            <th>Waste Ratio</th>
+                            <th>Alert level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if not waste_list %}
+                        <tr>
+                            <td colspan="6" class="text-center text-secondary py-4">No records stored yet.</td>
+                        </tr>
+                        {% endif %}
+                        {% for record in waste_list %}
+                        <tr>
+                            <td class="fw-bold"><i class="fa-regular fa-calendar-days text-info me-2"></i>{{ record.date }}</td>
+                            <td>{{ record.prepared }} Kg</td>
+                            <td>{{ record.consumed }} Kg</td>
+                            <td class="fw-bold text-danger">{{ record.waste }} Kg</td>
+                            <td class="fw-bold">
+                                {% set ratio = (record.waste / record.prepared * 100) if record.prepared > 0 else 0 %}
+                                {{ "%.1f"|format(ratio) }}%
+                            </td>
+                            <td>
+                                {% set ratio = (record.waste / record.prepared * 100) if record.prepared > 0 else 0 %}
+                                {% if ratio >= 15.0 %}
+                                <span class="badge bg-danger bg-opacity-10 text-danger"><i class="fa-solid fa-circle-exclamation me-1"></i>Critical Waste</span>
+                                {% elif ratio >= 5.0 %}
+                                <span class="badge bg-warning bg-opacity-10 text-warning"><i class="fa-solid fa-triangle-exclamation me-1"></i>Moderate Warning</span>
+                                {% else %}
+                                <span class="badge bg-success bg-opacity-10 text-success"><i class="fa-solid fa-circle-check me-1"></i>Optimal Green</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
-
-{% endif %}
-
-<div class="nav">
-
-<a href="/">
-<button type="button">🏠 Home</button>
-</a>
-
-<a href="/dashboard">
-<button type="button">📊 Dashboard</button>
-</a>
-
-</div>
-
-</div>
-
-<footer>
-
-<p>© 2026 Smart Hostel Food Management System</p>
-
-</footer>
-
-</body>
-</html>
+{% endblock %}

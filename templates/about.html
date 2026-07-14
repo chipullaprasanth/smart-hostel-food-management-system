@@ -1,218 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends "base.html" %}
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}Smart Hostel - About Project{% endblock %}
 
-<title>About Project</title>
+{% block page_title %}About the System{% endblock %}
+{% block page_subtitle %}Understand the project goals, architecture, and technology stack.{% endblock %}
 
+{% block content %}
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
-
-body{
-    background:#f4f4f4;
-}
-
-header{
-    background:green;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-.container{
-    width:80%;
-    margin:30px auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0px 0px 10px gray;
-}
-
-h2{
-    color:green;
-    margin-top:20px;
-    margin-bottom:10px;
-}
-
-p{
-    font-size:18px;
-    line-height:1.8;
-    color:#444;
-}
-
-ul{
-    margin-left:25px;
-    margin-top:10px;
-}
-
-li{
-    font-size:18px;
-    margin-bottom:10px;
-}
-
-.buttons{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:15px;
-    margin-top:30px;
-}
-
-button{
-    width:100%;
-    padding:12px;
-    background:green;
-    color:white;
-    border:none;
-    border-radius:5px;
-    font-size:16px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:darkgreen;
-}
-
-footer{
-    margin-top:40px;
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:15px;
-}
-
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .about-item h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: var(--accent-primary);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .about-item p {
+        color: var(--text-secondary);
+        line-height: 1.6;
+        font-size: 15px;
+    }
 </style>
 
-</head>
+<div class="about-section">
+    <div class="glass-card about-item">
+        <h3><i class="fa-solid fa-leaf"></i> Zero Waste Target</h3>
+        <p>
+            The project's primary mission is to eradicate hostel food wastage. By aligning kitchen preparation requirements dynamically with student headcount data, we reduce raw food excess, manage pantry inventory, and establish donation pipes for surplus resources.
+        </p>
+    </div>
 
-<body>
+    <div class="glass-card about-item">
+        <h3><i class="fa-solid fa-microchip"></i> Telemetry & Predictions</h3>
+        <p>
+            Operating with a python back-end utilizing SQLite databases, the software records history metrics, log details, user registrations, and parses data using linear regression trends to output forecasts. Frontend charts dynamically adapt using Javascript.
+        </p>
+    </div>
 
-<header>
-
-<h1>ℹ️ About Project</h1>
-
-<p>Smart Hostel Food Management System</p>
-
-</header>
-
-<div class="container">
-
-<h2>🎯 Project Objective</h2>
-
-<p>
-The Smart Hostel Food Management System is designed to predict daily food requirements
-using Machine Learning. It helps reduce food waste by estimating the number of students
-present in the hostel and calculating the required food quantity.
-</p>
-
-<h2>✨ Main Features</h2>
-
-<ul>
-
-<li>🍽 Food Quantity Prediction</li>
-
-<li>🤖 Machine Learning Attendance Prediction</li>
-
-<li>♻️ Food Waste Calculator</li>
-
-<li>📊 Dashboard</li>
-
-<li>📈 Food Waste Analysis Charts</li>
-
-<li>📄 PDF Report Generation</li>
-
-<li>👤 User Registration</li>
-
-<li>🔐 Admin Login</li>
-
-<li>📜 Prediction History</li>
-
-<li>📝 Feedback System</li>
-
-</ul>
-
-<h2>🛠 Technologies Used</h2>
-
-<ul>
-
-<li>Python</li>
-
-<li>Flask</li>
-
-<li>SQLite</li>
-
-<li>Pandas</li>
-
-<li>Scikit-learn</li>
-
-<li>HTML</li>
-
-<li>CSS</li>
-
-<li>JavaScript</li>
-
-<li>Chart.js</li>
-
-</ul>
-
-<h2>📈 Benefits</h2>
-
-<ul>
-
-<li>Reduce Food Waste</li>
-
-<li>Save Hostel Expenses</li>
-
-<li>Improve Food Planning</li>
-
-<li>Better Resource Management</li>
-
-<li>Machine Learning Based Prediction</li>
-
-</ul>
-
-<h2>👨‍💻 Developed By</h2>
-
-<p>
-
-<b>Name:</b> Your Name<br><br>
-
-<b>Department:</b> Computer Science Engineering<br><br>
-
-<b>Project:</b> Food Waste Reduction in Hostel Using Machine Learning
-
-</p>
-
-<div class="buttons">
-
-<a href="/">
-<button>🏠 Home</button>
-</a>
-
-<a href="/dashboard">
-<button>📊 Dashboard</button>
-</a>
-
-<a href="/contact">
-<button>📞 Contact</button>
-</a>
-
+    <div class="glass-card about-item">
+        <h3><i class="fa-solid fa-graduation-cap"></i> Senior Enterprise Design</h3>
+        <p>
+            Refactored to meet premium security constraints, clean MVC architecture, dynamic chart visualization models, session check parameters, and database query bindings.
+        </p>
+    </div>
 </div>
-
-</div>
-
-<footer>
-
-<p>© 2026 Smart Hostel Food Management System</p>
-
-</footer>
-
-</body>
-</html>
+{% endblock %}

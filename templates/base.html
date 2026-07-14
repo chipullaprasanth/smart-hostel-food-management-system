@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Smart Hostel - Food Forecasting Portal{% endblock %}</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #131a26;
+            --bg-tertiary: #1f2a3c;
+            --accent-primary: #00f2fe;
+            --accent-green: #10b981; /* standard emerald */
+            --accent-hover: #4facfe;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border-color: #223047;
+            --glass-bg: rgba(19, 26, 38, 0.8);
+            --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 260px;
+            background-color: var(--bg-secondary);
+            border-right: 1px solid var(--border-color);
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-brand {
+            padding: 24px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .sidebar-brand span {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .sidebar-brand i {
+            font-size: 24px;
+            color: var(--accent-primary);
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            padding: 20px 12px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-menu a:hover, .sidebar-menu li.active a {
+            background: rgba(0, 242, 254, 0.1);
+            color: var(--text-primary);
+            box-shadow: inset 0 0 10px rgba(0, 242, 254, 0.05);
+        }
+
+        .sidebar-menu li.active a {
+            border-left: 3px solid var(--accent-primary);
+            background: rgba(0, 242, 254, 0.15);
+        }
+
+        .sidebar-user {
+            padding: 16px 24px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .user-name {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Main view */
+        .main-wrapper {
+            margin-left: 260px;
+            flex-grow: 1;
+            padding: 40px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Cards and Elements override */
+        .premium-card {
+            background-color: var(--glass-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            padding: 24px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .premium-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 242, 254, 0.3);
+        }
+
+        /* Custom forms overrides */
+        .form-control, .form-select {
+            background-color: var(--bg-primary) !important;
+            border: 1px solid var(--border-color) !important;
+            color: var(--text-primary) !important;
+            border-radius: 8px;
+            padding: 10px 14px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus, .form-select:focus {
+            box-shadow: 0 0 0 2px rgba(0, 242, 254, 0.2) !important;
+            border-color: var(--accent-primary) !important;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--border-color);
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 30px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+    </style>
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+    <!-- Sidebar menu -->
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <i class="fa-solid fa-cloud-sun-rain"></i>
+            <span>Smart Hostel AI</span>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li class="menu-category-header text-uppercase text-muted font-monospace small px-3 mt-3 mb-2" style="font-size: 11px; letter-spacing: 1px;">Core Analytics</li>
+            <li class="{% if request.path == '/' %}active{% endif %}">
+                <a href="/"><i class="fa-solid fa-home"></i> Home</a>
+            </li>
+            <li class="{% if request.path == '/dashboard' %}active{% endif %}">
+                <a href="/dashboard"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+            </li>
+            <li class="{% if request.path == '/predict' %}active{% endif %}">
+                <a href="/predict"><i class="fa-solid fa-microchip"></i> Prediction System</a>
+            </li>
+            <li class="{% if request.path == '/simple_predict' %}active{% endif %}">
+                <a href="/simple_predict"><i class="fa-solid fa-calculator"></i> Simple Predictor</a>
+            </li>
+            <li class="{% if request.path == '/ml_forecast' %}active{% endif %}">
+                <a href="/ml_forecast"><i class="fa-solid fa-chart-bar"></i> ML Demand Forecast</a>
+            </li>
+            <li class="{% if request.path == '/history' %}active{% endif %}">
+                <a href="/history"><i class="fa-solid fa-history"></i> Forecast History</a>
+            </li>
+
+            <li class="menu-category-header text-uppercase text-muted font-monospace small px-3 mt-3 mb-2" style="font-size: 11px; letter-spacing: 1px;">Kitchen Operations</li>
+            <li class="{% if request.path == '/attendance' %}active{% endif %}">
+                <a href="/attendance"><i class="fa-solid fa-calendar-check"></i> Attendance Log</a>
+            </li>
+            <li class="{% if request.path == '/inventory' %}active{% endif %}">
+                <a href="/inventory"><i class="fa-solid fa-boxes-stacked"></i> Stock Inventory</a>
+            </li>
+            <li class="{% if request.path == '/donation' %}active{% endif %}">
+                <a href="/donation"><i class="fa-solid fa-hand-holding-heart"></i> Food Donation</a>
+            </li>
+            <li class="{% if request.path == '/waste' %}active{% endif %}">
+                <a href="/waste"><i class="fa-solid fa-trash-can"></i> Waste Analysis</a>
+            </li>
+            <li class="{% if request.path == '/expense' %}active{% endif %}">
+                <a href="/expense"><i class="fa-solid fa-receipt"></i> Daily Expenses</a>
+            </li>
+
+            <li class="menu-category-header text-uppercase text-muted font-monospace small px-3 mt-3 mb-2" style="font-size: 11px; letter-spacing: 1px;">Information</li>
+            <li class="{% if request.path == '/notifications' %}active{% endif %}">
+                <a href="/notifications"><i class="fa-solid fa-bell"></i> Alerts & Notes</a>
+            </li>
+            <li class="{% if request.path == '/feedback' %}active{% endif %}">
+                <a href="/feedback"><i class="fa-solid fa-comment-dots"></i> Feedback</a>
+            </li>
+            <li class="{% if request.path == '/about' %}active{% endif %}">
+                <a href="/about"><i class="fa-solid fa-info-circle"></i> About Project</a>
+            </li>
+            <li class="{% if request.path == '/contact' %}active{% endif %}">
+                <a href="/contact"><i class="fa-solid fa-envelope-open-text"></i> Contact Support</a>
+            </li>
+            <li class="{% if request.path == '/settings' %}active{% endif %}">
+                <a href="/settings"><i class="fa-solid fa-sliders"></i> Settings</a>
+            </li>
+            <li class="{% if request.path == '/admin' %}active{% endif %}">
+                <a href="/admin"><i class="fa-solid fa-user-shield"></i> Admin Panel</a>
+            </li>
+        </ul>
+
+        <div class="sidebar-user">
+            <div class="user-info">
+                <div class="user-avatar">
+                    {{ (session.get('user') or 'G')[0].upper() }}
+                </div>
+                <div class="user-name">
+                    {{ session.get('user') or 'Guest' }}
+                </div>
+            </div>
+            {% if session.get('user') %}
+            <a href="/logout" class="text-secondary" title="Logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+            {% else %}
+            <a href="/login" class="text-info" title="Login"><i class="fa-solid fa-right-to-bracket"></i></a>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Main application viewport -->
+    <div class="main-wrapper">
+        <!-- Toast and Alert Notifications -->
+        <div class="container-fluid p-0 mb-4" id="alert-container">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for msg in messages %}
+                        <div class="alert alert-info alert-dismissible fade show border-0 text-white" style="background: rgba(0, 242, 254, 0.15);" role="alert">
+                            <i class="fa-solid fa-info-circle me-2" style="color: var(--accent-primary);"></i>
+                            {{ msg }}
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+
+        <div class="container-fluid p-0 mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h2 class="fw-bold mb-1">{% block page_title %}Operational Dashboard{% endblock %}</h2>
+                    <p class="text-secondary mb-0">{% block page_subtitle %}Smart Hostel Telemetry and Forecast Analytics{% endblock %}</p>
+                </div>
+                <div>
+                    {% block header_actions %}{% endblock %}
+                </div>
+            </div>
+        </div>
+
+        {% block content %}{% endblock %}
+
+        <footer>
+            <p>&copy; 2026 Smart Hostel AI food management console. Designed for B.Tech placement presentation.</p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

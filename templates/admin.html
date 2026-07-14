@@ -1,106 +1,83 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends "base.html" %}
 
-<title>Admin Panel</title>
+{% block title %}Smart Hostel - Admin Panel{% endblock %}
 
+{% block page_title %}Administration Console{% endblock %}
+{% block page_subtitle %}Platform overview statistics, user counts, and feedback logs.{% endblock %}
+
+{% block content %}
 <style>
-
-body{
-    font-family:Arial,sans-serif;
-    background:#f4f4f4;
-    text-align:center;
-}
-
-.container{
-    width:80%;
-    margin:auto;
-    margin-top:40px;
-}
-
-h1{
-    color:green;
-}
-
-.cards{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    margin-top:30px;
-}
-
-.card{
-    background:white;
-    width:220px;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 0 10px gray;
-}
-
-.card h2{
-    color:green;
-    font-size:35px;
-}
-
-button{
-    margin:10px;
-    padding:12px 20px;
-    background:green;
-    color:white;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:darkgreen;
-}
-
+    .admin-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    .admin-card {
+        padding: 24px;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        text-align: center;
+    }
+    .admin-card h2 {
+        font-size: 36px;
+        font-weight: 800;
+        color: var(--accent-primary);
+        margin-bottom: 4px;
+    }
+    .admin-card p {
+        color: var(--text-secondary);
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .feedback-item {
+        background: var(--bg-primary);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 12px;
+    }
+    .feedback-meta {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        font-size: 13px;
+    }
 </style>
 
-</head>
+<div class="admin-grid">
+    <div class="admin-card">
+        <h2>{{ users }}</h2>
+        <p>Registered User Accounts</p>
+    </div>
+    
+    <div class="admin-card">
+        <h2>{{ feedback }}</h2>
+        <p>Received Feedbacks</p>
+    </div>
 
-<body>
-
-<div class="container">
-
-<h1>👨‍💼 Admin Panel</h1>
-
-<div class="cards">
-
-<div class="card">
-<h2>{{ total_users }}</h2>
-<p>Registered Users</p>
+    <div class="admin-card">
+        <h2>{{ predictions }}</h2>
+        <p>Total Calculations Logged</p>
+    </div>
 </div>
 
-<div class="card">
-<h2>{{ total_feedback }}</h2>
-<p>Feedback Received</p>
+<div class="glass-card">
+    <h3 style="margin-bottom: 20px; font-weight: 700;">Recent User Feedback</h3>
+    
+    {% if not feedback_list %}
+    <p style="color: var(--text-muted); text-align: center; padding: 20px;">No feedback logs recorded yet.</p>
+    {% endif %}
+    
+    {% for f in feedback_list %}
+    <div class="feedback-item">
+        <div class="feedback-meta">
+            <span style="font-weight: 600; color: var(--accent-primary);"><i class="fa-solid fa-user"></i> {{ f['username'] }}</span>
+            <span style="color: var(--text-muted);">{{ f['created_at'] }}</span>
+        </div>
+        <p style="color: var(--text-primary); font-size: 14px; line-height: 1.5;">{{ f['feedback'] }}</p>
+    </div>
+    {% endfor %}
 </div>
-
-<div class="card">
-<h2>{{ total_predictions }}</h2>
-<p>Total Predictions</p>
-</div>
-
-</div>
-
-<br>
-
-<a href="/">
-<button>🏠 Home</button>
-</a>
-
-<a href="/dashboard">
-<button>📊 Dashboard</button>
-</a>
-
-<a href="/history">
-<button>📜 View History</button>
-</a>
-
-</div>
-
-</body>
-</html>
+{% endblock %}

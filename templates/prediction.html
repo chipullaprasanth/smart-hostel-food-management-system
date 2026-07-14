@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Hostel - Predict Demand{% endblock %}
+
+{% block page_title %}ML Prediction Engine{% endblock %}
+{% block page_subtitle %}Execute Random Forest regression to calculate optimal student numbers and ingredient volumes.{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+    <!-- Form Inputs Panel -->
+    <div class="col-lg-7">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-4"><i class="fa-solid fa-square-poll-horizontal text-info me-2"></i>Predictive Parameters</h5>
+            <form method="POST">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="Day" class="form-label small text-secondary">Day of Week</label>
+                        <select id="Day" name="Day" class="form-select" required>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="Month" class="form-label small text-secondary">Month</label>
+                        <select id="Month" name="Month" class="form-select" required>
+                            <option value="January">January</option>
+                            <option value="July">July</option>
+                            <option value="December">December</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="Temperature" class="form-label small text-secondary">Temperature (°C)</label>
+                        <input type="number" step="0.1" id="Temperature" name="Temperature" class="form-control" value="28.0" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="Rainfall" class="form-label small text-secondary">Rainfall (mm)</label>
+                        <input type="number" step="0.1" id="Rainfall" name="Rainfall" class="form-control" value="0.0" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="Humidity" class="form-label small text-secondary">Humidity (%)</label>
+                        <input type="number" id="Humidity" name="Humidity" class="form-control" value="65" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="Wind_Speed" class="form-label small text-secondary">Wind Speed (km/h)</label>
+                        <input type="number" step="0.1" id="Wind_Speed" name="Wind_Speed" class="form-control" value="12.0" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="Food_Rating" class="form-label small text-secondary">Food Rating (1-5)</label>
+                        <input type="number" step="0.1" id="Food_Rating" name="Food_Rating" class="form-control" value="4.2" required>
+                    </div>
+
+
+
+                    <div class="col-md-4">
+                        <label for="Breakfast_Menu" class="form-label small text-secondary">Breakfast Menu</label>
+                        <select id="Breakfast_Menu" name="Breakfast_Menu" class="form-select">
+                            <option value="Idli Sambar">Idli Sambar</option>
+                            <option value="Masala Dosa">Masala Dosa</option>
+                            <option value="Aloo Paratha">Aloo Paratha</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="Lunch_Menu" class="form-label small text-secondary">Lunch Menu</label>
+                        <select id="Lunch_Menu" name="Lunch_Menu" class="form-select">
+                            <option value="Veg Biryani">Veg Biryani</option>
+                            <option value="Chole Bhature">Chole Bhature</option>
+                            <option value="Dal Chawal Sabzi">Dal Chawal Sabzi</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="Dinner_Menu" class="form-label small text-secondary">Dinner Menu</label>
+                        <select id="Dinner_Menu" name="Dinner_Menu" class="form-select">
+                            <option value="Roti Green Curry">Roti Green Curry</option>
+                            <option value="Khichdi Kadhi">Khichdi Kadhi</option>
+                            <option value="Chicken Tikka Rice">Chicken Tikka Rice</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="Previous_Attendance" class="form-label small text-secondary">Previous Attendance</label>
+                        <input type="number" id="Previous_Attendance" name="Previous_Attendance" class="form-control" value="70" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="Previous_Waste" class="form-label small text-secondary">Previous Waste (kg)</label>
+                        <input type="number" step="0.1" id="Previous_Waste" name="Previous_Waste" class="form-control" value="2.4" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 mt-4 py-2">
+                    <i class="fa-solid fa-wand-magic-sparkles me-2"></i>Compute ML Forecast
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Outputs Panel -->
+    <div class="col-lg-5">
+        {% if prediction %}
+        <div class="premium-card text-center h-100 d-flex flex-column justify-content-center p-5" style="border-color: var(--accent-primary);">
+            <div class="mb-4">
+                <p class="text-secondary small text-uppercase fw-bold mb-1">Predicted Attendance</p>
+                <h1 class="display-3 fw-bold text-info mb-1">{{ prediction.students }}</h1>
+                <p class="text-secondary">Students</p>
+            </div>
+            
+            <div class="border-top border-secondary pt-4 text-start">
+                <h6 class="fw-bold text-secondary mb-3">Calculated Raw Ingredients</h6>
+                <div class="d-flex justify-content-between mb-2">
+                    <span><i class="fa-solid fa-bowl-rice text-info me-2"></i>Rice Required</span>
+                    <span class="fw-bold">{{ prediction.rice }} Kg</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <span><i class="fa-solid fa-whiskey-glass text-info me-2"></i>Dal Required</span>
+                    <span class="fw-bold">{{ prediction.dal }} Kg</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span><i class="fa-solid fa-carrot text-info me-2"></i>Vegetables Required</span>
+                    <span class="fw-bold">{{ prediction.vegetables }} Kg</span>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="premium-card text-center h-100 d-flex flex-column align-items-center justify-content-center p-5">
+            <i class="fa-solid fa-microchip text-secondary display-4 mb-3"></i>
+            <h5 class="fw-bold text-secondary">Awaiting Parameters</h5>
+            <p class="text-secondary small">Submit the telemetry parameters to run the Random Forest prediction pipeline.</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

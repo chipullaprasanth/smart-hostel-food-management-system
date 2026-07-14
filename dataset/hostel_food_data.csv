@@ -1,0 +1,1201 @@
+Day,Month,Temperature,Rainfall,Humidity,Wind_Speed,Breakfast_Menu,Lunch_Menu,Dinner_Menu,Previous_Attendance,Previous_Waste,Food_Rating,Students_Present
+Sunday,April,40.8,4.6,48,6.1,Poha Upma,Rajma Chawal,Dal Fry Jeera Rice,63,6.7,3.9,61
+Saturday,February,22.4,0.0,56,15.6,Aloo Paratha,Veg Biryani,Roti Green Curry,58,3.4,3.7,61
+Thursday,September,19.1,0.9,43,26.7,Aloo Paratha,Chole Bhature,Chicken Tikka Rice,81,1.9,3.2,80
+Sunday,March,39.8,0.0,76,10.1,Bread Butter Toast,Chole Bhature,Egg Curry Roti,71,3.9,2.9,67
+Tuesday,April,32.3,0.5,50,3.2,Puri Bhaji,Dal Chawal Sabzi,Chicken Tikka Rice,84,1.0,3.7,81
+Friday,January,18.4,0.0,61,9.6,Poha Upma,Rajma Chawal,Roti Green Curry,77,2.3,4.1,80
+Friday,October,26.6,0.0,87,18.2,Masala Dosa,Veg Biryani,Dal Fry Jeera Rice,77,1.2,4.2,82
+Sunday,March,36.3,0.0,82,14.8,Idli Sambar,Chole Bhature,Chicken Tikka Rice,69,4.1,3.5,68
+Friday,April,39.8,0.0,62,21.6,Aloo Paratha,Dal Chawal Sabzi,Khichdi Kadhi,83,0.4,4.1,80
+Thursday,December,23.2,0.0,88,10.4,Aloo Paratha,Veg Biryani,Roti Green Curry,85,2.5,3.1,82
+Monday,March,18.2,0.0,62,7.8,Poha Upma,Chole Bhature,Egg Curry Roti,80,2.1,3.1,78
+Monday,January,24.1,0.0,78,20.5,Puri Bhaji,Veg Biryani,Roti Green Curry,74,1.6,3.1,78
+Saturday,July,24.7,1.4,47,14.7,Bread Butter Toast,Paneer Tadka Roti,Khichdi Kadhi,65,7.9,3.4,67
+Saturday,November,37.6,0.8,67,20.1,Poha Upma,Paneer Tadka Roti,Egg Curry Roti,76,1.6,4.1,72
+Wednesday,April,33.5,0.0,78,12.1,Masala Dosa,Veg Biryani,Khichdi Kadhi,82,2.9,3.3,78
+Thursday,December,24.3,16.8,70,24.9,Idli Sambar,Veg Biryani,Khichdi Kadhi,78,2.6,4.1,81
+Saturday,August,39.3,13.7,83,19.4,Bread Butter Toast,Rajma Chawal,Roti Green Curry,69,3.9,4.0,69
+Friday,September,22.2,0.0,67,6.6,Poha Upma,Veg Biryani,Roti Green Curry,73,1.9,3.7,76
+Saturday,June,41.5,0.0,89,13.3,Puri Bhaji,Veg Biryani,Egg Curry Roti,68,1.8,4.0,71
+Monday,January,41.9,0.0,55,25.0,Aloo Paratha,Veg Biryani,Dal Fry Jeera Rice,72,1.7,4.6,77
+Sunday,March,41.5,0.0,56,7.0,Idli Sambar,Rajma Chawal,Chicken Tikka Rice,68,2.1,3.8,66
+Sunday,June,26.6,0.0,56,10.4,Idli Sambar,Veg Biryani,Khichdi Kadhi,73,6.6,4.1,69
+Wednesday,February,38.8,3.6,67,22.8,Idli Sambar,Paneer Tadka Roti,Khichdi Kadhi,78,2.0,3.3,77
+Wednesday,September,21.7,9.1,87,8.5,Masala Dosa,Rajma Chawal,Egg Curry Roti,81,2.3,3.3,79
+Thursday,December,32.9,0.0,42,15.8,Poha Upma,Paneer Tadka Roti,Dal Fry Jeera Rice,80,0.3,4.7,76
+Friday,October,41.1,6.0,62,6.5,Idli Sambar,Chole Bhature,Roti Green Curry,73,2.0,4.0,74
+Friday,July,33.8,0.0,80,3.2,Masala Dosa,Rajma Chawal,Dal Fry Jeera Rice,72,1.0,2.8,77
+Saturday,April,22.2,0.0,81,23.0,Aloo Paratha,Veg Biryani,Dal Fry Jeera Rice,60,5.3,3.4,60
+Tuesday,April,27.0,3.5,87,19.1,Aloo Paratha,Chole Bhature,Roti Green Curry,79,1.8,4.5,83
+Monday,January,37.5,4.9,85,18.9,Poha Upma,Paneer Tadka Roti,Dal Fry Jeera Rice,77,0.2,2.7,81
+Tuesday,March,26.1,2.4,77,10.9,Poha Upma,Veg Biryani,Egg Curry Roti,83,2.2,4.1,81
+Friday,September,31.2,0.0,71,17.0,Poha Upma,Paneer Tadka Roti,Chicken Tikka Rice,81,2.6,3.1,79
+Friday,December,28.3,7.0,45,25.5,Bread Butter Toast,Paneer Tadka Roti,Roti Green Curry,82,2.6,3.2,79
+Monday,July,41.0,3.3,67,4.2,Puri Bhaji,Rajma Chawal,Egg Curry Roti,81,2.3,3.3,82
+Sunday,September,20.7,18.3,94,3.5,Poha Upma,Dal Chawal Sabzi,Khichdi Kadhi,63,1.1,4.1,63
+Friday,August,19.7,6.1,44,4.2,Poha Upma,Dal Chawal Sabzi,Roti Green Curry,79,2.8,4.5,84
+Monday,April,26.4,3.3,60,20.3,Masala Dosa,Chole Bhature,Khichdi Kadhi,83,2.2,2.8,79
+Friday,September,35.9,1.4,62,14.4,Idli Sambar,Veg Biryani,Dal Fry Jeera Rice,78,0.2,4.7,79
+Friday,November,40.1,0.0,78,4.0,Idli Sambar,Veg Biryani,Roti Green Curry,85,2.8,3.9,82
+Tuesday,August,27.5,0.0,58,6.4,Aloo Paratha,Chole Bhature,Chicken Tikka Rice,79,2.9,3.0,80
+Wednesday,June,18.8,0.0,62,17.7,Puri Bhaji,Dal Chawal Sabzi,Khichdi Kadhi,78,2.6,4.4,76
+Wednesday,May,18.6,0.0,84,27.7,Idli Sambar,Rajma Chawal,Dal Fry Jeera Rice,88,2.9,4.2,85
+Wednesday,January,38.1,0.0,62,9.1,Bread Butter Toast,Paneer Tadka Roti,Roti Green Curry,81,2.3,3.7,80
+Friday,October,38.4,0.0,64,5.4,Poha Upma,Dal Chawal Sabzi,Dal Fry Jeera Rice,75,2.0,3.0,80
+Tuesday,December,24.4,0.0,67,14.4,Poha Upma,Rajma Chawal,Chicken Tikka Rice,89,1.8,4.5,86
+Sunday,July,36.1,6.1,51,5.5,Aloo Paratha,Chole Bhature,Chicken Tikka Rice,69,1.1,3.9,73
+Saturday,January,36.8,0.0,74,24.4,Puri Bhaji,Dal Chawal Sabzi,Egg Curry Roti,66,0.8,3.6,64
+Saturday,May,26.3,0.0,71,10.9,Idli Sambar,Rajma Chawal,Egg Curry Roti,65,7.2,2.9,62
+Wednesday,November,34.0,0.0,50,3.1,Puri Bhaji,Chole Bhature,Egg Curry Roti,79,1.4,3.3,80
+Tuesday,February,21.1,0.0,57,4.4,Idli Sambar,Rajma Chawal,Dal Fry Jeera Rice,76,2.4,2.5,78
+Monday,March,22.4,0.0,60,14.6,Masala Dosa,Paneer Tadka Roti,Chicken Tikka Rice,77,1.4,4.2,81
+Wednesday,March,23.8,0.0,60,2.5,Idli Sambar,Veg Biryani,Chicken Tikka Rice,83,2.7,3.7,80
+Thursday,September,34.3,3.5,44,16.0,Masala Dosa,Veg Biryani,Egg Curry Roti,81,1.9,2.8,77
+Wednesday,August,30.0,0.0,91,2.2,Puri Bhaji,Paneer Tadka Roti,Khichdi Kadhi,77,2.7,2.7,75
+Sunday,March,30.6,0.0,94,4.9,Masala Dosa,Paneer Tadka Roti,Egg Curry Roti,64,5.5,4.6,64
+Monday,February,31.4,0.0,55,22.0,Bread Butter Toast,Chole Bhature,Egg Curry Roti,76,2.2,3.5,81
+Thursday,January,32.7,0.0,71,6.0,Aloo Paratha,Dal Chawal Sabzi,Khichdi Kadhi,76,0.3,3.9,77
+Thursday,February,25.7,1.5,77,21.8,Poha Upma,Rajma Chawal,Roti Green Curry,69,0.5,4.5,73
+Wednesday,September,22.9,0.0,90,20.8,Aloo Paratha,Dal Chawal Sabzi,Khichdi Kadhi,77,0.6,4.3,78
+Wednesday,November,33.2,1.9,72,19.8,Bread Butter Toast,Rajma Chawal,Dal Fry Jeera Rice,79,1.4,3.2,78
+Monday,September,26.5,0.0,69,3.7,Poha Upma,Rajma Chawal,Khichdi Kadhi,72,1.6,3.9,77
+Sunday,November,36.9,0.0,57,8.5,Idli Sambar,Paneer Tadka Roti,Chicken Tikka Rice,54,1.3,4.3,59
+Friday,April,29.0,3.5,69,14.6,Aloo Paratha,Paneer Tadka Roti,Dal Fry Jeera Rice,82,2.2,4.2,84
+Wednesday,May,37.8,2.1,52,13.0,Masala Dosa,Rajma Chawal,Egg Curry Roti,85,1.6,4.6,83
+Monday,January,18.4,13.4,71,20.1,Puri Bhaji,Chole Bhature,Roti Green Curry,77,2.5,3.8,75
+Wednesday,July,20.9,0.0,49,6.8,Idli Sambar,Veg Biryani,Khichdi Kadhi,84,1.2,3.9,85
+Friday,September,22.9,4.6,46,12.8,Masala Dosa,Rajma Chawal,Chicken Tikka Rice,79,0.8,3.6,82
+Monday,July,22.0,0.0,57,22.3,Poha Upma,Chole Bhature,Egg Curry Roti,74,0.6,3.0,79
+Thursday,September,21.6,0.0,44,27.9,Idli Sambar,Veg Biryani,Dal Fry Jeera Rice,79,0.2,3.4,84
+Saturday,August,32.1,0.0,79,15.7,Bread Butter Toast,Paneer Tadka Roti,Roti Green Curry,61,1.7,3.4,64
+Monday,August,38.7,2.3,54,18.7,Aloo Paratha,Veg Biryani,Egg Curry Roti,82,0.7,4.4,79
+Sunday,November,30.1,0.0,58,16.8,Poha Upma,Veg Biryani,Egg Curry Roti,69,0.8,3.0,72
+Saturday,August,37.4,14.4,47,12.6,Masala Dosa,Chole Bhature,Roti Green Curry,67,2.5,3.0,72
+Thursday,November,24.2,0.0,72,9.0,Puri Bhaji,Dal Chawal Sabzi,Roti Green Curry,79,2.9,3.5,82
+Saturday,December,21.4,3.3,89,22.8,Idli Sambar,Chole Bhature,Khichdi Kadhi,69,2.1,3.7,68
+Saturday,November,28.1,0.0,89,20.0,Puri Bhaji,Rajma Chawal,Chicken Tikka Rice,61,4.2,3.7,63
+Tuesday,January,27.7,0.0,79,4.8,Bread Butter Toast,Dal Chawal Sabzi,Khichdi Kadhi,83,1.5,4.6,80
+Tuesday,January,28.1,0.0,68,3.2,Aloo Paratha,Rajma Chawal,Roti Green Curry,80,2.3,2.7,82
+Friday,May,38.1,0.0,90,20.8,Poha Upma,Chole Bhature,Dal Fry Jeera Rice,77,1.8,3.6,80
+Wednesday,January,29.9,0.0,58,22.0,Puri Bhaji,Veg Biryani,Roti Green Curry,69,1.5,3.3,74
+Wednesday,August,28.4,0.0,85,22.8,Aloo Paratha,Rajma Chawal,Chicken Tikka Rice,77,0.5,2.7,82
+Tuesday,September,28.7,0.0,69,24.7,Puri Bhaji,Veg Biryani,Dal Fry Jeera Rice,78,2.9,4.1,78
+Tuesday,September,33.5,0.3,76,3.1,Idli Sambar,Chole Bhature,Dal Fry Jeera Rice,78,1.0,3.6,77
+Tuesday,November,40.7,0.0,87,24.0,Masala Dosa,Rajma Chawal,Chicken Tikka Rice,80,0.8,4.0,78
+Thursday,February,39.2,0.0,64,12.5,Idli Sambar,Paneer Tadka Roti,Dal Fry Jeera Rice,84,2.6,4.0,80
+Tuesday,July,29.1,0.0,50,12.0,Poha Upma,Rajma Chawal,Egg Curry Roti,80,1.3,2.6,85
+Friday,December,33.1,20.7,82,12.9,Aloo Paratha,Dal Chawal Sabzi,Roti Green Curry,75,1.0,3.0,79
+Saturday,May,19.0,0.0,94,13.1,Idli Sambar,Veg Biryani,Egg Curry Roti,57,6.4,3.0,58
+Wednesday,December,28.0,14.5,65,17.9,Idli Sambar,Paneer Tadka Roti,Egg Curry Roti,79,2.5,3.0,80
+Saturday,October,19.1,0.0,42,26.9,Bread Butter Toast,Dal Chawal Sabzi,Dal Fry Jeera Rice,60,4.4,3.9,65
+Thursday,October,30.6,0.0,68,14.8,Idli Sambar,Rajma Chawal,Khichdi Kadhi,83,2.7,3.0,80
+Friday,February,29.0,0.0,55,14.4,Poha Upma,Veg Biryani,Chicken Tikka Rice,78,1.1,4.5,75
+Monday,May,35.6,0.0,53,2.1,Poha Upma,Dal Chawal Sabzi,Chicken Tikka Rice,79,1.1,3.7,82
+Tuesday,August,31.6,0.0,88,22.7,Aloo Paratha,Veg Biryani,Khichdi Kadhi,83,1.1,4.5,80
+Friday,September,40.3,0.0,78,6.9,Puri Bhaji,Rajma Chawal,Dal Fry Jeera Rice,79,0.6,4.5,78
+Thursday,February,38.0,0.0,40,9.5,Bread Butter Toast,Rajma Chawal,Roti Green Curry,79,0.9,3.8,77
+Thursday,August,37.6,0.0,55,2.5,Idli Sambar,Chole Bhature,Egg Curry Roti,76,2.8,4.0,80
+Monday,December,19.6,0.0,59,18.1,Poha Upma,Chole Bhature,Chicken Tikka Rice,79,2.0,4.8,81
+Thursday,December,18.6,0.0,57,14.7,Poha Upma,Rajma Chawal,Chicken Tikka Rice,77,1.3,2.5,79
+Friday,September,21.9,5.9,52,4.1,Bread Butter Toast,Paneer Tadka Roti,Khichdi Kadhi,71,2.9,3.1,76
+Thursday,May,39.8,16.7,81,13.5,Poha Upma,Veg Biryani,Chicken Tikka Rice,72,2.0,4.6,77
+Thursday,February,38.7,0.0,93,6.8,Idli Sambar,Dal Chawal Sabzi,Dal Fry Jeera Rice,73,2.3,2.9,77
+Wednesday,December,18.8,4.8,83,14.5,Bread Butter Toast,Veg Biryani,Egg Curry Roti,75,1.8,3.1,75
+Friday,February,37.1,0.0,65,2.3,Masala Dosa,Chole Bhature,Khichdi Kadhi,75,2.9,4.1,80
+Monday,August,35.4,0.8,45,16.8,Bread Butter Toast,Paneer Tadka Roti,Egg Curry Roti,83,1.1,3.3,80
+Monday,April,26.6,0.0,93,7.2,Masala Dosa,Chole Bhature,Chicken Tikka Rice,72,2.9,2.6,77
+Friday,March,39.5,0.0,73,17.9,Idli Sambar,Chole Bhature,Egg Curry Roti,83,2.0,4.5,82
+Thursday,June,37.6,0.0,75,15.7,Masala Dosa,Rajma Chawal,Chicken Tikka Rice,82,2.0,2.6,81
+Monday,March,23.3,2.1,50,22.5,Poha Upma,Paneer Tadka Roti,Chicken Tikka Rice,78,2.9,2.5,76
+Wednesday,December,22.8,0.4,41,8.7,Aloo Paratha,Veg Biryani,Dal Fry Jeera Rice,85,1.3,4.2,83
+Thursday,December,26.9,0.2,87,17.0,Aloo Paratha,Chole Bhature,Dal Fry Jeera Rice,82,1.3,3.4,84
+Tuesday,March,32.2,1.2,74,18.4,Idli Sambar,Rajma Chawal,Chicken Tikka Rice,85,1.9,4.1,84
+Saturday,February,22.3,3.4,53,24.6,Bread Butter Toast,Veg Biryani,Egg Curry Roti,57,6.9,3.9,61
+Friday,January,36.6,0.0,93,13.8,Poha Upma,Chole Bhature,Khichdi Kadhi,87,1.4,3.5,83
+Thursday,September,28.3,0.0,73,20.4,Bread Butter Toast,Paneer Tadka Roti,Egg Curry Roti,81,2.4,2.6,82
+Thursday,August,32.0,1.2,46,9.0,Masala Dosa,Veg Biryani,Dal Fry Jeera Rice,78,0.5,4.7,83
+Saturday,May,40.4,0.0,67,3.1,Masala Dosa,Paneer Tadka Roti,Dal Fry Jeera Rice,60,3.1,3.6,64
+Saturday,April,21.0,0.0,47,26.4,Aloo Paratha,Chole Bhature,Dal Fry Jeera Rice,64,7.0,2.7,64
+Saturday,February,33.9,2.3,40,8.3,Masala Dosa,Veg Biryani,Egg Curry Roti,62,7.6,2.8,65
+Saturday,May,34.0,0.0,59,6.1,Bread Butter Toast,Veg Biryani,Roti Green Curry,64,4.8,3.4,65
+Monday,November,39.1,0.0,57,19.4,Bread Butter Toast,Chole Bhature,Chicken Tikka Rice,77,0.4,4.5,82
+Saturday,July,18.1,0.0,60,12.3,Puri Bhaji,Rajma Chawal,Egg Curry Roti,63,4.6,3.8,68
+Wednesday,December,18.4,0.0,49,18.7,Masala Dosa,Veg Biryani,Khichdi Kadhi,73,1.9,3.7,75
+Sunday,June,35.9,3.7,85,13.2,Puri Bhaji,Paneer Tadka Roti,Roti Green Curry,66,7.5,4.0,68
+Saturday,March,20.4,0.0,54,9.4,Poha Upma,Dal Chawal Sabzi,Egg Curry Roti,60,7.8,3.7,65
+Tuesday,September,30.5,0.0,87,22.8,Idli Sambar,Chole Bhature,Dal Fry Jeera Rice,80,1.3,3.1,82
+Saturday,July,37.6,0.0,68,4.9,Puri Bhaji,Dal Chawal Sabzi,Egg Curry Roti,61,6.8,3.0,58
+Monday,October,24.1,0.0,80,24.1,Masala Dosa,Veg Biryani,Chicken Tikka Rice,85,1.4,4.3,81
+Tuesday,May,22.0,9.9,51,4.5,Puri Bhaji,Rajma Chawal,Egg Curry Roti,79,1.5,3.0,76
+Tuesday,March,32.3,2.9,64,20.8,Poha Upma,Paneer Tadka Roti,Khichdi Kadhi,82,1.8,3.9,82
+Sunday,April,20.1,1.1,57,7.9,Idli Sambar,Paneer Tadka Roti,Dal Fry Jeera Rice,66,2.5,3.7,67
+Tuesday,March,30.8,0.0,58,19.4,Aloo Paratha,Chole Bhature,Roti Green Curry,81,1.4,4.8,80
+Saturday,December,20.1,5.0,81,6.4,Masala Dosa,Veg Biryani,Egg Curry Roti,63,0.7,3.3,61
+Thursday,August,36.4,0.0,76,4.4,Bread Butter Toast,Chole Bhature,Roti Green Curry,75,0.6,3.9,75
+Friday,April,25.3,0.0,59,4.3,Poha Upma,Veg Biryani,Roti Green Curry,82,1.8,3.7,78
+Sunday,June,40.1,0.0,94,24.1,Masala Dosa,Paneer Tadka Roti,Roti Green Curry,68,2.1,2.8,71
+Tuesday,June,21.4,0.0,85,10.4,Poha Upma,Chole Bhature,Khichdi Kadhi,84,2.5,4.1,80
+Monday,June,25.5,0.7,89,23.6,Aloo Paratha,Rajma Chawal,Khichdi Kadhi,82,2.0,3.4,79
+Tuesday,August,29.5,0.0,52,4.1,Aloo Paratha,Paneer Tadka Roti,Dal Fry Jeera Rice,78,0.1,4.7,78
+Wednesday,February,33.6,0.0,43,22.3,Masala Dosa,Veg Biryani,Chicken Tikka Rice,77,0.3,3.6,81
+Sunday,September,28.3,0.0,44,22.4,Bread Butter Toast,Rajma Chawal,Egg Curry Roti,60,5.4,3.9,62
+Saturday,July,35.4,2.6,75,11.2,Poha Upma,Paneer Tadka Roti,Dal Fry Jeera Rice,69,3.6,3.4,68
+Wednesday,May,18.5,0.0,81,5.6,Puri Bhaji,Veg Biryani,Dal Fry Jeera Rice,76,2.5,2.5,77
+Sunday,May,29.7,0.0,57,21.2,Poha Upma,Veg Biryani,Dal Fry Jeera Rice,68,6.4,3.4,64
+Friday,January,40.9,1.9,77,13.4,Puri Bhaji,Veg Biryani,Chicken Tikka Rice,83,2.0,4.6,82
+Wednesday,June,33.3,0.3,68,5.9,Aloo Paratha,Veg Biryani,Dal Fry Jeera Rice,79,0.3,2.6,77
+Wednesday,January,19.7,0.0,40,26.9,Puri Bhaji,Chole Bhature,Egg Curry Roti,79,0.6,3.3,82
+Friday,May,33.8,1.5,41,4.1,Aloo Paratha,Veg Biryani,Roti Green Curry,79,0.1,4.7,83
+Thursday,April,36.6,3.8,42,27.2,Puri Bhaji,Paneer Tadka Roti,Egg Curry Roti,75,0.5,3.6,79
+Sunday,January,40.3,0.0,60,13.2,Aloo Paratha,Chole Bhature,Roti Green Curry,61,1.4,2.9,63
+Wednesday,January,33.5,0.0,84,24.4,Idli Sambar,Paneer Tadka Roti,Roti Green Curry,78,2.3,3.8,76
+Saturday,July,22.3,0.0,57,21.6,Idli Sambar,Paneer Tadka Roti,Dal Fry Jeera Rice,69,2.2,4.2,70
+Wednesday,February,23.1,0.0,86,21.1,Poha Upma,Dal Chawal Sabzi,Dal Fry Jeera Rice,78,2.1,4.2,77
+Sunday,December,33.3,0.9,65,2.2,Idli Sambar,Paneer Tadka Roti,Dal Fry Jeera Rice,69,2.0,4.5,67
+Tuesday,February,22.9,0.0,80,18.0,Poha Upma,Chole Bhature,Roti Green Curry,88,2.3,3.4,84
+Saturday,December,35.9,0.0,92,11.6,Poha Upma,Rajma Chawal,Khichdi Kadhi,72,2.2,4.8,74
+Saturday,March,21.3,0.0,49,2.8,Bread Butter Toast,Paneer Tadka Roti,Egg Curry Roti,66,1.0,4.3,69
+Tuesday,July,34.9,0.0,66,17.6,Poha Upma,Paneer Tadka Roti,Egg Curry Roti,76,0.3,3.2,79
+Friday,December,36.8,7.8,68,13.4,Aloo Paratha,Veg Biryani,Roti Green Curry,84,2.8,2.7,81
+Friday,January,28.1,7.7,46,12.7,Bread Butter Toast,Paneer Tadka Roti,Khichdi Kadhi,79,1.8,4.2,75
+Monday,April,26.7,0.0,41,2.6,Bread Butter Toast,Dal Chawal Sabzi,Roti Green Curry,77,2.5,4.6,78
+Friday,April,37.3,0.0,66,5.5,Aloo Paratha,Chole Bhature,Khichdi Kadhi,84,0.1,3.5,81
+Monday,June,23.4,0.0,61,26.0,Idli Sambar,Paneer Tadka Roti,Dal Fry Jeera Rice,80,0.8,2.7,79
+Thursday,August,41.4,0.0,63,24.0,Bread Butter Toast,Paneer Tadka Roti,Roti Green Curry,81,0.2,3.6,79
+Tuesday,October,31.5,0.0,57,22.1,Bread Butter Toast,Chole Bhature,Khichdi Kadhi,86,2.5,4.7,82
+Saturday,September,29.9,0.8,79,7.0,Idli Sambar,Rajma Chawal,Khichdi Kadhi,65,0.7,4.7,62
+Friday,April,28.0,0.0,77,16.2,Puri Bhaji,Dal Chawal Sabzi,Chicken Tikka Rice,79,1.7,3.4,84
+Saturday,June,38.3,0.0,47,19.3,Idli Sambar,Chole Bhature,Chicken Tikka Rice,69,4.6,3.6,68
+Sunday,August,20.7,0.0,93,22.6,Idli Sambar,Dal Chawal Sabzi,Egg Curry Roti,69,1.4,3.8,67
+Sunday,June,21.9,0.0,92,16.6,Aloo Paratha,Chole Bhature,Roti Green Curry,68,4.0,2.6,66
+Thursday,January,27.4,2.3,64,12.3,Poha Upma,Rajma Chawal,Dal Fry Jeera Rice,82,1.1,4.7,80
+Monday,April,24.6,0.0,75,7.1,Bread Butter Toast,Chole Bhature,Chicken Tikka Rice,75,2.4,3.5,75
+Sunday,March,26.7,0.9,67,17.6,Puri Bhaji,Paneer Tadka Roti,Khichdi Kadhi,67,7.8,3.2,66
+Sunday,July,20.9,2.0,94,27.5,Poha Upma,Rajma Chawal,Dal Fry Jeera Rice,66,5.9,3.8,68
+Tuesday,October,19.9,1.0,87,23.3,Masala Dosa,Rajma Chawal,Egg Curry Roti,86,1.1,3.2,83
+Tuesday,June,37.9,0.0,49,20.5,Masala Dosa,Veg Biryani,Dal Fry Jeera Rice,75,1.1,3.5,79
+Sunday,February,36.0,4.9,59,23.9,Poha Upma,Rajma Chawal,Khichdi Kadhi,73,0.6,2.6,72
+Thursday,December,41.8,0.0,44,10.8,Masala Dosa,Veg Biryani,Dal Fry Jeera Rice,75,1.3,2.6,76
+Thursday,April,38.9,7.8,76,8.8,Idli Sambar,Rajma Chawal,Khichdi Kadhi,79,0.8,3.8,79
+Friday,August,21.1,0.0,84,14.5,Idli Sambar,Veg Biryani,Chicken Tikka Rice,77,2.6,4.7,77
+Wednesday,March,37.8,9.1,93,18.2,Idli Sambar,Rajma Chawal,Egg Curry Roti,83,2.1,4.4,81
+Friday,April,20.3,0.0,40,14.2,Idli Sambar,Rajma Chawal,Dal Fry Jeera Rice,81,0.2,3.2,78
+Thursday,December,38.5,4.5,89,6.8,Puri Bhaji,Veg Biryani,Egg Curry Roti,75,0.7,3.8,77
+Thursday,January,35.7,0.0,41,24.6,Masala Dosa,Veg Biryani,Dal Fry Jeera Rice,82,1.0,4.1,80
+Thursday,September,26.2,0.0,49,26.7,Bread Butter Toast,Paneer Tadka Roti,Roti Green Curry,78,1.2,4.1,80
+Friday,March,33.7,4.6,80,15.2,Bread Butter Toast,Veg Biryani,Chicken Tikka Rice,75,0.2,3.3,75
+Wednesday,December,29.3,0.0,66,18.2,Bread Butter Toast,Rajma Chawal,Dal Fry Jeera Rice,77,0.1,3.6,82
+Saturday,August,18.9,0.0,58,22.9,Idli Sambar,Chole Bhature,Khichdi Kadhi,72,6.6,2.6,69
+Monday,September,37.6,0.0,88,16.9,Puri Bhaji,Rajma Chawal,Khichdi Kadhi,86,2.7,3.5,84
+Friday,December,34.2,0.0,79,26.8,Puri Bhaji,Veg Biryani,Khichdi Kadhi,78,0.2,2.5,77
+Thursday,February,24.2,8.1,76,4.4,Aloo Paratha,Paneer Tadka Roti,Roti Green Curry,80,1.3,2.7,79
+Friday,September,33.5,4.6,67,5.6,Idli Sambar,Veg Biryani,Egg Curry Roti,78,0.4,2.9,78
+Tuesday,June,37.9,8.6,78,15.8,Poha Upma,Veg Biryani,Dal Fry Jeera Rice,81,2.0,3.4,79
+Thursday,May,34.6,0.0,77,9.2,Puri Bhaji,Chole Bhature,Egg Curry Roti,72,1.4,3.0,75
+Thursday,September,28.3,0.0,72,11.7,Idli Sambar,Paneer Tadka Roti,Egg Curry Roti,75,2.0,4.1,76
+Friday,August,36.3,2.1,68,11.9,Poha Upma,Rajma Chawal,Khichdi Kadhi,73,0.4,3.4,78
+Friday,August,26.8,0.0,94,13.8,Aloo Paratha,Veg Biryani,Dal Fry Jeera Rice,80,0.2,4.7,76
+Saturday,November,27.3,0.0,41,21.7,Puri Bhaji,Chole Bhature,Dal Fry Jeera Rice,70,3.3,4.4,66
+Wednesday,July,28.7,3.9,44,17.8,Bread Butter Toast,Paneer Tadka Roti,Roti Green Curry,80,1.5,3.4,81
+Friday,February,22.0,0.0,86,11.3,Masala Dosa,Dal Chawal Sabzi,Khichdi Kadhi,72,1.1,2.9,73
+Thursday,May,41.2,0.0,59,17.1,Puri Bhaji,Rajma Chawal,Dal Fry Jeera Rice,67,2.2,3.9,72
+Tuesday,August,25.8,3.1,80,5.8,Puri Bhaji,Veg Biryani,Dal Fry Jeera Rice,76,0.5,3.7,79
+Wednesday,May,32.4,0.0,65,3.0,Bread Butter Toast,Rajma Chawal,Egg Curry Roti,82,2.8,2.6,78
+Monday,March,29.1,3.3,87,17.3,Masala Dosa,Paneer Tadka Roti,Khichdi Kadhi,87,1.4,3.0,85
+Wednesday,November,40.0,0.0,79,25.3,Poha Upma,Chole Bhature,Egg Curry Roti,78,0.7,4.4,81
+Monday,August,38.5,0.0,86,25.2,Poha Upma,Rajma Chawal,Khichdi Kadhi,85,0.2,2.6,84
+Saturday,June,35.3,0.7,56,11.3,Masala Dosa,Veg Biryani,Khichdi Kadhi,60,6.1,3.0,61
+Friday,August,40.5,8.3,88,20.2,Idli Sambar,Chole Bhature,Egg Curry Roti,78,1.0,3.4,78
+Wednesday,December,31.8,0.0,45,24.6,Masala Dosa,Veg Biryani,Chicken Tikka Rice,75,2.2,4.3,79
+Sunday,December,38.7,0.0,56,6.0,Poha Upma,Dal Chawal Sabzi,Dal Fry Jeera Rice,73,0.7,4.4,70
+Friday,May,23.2,0.0,81,6.9,Bread Butter Toast,Chole Bhature,Chicken Tikka Rice,82,0.8,4.4,86
+Thursday,April,25.3,0.0,70,5.1,Poha Upma,Chole Bhature,Egg Curry Roti,78,0.5,3.6,82
+Tuesday,November,24.5,0.0,45,6.9,Puri Bhaji,Chole Bhature,Chicken Tikka Rice,75,1.5,3.1,79
+Saturday,May,40.6,0.0,91,23.5,Poha Upma,Rajma Chawal,Roti Green Curry,65,7.3,4.4,67
+Wednesday,March,39.8,0.0,93,4.3,Masala Dosa,Chole Bhature,Dal Fry Jeera Rice,88,0.5,3.4,84
+Friday,May,39.0,0.0,55,5.4,Aloo Paratha,Veg Biryani,Roti Green Curry,79,1.9,2.7,82
+Friday,October,20.5,0.0,61,24.5,Poha Upma,Chole Bhature,Khichdi Kadhi,79,0.7,3.4,83
+Monday,June,29.3,1.2,77,17.8,Masala Dosa,Veg Biryani,Egg Curry Roti,79,2.0,4.2,79
+Friday,December,35.1,0.0,88,9.5,Poha Upma,Dal Chawal Sabzi,Roti Green Curry,79,2.1,4.4,80
+Friday,May,39.9,6.2,92,2.8,Poha Upma,Veg Biryani,Egg Curry Roti,86,2.2,3.9,84
+Monday,April,19.0,0.0,81,13.8,Idli Sambar,Paneer Tadka Roti,Chicken Tikka Rice,80,0.4,4.5,77
+Saturday,July,18.4,0.0,82,15.5,Aloo Paratha,Veg Biryani,Egg Curry Roti,64,4.6,2.5,66
+Thursday,March,18.6,7.6,82,13.9,Bread Butter Toast,Rajma Chawal,Egg Curry Roti,76,1.5,4.6,80
+Sunday,December,29.4,0.0,92,26.5,Puri Bhaji,Paneer Tadka Roti,Chicken Tikka Rice,68,2.0,4.0,65
+Tuesday,December,32.9,9.4,57,9.2,Puri Bhaji,Dal Chawal Sabzi,Egg Curry Roti,71,2.8,3.4,76
+Saturday,August,35.4,0.0,43,19.9,Masala Dosa,Veg Biryani,Chicken Tikka Rice,72,3.9,2.5,69
+Saturday,January,41.0,0.0,53,15.0,Puri Bhaji,Dal Chawal Sabzi,Chicken Tikka Rice,62,1.5,3.8,67
+Wednesday,February,38.5,0.0,92,7.1,Poha Upma,Paneer Tadka Roti,Khichdi Kadhi,79,0.7,4.8,76
+Friday,September,40.1,0.0,51,2.3,Bread Butter Toast,Paneer Tadka Roti,Egg Curry Roti,76,2.9,4.3,80
+Friday,October,29.4,1.4,75,19.3,Poha Upma,Paneer Tadka Roti,Chicken Tikka Rice,81,1.8,4.3,81
+Friday,October,36.8,0.0,70,22.9,Puri Bhaji,Chole Bhature,Egg Curry Roti,84,1.3,2.9,84
+Monday,March,39.5,0.0,89,6.0,Poha Upma,Chole Bhature,Khichdi Kadhi,83,2.3,3.6,80
+Monday,March,27.4,12.5,92,17.0,Bread Butter Toast,Veg Biryani,Chicken Tikka Rice,79,2.0,4.8,83
+Tuesday,January,22.6,0.5,67,7.7,Idli Sambar,Dal Chawal Sabzi,Chicken Tikka Rice,74,2.6,4.7,74
+Friday,September,40.8,0.0,64,17.1,Poha Upma,Paneer Tadka Roti,Chicken Tikka Rice,80,2.8,4.4,79
+Friday,May,36.3,11.0,69,7.3,Idli Sambar,Rajma Chawal,Egg Curry Roti,74,1.0,4.0,76
+Wednesday,May,29.0,0.0,85,3.2,Aloo Paratha,Chole Bhature,Dal Fry Jeera Rice,80,1.4,4.3,77
+Friday,August,25.0,2.5,70,15.8,Puri Bhaji,Veg Biryani,Egg Curry Roti,80,2.2,3.7,81
+Sunday,July,25.3,0.0,52,2.0,Aloo Paratha,Paneer Tadka Roti,Egg Curry Roti,69,5.1,3.0,68
+Saturday,May,35.1,1.0,60,25.5,Bread Butter Toast,Paneer Tadka Roti,Dal Fry Jeera Rice,59,3.4,3.7,64
+Sunday,October,35.0,0.0,82,17.2,Poha Upma,Chole Bhature,Roti Green Curry,63,1.3,3.3,64
+Monday,September,22.1,3.0,48,6.7,Poha Upma,Veg Biryani,Chicken Tikka Rice,83,0.9,4.2,80
+Wednesday,September,22.7,0.0,58,27.4,Poha Upma,Veg Biryani,Roti Green Curry,76,1.0,4.2,81
+Tuesday,April,36.9,2.4,41,23.8,Bread Butter Toast,Chole Bhature,Roti Green Curry,81,0.8,4.7,80
+Wednesday,March,34.9,0.0,69,13.2,Puri Bhaji,Rajma Chawal,Dal Fry Jeera Rice,84,0.6,4.7,81
+Thursday,December,25.0,5.6,83,8.5,Poha Upma,Chole Bhature,Khichdi Kadhi,77,2.1,3.9,79
+Thursday,January,31.2,0.0,56,11.2,Idli Sambar,Veg Biryani,Dal Fry Jeera Rice,72,0.9,4.2,77
+Monday,March,34.3,0.0,51,11.9,Idli Sambar,Dal Chawal Sabzi,Egg Curry Roti,80,0.7,4.0,79
+Wednesday,June,32.4,2.0,91,25.8,Masala Dosa,Dal Chawal Sabzi,Chicken Tikka Rice,88,1.8,2.9,84
+Monday,November,30.5,0.0,73,15.4,Poha Upma,Chole Bhature,Egg Curry Roti,78,2.9,3.8,78
+Wednesday,July,19.8,0.0,92,9.7,Bread Butter Toast,Paneer Tadka Roti,Egg Curry Roti,79,0.1,3.6,80
+Wednesday,June,24.0,6.1,73,10.1,Aloo Paratha,Rajma Chawal,Egg Curry Roti,75,2.8,2.5,77
+Tuesday,September,21.7,6.7,88,7.3,Bread Butter Toast,Paneer Tadka Roti,Chicken Tikka Rice,78,2.8,3.4,80
+Monday,April,40.6,0.0,79,18.0,Bread Butter Toast,Veg Biryani,Chicken Tikka Rice,78,1.0,2.5,78
+Thursday,November,20.0,9.9,84,15.3,Poha Upma,Chole Bhature,Khichdi Kadhi,88,2.1,3.9,84
+Friday,August,33.7,0.3,90,2.8,Idli Sambar,Veg Biryani,Dal Fry Jeera Rice,79,0.3,2.7,83
+Friday,February,35.6,5.6,44,26.7,Masala Dosa,Chole Bhature,Khichdi Kadhi,79,1.9,3.6,82
+Monday,July,35.7,0.0,43,11.6,Idli Sambar,Dal Chawal Sabzi,Khichdi Kadhi,72,2.6,3.7,77
+Monday,June,38.6,0.0,83,12.7,Masala Dosa,Rajma Chawal,Khichdi Kadhi,74,2.4,4.1,75
+Tuesday,February,30.0,4.6,51,17.3,Puri Bhaji,Rajma Chawal,Egg Curry Roti,68,2.3,3.0,73
+Saturday,June,33.7,0.0,48,6.2,Puri Bhaji,Veg Biryani,Chicken Tikka Rice,67,3.8,4.7,69
+Thursday,May,18.2,2.9,70,8.6,Puri Bhaji,Chole Bhature,Egg Curry Roti,81,0.7,4.5,80
+Sunday,May,25.8,0.0,67,26.5,Idli Sambar,Veg Biryani,Dal Fry Jeera Rice,65,4.4,4.6,65
+Friday,October,39.2,0.0,65,12.8,Bread Butter Toast,Veg Biryani,Dal Fry Jeera Rice,89,0.6,3.6,88
+Saturday,April,23.5,0.0,49,2.1,Masala Dosa,Dal Chawal Sabzi,Egg Curry Roti,62,7.1,3.7,58
+Tuesday,October,33.2,0.0,46,7.5,Poha Upma,Rajma Chawal,Egg Curry Roti,84,1.3,3.8,81
+Saturday,January,31.0,6.1,49,15.0,Poha Upma,Dal Chawal Sabzi,Roti Green Curry,73,0.5,4.0,72
+Tuesday,January,23.0,0.0,89,7.3,Idli Sambar,Dal Chawal Sabzi,Roti Green Curry,74,2.6,2.5,79
+Wednesday,March,31.5,5.8,53,2.3,Aloo Paratha,Veg Biryani,Roti Green Curry,76,0.9,3.6,79
+Sunday,March,37.7,0.0,66,2.3,Bread Butter Toast,Veg Biryani,Chicken Tikka Rice,72,2.6,4.6,70
+Thursday,September,35.8,3.9,93,13.7,Puri Bhaji,Dal Chawal Sabzi,Egg Curry Roti,71,0.3,4.8,74
+Saturday,August,19.6,0.0,65,20.8,Masala Dosa,Rajma Chawal,Khichdi Kadhi,65,1.2,3.4,70
+Sunday,December,20.3,0.0,42,17.1,Idli Sambar,Chole Bhature,Chicken Tikka Rice,64,5.5,4.3,67
+Thursday,November,22.1,0.0,88,21.5,Idli Sambar,Rajma Chawal,Dal Fry Jeera Rice,80,2.6,4.0,82
+Friday,June,36.2,0.0,62,20.5,Poha Upma,Veg Biryani,Dal Fry Jeera Rice,77,1.8,3.0,82
+Tuesday,December,28.7,0.0,92,13.2,Bread Butter Toast,Veg Biryani,Khichdi Kadhi,74,1.6,4.7,79
+Thursday,May,34.7,0.0,72,8.9,Puri Bhaji,Paneer Tadka Roti,Egg Curry Roti,80,0.2,4.3,78
+Sunday,June,18.8,1.4,70,3.0,Masala Dosa,Veg Biryani,Khichdi Kadhi,67,5.5,3.7,65
+Tuesday,February,36.0,6.1,93,23.5,Aloo Paratha,Rajma Chawal,Dal Fry Jeera Rice,78,1.8,4.2,81
+Friday,January,41.1,9.5,62,2.4,Aloo Paratha,Dal Chawal Sabzi,Khichdi Kadhi,82,1.9,2.5,80
+Thursday,July,38.1,4.1,74,24.5,Masala Dosa,Rajma Chawal,Roti Green Curry,80,2.2,2.7,84
+Wednesday,September,23.5,0.0,91,26.2,Aloo Paratha,Dal Chawal Sabzi,Khichdi Kadhi,81,2.9,3.6,82
+Thursday,June,37.3,4.5,42,13.8,Masala Dosa,Rajma Chawal,Chicken Tikka Rice,81,2.1,2.8,80
+Sunday,September,33.6,0.0,48,18.5,Aloo Paratha,Veg Biryani,Egg Curry Roti,65,2.5,2.6,70
+Saturday,February,18.5,4.7,78,23.8,Bread Butter Toast,Paneer Tadka Roti,Khichdi Kadhi,56,6.8,4.0,57
+Tuesday,April,19.9,0.5,72,20.3,Puri Bhaji,Chole Bhature,Roti Green Curry,77,0.8,3.9,79
+Saturday,November,23.1,10.9,50,21.2,Idli Sambar,Rajma Chawal,Khichdi Kadhi,66,4.0,2.6,63
+Sunday,May,19.5,0.0,43,27.4,Idli Sambar,Veg Biryani,Chicken Tikka Rice,68,0.3,4.7,72
+Thursday,October,23.5,0.0,54,4.6,Aloo Paratha,Dal Chawal Sabzi,Egg Curry Roti,76,0.7,4.7,74
+Friday,August,21.1,0.0,59,19.5,Aloo Paratha,Dal Chawal Sabzi,Chicken Tikka Rice,74,1.1,4.4,78
+Sunday,August,21.7,0.0,66,9.9,Aloo Paratha,Dal Chawal Sabzi,Chicken Tikka Rice,59,1.1,3.7,58
+Sunday,October,37.7,0.0,63,13.9,Puri Bhaji,Veg Biryani,Chicken Tikka Rice,60,7.0,4.0,65
+Sunday,July,38.2,11.0,60,7.1,Masala Dosa,Dal Chawal Sabzi,Roti Green Curry,60,6.5,3.6,63
+Sunday,July,28.9,0.7,50,26.7,Puri Bhaji,Rajma Chawal,Dal Fry Jeera Rice,64,2.2,3.8,64
+Sunday,August,26.9,0.8,71,6.8,Bread Butter Toast,Rajma Chawal,Egg Curry Roti,63,7.8,3.6,63
+Saturday,September,36.9,0.0,91,25.2,Aloo Paratha,Veg Biryani,Khichdi Kadhi,66,5.5,4.4,68
+Monday,May,39.0,0.0,54,2.0,Masala Dosa,Chole Bhature,Roti Green Curry,73,1.7,3.9,78
+Friday,January,25.1,0.0,92,26.6,Poha Upma,Chole Bhature,Khichdi Kadhi,80,1.5,3.9,81
+Monday,July,29.7,0.0,72,28.0,Masala Dosa,Dal Chawal Sabzi,Chicken Tikka Rice,78,2.0,2.9,80
+Thursday,October,36.6,0.0,74,9.2,Idli Sambar,Paneer Tadka Roti,Roti Green Curry,68,2.4,4.4,73
+Wednesday,February,23.2,0.0,65,22.1,Idli Sambar,Veg Biryani,Khichdi Kadhi,80,2.3,2.9,83
+Wednesday,January,23.1,0.0,87,23.7,Bread Butter Toast,Chole Bhature,Dal Fry Jeera Rice,75,1.6,4.2,78
+Monday,January,23.6,0.0,41,27.0,Poha Upma,Paneer Tadka Roti,Khichdi Kadhi,72,1.9,3.9,76
+Friday,March,30.2,0.0,90,10.8,Puri Bhaji,Paneer Tadka Roti,Chicken Tikka Rice,86,1.1,4.1,83
+Thursday,March,25.5,0.0,44,13.5,Idli Sambar,Chole Bhature,Chicken Tikka Rice,82,1.2,4.8,80
+Thursday,June,19.5,0.0,48,17.5,Bread Butter Toast,Dal Chawal Sabzi,Roti Green Curry,77,0.8,4.6,80
+Saturday,June,33.9,7.0,71,25.5,Puri Bhaji,Rajma Chawal,Chicken Tikka Rice,63,6.9,4.7,67
+Tuesday,April,36.2,0.0,56,4.8,Bread Butter Toast,Veg Biryani,Chicken Tikka Rice,89,1.9,2.9,85
+Thursday,January,37.7,0.0,66,5.0,Puri Bhaji,Chole Bhature,Chicken Tikka Rice,84,0.4,2.8,82
+Friday,June,39.7,0.0,80,19.1,Masala Dosa,Dal Chawal Sabzi,Egg Curry Roti,86,2.0,4.5,84
+Wednesday,August,27.6,0.0,40,23.5,Puri Bhaji,Dal Chawal Sabzi,Chicken Tikka Rice,76,0.7,3.8,76
+Monday,November,32.3,0.2,76,15.8,Aloo Paratha,Chole Bhature,Dal Fry Jeera Rice,79,1.3,3.8,79
+Saturday,September,18.8,1.4,47,5.0,Idli Sambar,Paneer Tadka Roti,Roti Green Curry,66,4.8,3.6,63
+Saturday,October,37.8,3.2,59,11.4,Idli Sambar,Veg Biryani,Chicken Tikka Rice,60,3.2,2.9,65
+Friday,June,31.6,0.0,47,17.0,Puri Bhaji,Rajma Chawal,Dal Fry Jeera Rice,81,2.1,3.6,81
+Tuesday,January,28.1,13.8,57,8.5,Poha Upma,Chole Bhature,Chicken Tikka Rice,82,2.2,3.3,79
+Friday,July,28.0,0.0,73,26.4,Aloo Paratha,Rajma Chawal,Roti Green Curry,86,2.5,4.0,82
+Friday,January,39.6,2.9,81,15.8,Bread Butter Toast,Dal Chawal Sabzi,Egg Curry Roti,74,1.3,3.8,76
+Thursday,February,31.4,0.0,67,21.0,Idli Sambar,Dal Chawal Sabzi,Chicken Tikka Rice,81,0.4,4.5,84
+Saturday,February,19.0,2.5,64,25.2,Puri Bhaji,Chole Bhature,Dal Fry Jeera Rice,72,1.6,3.5,71
+Tuesday,February,24.0,0.0,55,25.4,Bread Butter Toast,Rajma Chawal,Khichdi Kadhi,81,0.8,4.4,83
+Wednesday,May,38.6,2.9,47,11.9,Poha Upma,Dal Chawal Sabzi,Khichdi Kadhi,86,1.9,4.3,83
+Sunday,January,28.3,0.0,50,3.7,Puri Bhaji,Dal Chawal Sabzi,Egg Curry Roti,64,6.5,3.8,61
+Tuesday,September,34.6,0.0,84,3.4,Poha Upma,Paneer Tadka Roti,Chicken Tikka Rice,77,2.5,2.7,78
+Friday,July,21.3,0.0,87,26.1,Masala Dosa,Chole Bhature,Khichdi Kadhi,73,2.2,2.6,74
+Saturday,September,36.9,0.0,42,17.3,Puri Bhaji,Paneer Tadka Roti,Chicken Tikka Rice,67,1.5,2.6,66
+Sunday,August,20.2,0.0,48,7.8,Idli Sambar,Paneer Tadka Roti,Dal Fry Jeera Rice,59,1.1,2.7,60
+Saturday,October,33.9,7.1,80,14.6,Bread Butter Toast,Paneer Tadka Roti,Khichdi Kadhi,62,6.2,3.0,63
+Thursday,April,35.6,0.0,62,5.3,Masala Dosa,Dal Chawal Sabzi,Egg Curry Roti,83,0.9,3.8,83
+Saturday,April,39.5,0.0,52,12.7,Bread Butter Toast,Paneer Tadka Roti,Roti Green Curry,61,3.5,2.8,65
+Thursday,July,35.7,0.0,76,9.0,Masala Dosa,Dal Chawal Sabzi,Chicken Tikka Rice,80,2.4,3.5,76
+Wednesday,September,30.2,21.1,82,13.3,Masala Dosa,Chole Bhature,Chicken Tikka Rice,75,1.6,3.3,80
+Saturday,July,40.4,8.7,70,22.3,Masala Dosa,Chole Bhature,Egg Curry Roti,64,6.2,2.6,65
+Tuesday,October,38.8,0.0,46,27.5,Poha Upma,Rajma Chawal,Dal Fry Jeera Rice,76,2.1,2.8,79
+Monday,June,32.5,4.3,63,9.2,Idli Sambar,Dal Chawal Sabzi,Chicken Tikka Rice,84,2.0,4.1,81
+Sunday,May,33.6,0.0,46,20.2,Poha Upma,Veg Biryani,Chicken Tikka Rice,54,3.6,2.9,58
+Monday,December,18.7,8.2,86,14.6,Masala Dosa,Veg Biryani,Khichdi Kadhi,81,2.9,3.8,78
+Friday,December,32.2,0.0,41,11.4,Bread Butter Toast,Dal Chawal Sabzi,Chicken Tikka Rice,73,2.8,2.8,77
+Thursday,June,21.4,1.7,68,20.1,Aloo Paratha,Veg Biryani,Roti Green Curry,84,0.1,4.4,83
+Wednesday,November,40.2,0.0,47,13.5,Bread Butter Toast,Paneer Tadka Roti,Roti Green Curry,86,0.5,4.0,85
+Sunday,December,40.2,0.0,67,10.3,Poha Upma,Paneer Tadka Roti,Khichdi Kadhi,67,6.6,3.2,66
+Friday,November,37.8,4.0,84,12.0,Masala Dosa,Dal Chawal Sabzi,Dal Fry Jeera Rice,83,1.2,3.4,80
+Monday,April,21.3,0.0,85,27.4,Poha Upma,Dal Chawal Sabzi,Chicken Tikka Rice,83,1.5,2.7,79
+Monday,January,29.7,4.5,78,11.5,Aloo Paratha,Rajma Chawal,Dal Fry Jeera Rice,80,2.1,3.8,82
+Monday,July,38.9,0.0,80,18.1,Puri Bhaji,Dal Chawal Sabzi,Egg Curry Roti,79,0.8,4.3,79
+Thursday,August,41.1,0.0,66,17.2,Aloo Paratha,Veg Biryani,Egg Curry Roti,75,2.9,4.0,74
+Sunday,July,23.6,8.6,42,15.0,Bread Butter Toast,Paneer Tadka Roti,Roti Green Curry,68,2.2,3.9,70
+Sunday,November,39.8,6.0,82,10.8,Poha Upma,Dal Chawal Sabzi,Dal Fry Jeera Rice,67,7.8,2.5,64
+Friday,June,25.3,4.9,91,19.6,Masala Dosa,Rajma Chawal,Egg Curry Roti,81,1.2,4.6,78
+Saturday,March,19.8,0.0,43,15.0,Poha Upma,Paneer Tadka Roti,Dal Fry Jeera Rice,64,3.6,4.5,61
+Tuesday,November,33.8,0.0,75,3.6,Idli Sambar,Chole Bhature,Roti Green Curry,80,1.6,4.7,79
+Tuesday,June,38.8,0.0,48,19.6,Aloo Paratha,Veg Biryani,Egg Curry Roti,80,0.7,3.0,76
+Sunday,February,38.9,0.0,59,22.9,Masala Dosa,Paneer Tadka Roti,Khichdi Kadhi,54,1.6,4.1,57
+Wednesday,April,32.7,0.0,57,14.2,Idli Sambar,Paneer Tadka Roti,Khichdi Kadhi,75,2.4,4.3,77
+Friday,July,34.3,0.0,94,10.5,Bread Butter Toast,Paneer Tadka Roti,Khichdi Kadhi,85,2.7,3.7,82
+Tuesday,May,36.9,2.1,88,2.3,Puri Bhaji,Veg Biryani,Khichdi Kadhi,76,2.0,2.8,80
+Friday,December,19.3,0.0,89,12.0,Puri Bhaji,Chole Bhature,Roti Green Curry,75,0.9,4.4,79
+Tuesday,August,31.3,5.0,83,17.6,Poha Upma,Paneer Tadka Roti,Egg Curry Roti,70,1.8,2.5,75
+Friday,June,19.4,7.2,68,7.9,Masala Dosa,Dal Chawal Sabzi,Khichdi Kadhi,75,0.2,2.9,78
+Sunday,June,30.3,0.0,61,23.8,Aloo Paratha,Paneer Tadka Roti,Khichdi Kadhi,62,4.4,2.6,61
+Wednesday,September,31.4,0.2,45,3.1,Idli Sambar,Veg Biryani,Dal Fry Jeera Rice,84,1.0,3.5,82
+Monday,February,22.1,0.0,46,15.5,Idli Sambar,Paneer Tadka Roti,Roti Green Curry,74,2.1,2.6,74
+Wednesday,September,21.4,0.0,70,4.0,Aloo Paratha,Veg Biryani,Egg Curry Roti,81,2.0,4.0,79
+Thursday,January,18.5,0.2,93,16.3,Bread Butter Toast,Dal Chawal Sabzi,Dal Fry Jeera Rice,70,0.6,2.9,72
+Sunday,February,34.3,0.0,66,26.0,Puri Bhaji,Chole Bhature,Roti Green Curry,70,3.5,4.0,68
+Wednesday,November,41.5,0.0,83,10.7,Aloo Paratha,Paneer Tadka Roti,Egg Curry Roti,77,1.6,3.8,80
+Thursday,January,41.0,5.3,65,19.6,Bread Butter Toast,Paneer Tadka Roti,Egg Curry Roti,77,2.9,4.1,76
+Friday,October,39.8,1.2,59,19.4,Poha Upma,Rajma Chawal,Dal Fry Jeera Rice,80,0.8,3.9,79
+Friday,September,22.8,0.0,52,3.8,Poha Upma,Chole Bhature,Chicken Tikka Rice,75,1.7,2.6,76
+Sunday,May,35.6,3.3,47,8.8,Puri Bhaji,Paneer Tadka Roti,Roti Green Curry,75,1.0,4.1,72
+Monday,June,39.8,0.0,45,10.3,Masala Dosa,Rajma Chawal,Dal Fry Jeera Rice,75,1.1,3.6,80
+Friday,March,39.5,0.0,41,24.4,Poha Upma,Chole Bhature,Roti Green Curry,74,2.4,3.2,77
+Monday,June,39.9,0.0,49,9.0,Aloo Paratha,Chole Bhature,Chicken Tikka Rice,84,1.9,3.5,84
+Wednesday,July,35.4,6.3,71,2.4,Puri Bhaji,Veg Biryani,Egg Curry Roti,88,1.0,4.0,85
+Tuesday,April,24.4,0.0,70,20.4,Puri Bhaji,Paneer Tadka Roti,Chicken Tikka Rice,80,2.7,4.5,77
+Sunday,September,21.3,0.0,89,2.6,Aloo Paratha,Dal Chawal Sabzi,Egg Curry Roti,68,6.2,3.3,65
+Tuesday,June,27.9,0.0,93,18.8,Puri Bhaji,Chole Bhature,Khichdi Kadhi,77,1.2,4.5,79
+Monday,February,41.2,0.0,74,20.9,Poha Upma,Chole Bhature,Khichdi Kadhi,79,1.0,3.5,79
+Friday,March,27.6,0.0,68,26.0,Idli Sambar,Paneer Tadka Roti,Roti Green Curry,75,2.9,3.2,78
+Sunday,March,36.9,1.6,84,4.1,Aloo Paratha,Rajma Chawal,Chicken Tikka Rice,69,6.2,3.8,65
+Monday,June,34.6,5.7,58,15.0,Poha Upma,Chole Bhature,Khichdi Kadhi,78,2.1,3.2,79
+Sunday,November,37.5,1.9,87,5.4,Idli Sambar,Dal Chawal Sabzi,Egg Curry Roti,67,2.8,3.9,67
+Sunday,November,41.0,0.0,44,7.1,Poha Upma,Rajma Chawal,Chicken Tikka Rice,68,1.4,3.8,73
+Friday,March,35.0,0.0,86,19.4,Puri Bhaji,Dal Chawal Sabzi,Roti Green Curry,72,0.4,3.2,74
+Tuesday,June,39.3,0.0,92,19.7,Aloo Paratha,Rajma Chawal,Dal Fry Jeera Rice,76,1.7,3.2,78
+Monday,February,26.9,0.0,58,15.5,Bread Butter Toast,Dal Chawal Sabzi,Dal Fry Jeera Rice,86,1.3,3.5,84
+Tuesday,January,28.8,3.8,65,12.7,Bread Butter Toast,Rajma Chawal,Dal Fry Jeera Rice,72,0.9,4.4,77
+Sunday,February,40.3,6.9,57,24.0,Puri Bhaji,Paneer Tadka Roti,Khichdi Kadhi,71,3.6,2.6,68
+Monday,February,18.0,9.3,80,6.4,Bread Butter Toast,Rajma Chawal,Roti Green Curry,81,1.0,4.2,79
+Friday,February,19.8,6.2,52,21.5,Aloo Paratha,Chole Bhature,Chicken Tikka Rice,84,1.9,2.9,82
+Tuesday,June,26.2,0.0,77,15.2,Masala Dosa,Rajma Chawal,Chicken Tikka Rice,81,0.8,3.7,81
+Monday,April,41.8,0.5,78,11.0,Poha Upma,Paneer Tadka Roti,Chicken Tikka Rice,71,0.2,3.0,74
+Thursday,August,19.6,15.1,47,16.0,Poha Upma,Veg Biryani,Egg Curry Roti,80,2.4,3.5,82
+Wednesday,September,30.9,2.1,78,27.8,Bread Butter Toast,Veg Biryani,Khichdi Kadhi,76,1.0,4.0,79
+Tuesday,March,36.3,0.0,87,5.1,Idli Sambar,Rajma Chawal,Roti Green Curry,79,0.1,3.1,79
+Thursday,January,38.1,0.0,40,22.9,Aloo Paratha,Dal Chawal Sabzi,Egg Curry Roti,78,2.3,3.2,80
+Sunday,March,34.8,0.0,64,23.6,Bread Butter Toast,Veg Biryani,Egg Curry Roti,69,3.6,4.0,69
+Sunday,July,24.6,15.4,59,3.1,Puri Bhaji,Rajma Chawal,Roti Green Curry,68,6.7,4.1,67
+Sunday,June,27.2,2.1,74,7.0,Masala Dosa,Veg Biryani,Roti Green Curry,60,7.4,3.7,64
+Monday,January,31.5,13.0,74,23.4,Bread Butter Toast,Paneer Tadka Roti,Dal Fry Jeera Rice,77,1.3,3.4,82
+Wednesday,October,31.5,4.4,68,21.7,Aloo Paratha,Veg Biryani,Khichdi Kadhi,80,1.3,4.3,79
+Sunday,October,25.6,0.0,73,8.3,Bread Butter Toast,Veg Biryani,Dal Fry Jeera Rice,60,1.2,3.8,65
+Friday,September,18.1,0.0,46,10.0,Idli Sambar,Veg Biryani,Dal Fry Jeera Rice,83,1.7,3.8,84
+Sunday,August,19.9,6.5,56,17.6,Idli Sambar,Veg Biryani,Roti Green Curry,64,4.3,2.8,68
+Sunday,November,19.3,0.0,67,7.6,Poha Upma,Chole Bhature,Egg Curry Roti,57,6.7,3.6,61
+Wednesday,February,40.0,0.0,56,13.2,Poha Upma,Rajma Chawal,Roti Green Curry,76,3.0,4.5,79
+Thursday,May,32.4,0.0,69,3.1,Bread Butter Toast,Veg Biryani,Roti Green Curry,81,2.3,2.5,79
+Thursday,June,33.2,0.0,81,16.2,Masala Dosa,Veg Biryani,Chicken Tikka Rice,76,0.7,2.6,78
+Thursday,April,35.2,2.8,66,25.3,Aloo Paratha,Veg Biryani,Dal Fry Jeera Rice,82,0.7,3.9,83
+Thursday,August,18.9,1.4,76,23.8,Aloo Paratha,Chole Bhature,Egg Curry Roti,80,1.5,4.5,83
+Tuesday,April,28.0,0.0,91,15.4,Puri Bhaji,Paneer Tadka Roti,Chicken Tikka Rice,78,0.7,3.3,81
+Wednesday,June,23.0,0.4,59,19.7,Poha Upma,Chole Bhature,Dal Fry Jeera Rice,82,0.4,4.1,83
+Wednesday,June,23.1,0.0,57,16.6,Masala Dosa,Dal Chawal Sabzi,Khichdi Kadhi,82,1.6,3.2,82
+Saturday,February,19.3,0.6,56,15.8,Aloo Paratha,Paneer Tadka Roti,Chicken Tikka Rice,56,5.1,2.9,57
+Thursday,February,35.5,7.2,72,7.0,Poha Upma,Rajma Chawal,Roti Green Curry,88,2.2,3.9,89
+Friday,April,24.2,2.4,67,24.3,Masala Dosa,Dal Chawal Sabzi,Dal Fry Jeera Rice,77,2.7,2.8,76
+Sunday,July,24.9,9.1,87,10.2,Masala Dosa,Chole Bhature,Roti Green Curry,64,3.0,3.9,62
+Saturday,May,24.8,0.0,66,22.4,Aloo Paratha,Veg Biryani,Egg Curry Roti,64,4.3,4.4,60
+Thursday,October,19.5,0.0,46,2.9,Aloo Paratha,Dal Chawal Sabzi,Roti Green Curry,74,1.9,4.4,78
+Wednesday,February,26.3,2.2,73,25.0,Puri Bhaji,Chole Bhature,Egg Curry Roti,71,2.9,4.8,75
+Thursday,January,32.4,1.7,74,13.8,Poha Upma,Chole Bhature,Khichdi Kadhi,80,0.4,3.1,81
+Tuesday,September,31.1,0.0,43,10.3,Poha Upma,Chole Bhature,Khichdi Kadhi,75,0.1,2.7,79
+Thursday,February,27.0,0.4,77,26.2,Aloo Paratha,Paneer Tadka Roti,Roti Green Curry,84,2.2,3.4,80
+Monday,May,25.6,3.2,76,12.5,Poha Upma,Paneer Tadka Roti,Dal Fry Jeera Rice,80,0.8,3.4,82
+Tuesday,May,41.9,0.0,53,13.5,Puri Bhaji,Rajma Chawal,Dal Fry Jeera Rice,85,0.2,4.8,81
+Thursday,October,37.6,0.5,69,25.7,Bread Butter Toast,Paneer Tadka Roti,Khichdi Kadhi,77,2.3,2.8,81
+Tuesday,October,26.7,1.6,58,20.2,Puri Bhaji,Rajma Chawal,Chicken Tikka Rice,74,0.8,2.6,77
+Tuesday,December,40.9,0.2,58,12.5,Masala Dosa,Paneer Tadka Roti,Dal Fry Jeera Rice,75,0.6,3.5,76
+Wednesday,September,25.8,2.5,73,13.6,Aloo Paratha,Chole Bhature,Egg Curry Roti,81,0.4,3.0,77
+Wednesday,November,38.8,0.0,77,2.4,Bread Butter Toast,Paneer Tadka Roti,Roti Green Curry,73,1.6,3.1,75
+Tuesday,January,34.6,0.2,60,27.5,Poha Upma,Rajma Chawal,Chicken Tikka Rice,76,2.4,4.5,73
+Sunday,November,29.0,0.0,61,27.1,Bread Butter Toast,Veg Biryani,Chicken Tikka Rice,57,1.3,4.5,62
+Friday,August,35.4,1.2,48,3.6,Aloo Paratha,Dal Chawal Sabzi,Dal Fry Jeera Rice,79,0.6,3.2,83
+Thursday,April,35.2,1.1,40,4.0,Poha Upma,Chole Bhature,Chicken Tikka Rice,83,1.4,3.3,79
+Monday,July,39.4,0.0,79,27.6,Poha Upma,Dal Chawal Sabzi,Roti Green Curry,76,0.3,4.2,77
+Monday,May,18.5,0.0,62,26.3,Poha Upma,Rajma Chawal,Egg Curry Roti,80,2.7,3.8,78
+Friday,November,30.9,0.0,61,25.1,Idli Sambar,Chole Bhature,Khichdi Kadhi,70,2.7,3.9,70
+Friday,August,29.3,0.0,92,23.4,Idli Sambar,Veg Biryani,Dal Fry Jeera Rice,80,1.2,2.6,81
+Wednesday,September,28.5,0.0,54,10.2,Puri Bhaji,Chole Bhature,Dal Fry Jeera Rice,76,1.8,3.6,77
+Sunday,September,18.1,14.8,45,6.2,Masala Dosa,Rajma Chawal,Egg Curry Roti,71,2.3,4.3,73
+Friday,July,38.8,1.4,88,4.5,Aloo Paratha,Veg Biryani,Dal Fry Jeera Rice,77,1.6,2.6,78
+Monday,March,32.7,0.0,82,6.4,Idli Sambar,Veg Biryani,Egg Curry Roti,81,1.1,3.1,79
+Wednesday,June,37.1,0.0,78,6.9,Puri Bhaji,Veg Biryani,Chicken Tikka Rice,67,2.0,3.1,71
+Monday,February,38.8,0.0,79,11.7,Masala Dosa,Paneer Tadka Roti,Khichdi Kadhi,84,0.8,3.4,81
+Sunday,March,41.0,0.0,59,25.3,Aloo Paratha,Veg Biryani,Egg Curry Roti,63,1.3,3.2,63
+Sunday,August,21.3,0.2,92,20.5,Masala Dosa,Paneer Tadka Roti,Egg Curry Roti,71,4.4,3.7,67
+Thursday,October,36.9,0.0,40,24.1,Poha Upma,Chole Bhature,Chicken Tikka Rice,77,2.5,3.9,77
+Tuesday,March,40.5,0.6,43,14.6,Idli Sambar,Dal Chawal Sabzi,Chicken Tikka Rice,83,2.2,2.8,82
+Thursday,June,36.2,0.0,68,5.6,Bread Butter Toast,Paneer Tadka Roti,Khichdi Kadhi,74,1.1,3.5,74
+Thursday,September,36.7,9.3,59,19.9,Idli Sambar,Rajma Chawal,Roti Green Curry,81,2.4,4.1,78
+Tuesday,April,22.2,2.9,47,24.4,Aloo Paratha,Chole Bhature,Egg Curry Roti,84,1.4,4.2,82
+Monday,August,28.3,0.0,40,8.8,Masala Dosa,Rajma Chawal,Dal Fry Jeera Rice,80,2.2,3.8,76
+Wednesday,August,18.6,0.0,56,26.2,Aloo Paratha,Veg Biryani,Chicken Tikka Rice,71,1.4,3.1,76
+Saturday,July,20.5,8.3,82,5.0,Aloo Paratha,Veg Biryani,Dal Fry Jeera Rice,67,2.5,3.6,69
+Tuesday,May,18.8,0.4,63,9.6,Masala Dosa,Chole Bhature,Khichdi Kadhi,78,1.8,4.1,78
+Tuesday,December,30.6,1.6,90,13.3,Puri Bhaji,Paneer Tadka Roti,Dal Fry Jeera Rice,85,1.9,2.7,81
+Tuesday,July,21.3,0.0,61,26.5,Masala Dosa,Dal Chawal Sabzi,Chicken Tikka Rice,82,2.0,3.7,82
+Wednesday,July,41.9,0.0,55,26.2,Idli Sambar,Chole Bhature,Khichdi Kadhi,79,1.3,4.2,80
+Saturday,February,19.6,5.2,75,5.3,Aloo Paratha,Veg Biryani,Roti Green Curry,62,1.0,4.2,66
+Friday,October,19.3,0.0,65,26.1,Masala Dosa,Chole Bhature,Egg Curry Roti,77,0.3,3.4,78
+Saturday,January,41.5,8.5,81,20.2,Aloo Paratha,Chole Bhature,Dal Fry Jeera Rice,65,5.5,2.8,69
+Saturday,October,23.9,0.0,86,24.8,Idli Sambar,Dal Chawal Sabzi,Dal Fry Jeera Rice,65,6.2,3.1,66
+Thursday,August,38.2,0.0,58,16.2,Bread Butter Toast,Chole Bhature,Chicken Tikka Rice,78,1.3,3.8,78
+Sunday,July,27.5,0.0,68,4.8,Bread Butter Toast,Dal Chawal Sabzi,Roti Green Curry,62,7.7,3.7,60
+Friday,March,24.2,6.3,77,25.2,Masala Dosa,Paneer Tadka Roti,Roti Green Curry,80,1.9,2.8,81
+Sunday,October,30.3,0.0,58,17.7,Masala Dosa,Dal Chawal Sabzi,Chicken Tikka Rice,67,6.6,2.7,66
+Saturday,May,29.9,1.8,41,13.2,Puri Bhaji,Paneer Tadka Roti,Dal Fry Jeera Rice,65,5.2,3.8,65
+Friday,October,29.6,0.0,90,27.4,Aloo Paratha,Rajma Chawal,Roti Green Curry,84,1.1,3.1,81
+Monday,October,25.4,0.0,62,27.6,Masala Dosa,Chole Bhature,Roti Green Curry,72,0.9,3.3,75
+Monday,October,22.7,1.2,73,7.8,Aloo Paratha,Chole Bhature,Dal Fry Jeera Rice,76,1.5,4.7,81
+Wednesday,June,26.1,0.0,68,15.3,Puri Bhaji,Rajma Chawal,Khichdi Kadhi,78,2.8,4.2,80
+Friday,February,26.5,3.9,77,19.7,Puri Bhaji,Chole Bhature,Dal Fry Jeera Rice,80,2.5,3.5,83
+Saturday,January,21.9,5.6,93,27.6,Masala Dosa,Rajma Chawal,Egg Curry Roti,60,5.2,3.1,62
+Sunday,July,19.9,0.0,45,13.7,Poha Upma,Veg Biryani,Dal Fry Jeera Rice,57,2.4,4.5,62
+Thursday,February,24.4,5.0,79,8.7,Masala Dosa,Dal Chawal Sabzi,Dal Fry Jeera Rice,78,0.8,3.2,77
+Saturday,March,27.7,0.0,45,2.4,Masala Dosa,Chole Bhature,Egg Curry Roti,64,2.1,4.4,61
+Thursday,July,33.9,12.4,67,22.7,Bread Butter Toast,Dal Chawal Sabzi,Dal Fry Jeera Rice,74,0.9,4.7,78
+Wednesday,October,27.1,0.0,58,27.5,Bread Butter Toast,Paneer Tadka Roti,Roti Green Curry,78,3.0,4.1,77
+Sunday,July,24.8,0.0,43,5.1,Aloo Paratha,Chole Bhature,Chicken Tikka Rice,73,0.6,3.2,71
+Monday,February,33.3,0.0,59,15.9,Puri Bhaji,Rajma Chawal,Chicken Tikka Rice,80,1.4,4.0,78
+Wednesday,December,32.3,2.6,73,18.4,Masala Dosa,Chole Bhature,Dal Fry Jeera Rice,79,0.8,3.9,80
+Tuesday,November,35.7,0.0,67,6.2,Idli Sambar,Rajma Chawal,Egg Curry Roti,76,1.3,4.1,79
+Sunday,August,34.6,5.0,63,15.7,Masala Dosa,Chole Bhature,Dal Fry Jeera Rice,60,2.3,3.5,58
+Thursday,May,37.9,0.0,54,24.5,Idli Sambar,Rajma Chawal,Roti Green Curry,74,0.3,3.6,78
+Tuesday,July,30.2,0.0,47,9.6,Bread Butter Toast,Chole Bhature,Chicken Tikka Rice,83,0.3,4.2,79
+Saturday,October,40.0,0.0,92,15.9,Poha Upma,Rajma Chawal,Chicken Tikka Rice,76,0.6,4.6,73
+Sunday,November,19.2,0.0,86,26.3,Masala Dosa,Chole Bhature,Khichdi Kadhi,59,3.7,3.7,62
+Monday,April,41.1,1.7,66,27.3,Aloo Paratha,Dal Chawal Sabzi,Chicken Tikka Rice,78,1.1,2.7,75
+Friday,August,27.3,5.8,51,8.2,Bread Butter Toast,Paneer Tadka Roti,Chicken Tikka Rice,74,1.1,4.6,77
+Sunday,February,34.3,0.8,48,22.5,Idli Sambar,Veg Biryani,Dal Fry Jeera Rice,56,3.3,3.9,60
+Sunday,May,37.5,0.0,92,12.6,Aloo Paratha,Paneer Tadka Roti,Egg Curry Roti,60,6.4,4.6,59
+Saturday,June,41.2,0.0,91,6.8,Poha Upma,Veg Biryani,Chicken Tikka Rice,69,5.3,3.7,68
+Friday,March,41.0,0.0,47,2.4,Idli Sambar,Rajma Chawal,Khichdi Kadhi,72,1.7,2.6,74
+Friday,April,30.0,0.0,77,15.1,Masala Dosa,Veg Biryani,Roti Green Curry,78,0.6,4.4,83
+Friday,March,32.7,0.0,92,15.5,Puri Bhaji,Chole Bhature,Dal Fry Jeera Rice,78,1.6,2.6,80
+Saturday,January,21.2,0.0,70,4.3,Aloo Paratha,Dal Chawal Sabzi,Dal Fry Jeera Rice,61,1.1,2.5,59
+Thursday,September,20.4,0.0,73,27.0,Masala Dosa,Paneer Tadka Roti,Roti Green Curry,84,2.4,4.0,82
+Tuesday,July,28.0,0.0,55,13.7,Masala Dosa,Chole Bhature,Dal Fry Jeera Rice,72,0.3,4.2,77
+Friday,January,29.4,0.0,59,15.8,Bread Butter Toast,Rajma Chawal,Dal Fry Jeera Rice,71,2.5,3.6,76
+Tuesday,September,26.0,0.0,71,8.2,Poha Upma,Dal Chawal Sabzi,Chicken Tikka Rice,68,2.9,3.3,70
+Friday,November,25.3,0.0,65,10.0,Poha Upma,Chole Bhature,Egg Curry Roti,71,0.6,3.2,76
+Saturday,August,24.6,0.4,76,8.2,Aloo Paratha,Veg Biryani,Roti Green Curry,76,2.5,4.7,72
+Tuesday,June,22.4,2.8,50,9.3,Idli Sambar,Paneer Tadka Roti,Chicken Tikka Rice,78,0.5,3.0,82
+Friday,October,29.8,0.0,42,20.9,Bread Butter Toast,Rajma Chawal,Dal Fry Jeera Rice,74,2.4,2.8,79
+Thursday,July,20.8,0.0,76,7.2,Puri Bhaji,Chole Bhature,Khichdi Kadhi,83,2.6,2.7,82
+Wednesday,November,29.3,6.7,46,21.7,Bread Butter Toast,Chole Bhature,Chicken Tikka Rice,76,0.6,3.9,79
+Thursday,December,22.2,3.5,77,7.3,Masala Dosa,Rajma Chawal,Khichdi Kadhi,78,2.2,4.0,82
+Friday,April,19.5,0.0,51,16.7,Puri Bhaji,Chole Bhature,Chicken Tikka Rice,76,0.9,2.6,79
+Monday,November,21.8,0.1,88,16.9,Masala Dosa,Chole Bhature,Dal Fry Jeera Rice,77,0.8,3.0,77
+Friday,August,33.4,13.9,78,6.1,Idli Sambar,Chole Bhature,Egg Curry Roti,84,2.1,2.7,82
+Sunday,May,40.1,0.5,92,8.7,Masala Dosa,Chole Bhature,Egg Curry Roti,60,3.1,2.6,62
+Friday,January,37.3,0.0,60,11.7,Idli Sambar,Dal Chawal Sabzi,Chicken Tikka Rice,84,0.7,3.3,82
+Saturday,July,20.5,0.6,94,22.3,Idli Sambar,Paneer Tadka Roti,Dal Fry Jeera Rice,58,7.2,3.8,57
+Friday,July,20.3,0.0,80,21.7,Masala Dosa,Veg Biryani,Dal Fry Jeera Rice,72,0.4,4.3,74
+Monday,March,39.4,0.0,58,5.0,Aloo Paratha,Rajma Chawal,Khichdi Kadhi,77,2.7,3.9,82
+Wednesday,June,21.8,9.2,67,27.5,Poha Upma,Rajma Chawal,Egg Curry Roti,77,2.8,4.0,81
+Tuesday,January,38.1,7.5,74,17.8,Bread Butter Toast,Paneer Tadka Roti,Dal Fry Jeera Rice,77,1.4,3.8,82
+Friday,January,28.4,3.0,47,12.1,Puri Bhaji,Paneer Tadka Roti,Chicken Tikka Rice,83,2.1,4.5,82
+Tuesday,June,36.8,0.0,66,22.2,Bread Butter Toast,Dal Chawal Sabzi,Khichdi Kadhi,78,2.7,2.5,83
+Saturday,April,35.5,0.0,58,7.1,Puri Bhaji,Dal Chawal Sabzi,Chicken Tikka Rice,55,5.1,4.0,55
+Monday,January,19.8,0.0,64,19.4,Idli Sambar,Rajma Chawal,Khichdi Kadhi,81,1.3,3.6,80
+Saturday,July,21.0,0.0,81,25.4,Aloo Paratha,Rajma Chawal,Dal Fry Jeera Rice,71,1.3,4.0,70
+Sunday,June,27.9,1.6,94,6.6,Poha Upma,Chole Bhature,Chicken Tikka Rice,62,1.0,3.7,61
+Thursday,January,31.0,1.5,84,18.4,Idli Sambar,Paneer Tadka Roti,Chicken Tikka Rice,84,0.7,4.0,81
+Saturday,November,30.6,4.4,92,3.4,Bread Butter Toast,Dal Chawal Sabzi,Dal Fry Jeera Rice,65,5.2,3.7,64
+Wednesday,July,24.7,0.0,44,12.8,Poha Upma,Veg Biryani,Roti Green Curry,82,1.4,4.8,80
+Tuesday,January,31.2,4.4,92,19.2,Bread Butter Toast,Dal Chawal Sabzi,Dal Fry Jeera Rice,80,1.2,4.7,79
+Monday,July,28.2,0.0,90,21.8,Bread Butter Toast,Chole Bhature,Egg Curry Roti,75,1.1,3.6,78
+Saturday,September,21.8,7.3,54,17.4,Bread Butter Toast,Rajma Chawal,Chicken Tikka Rice,66,3.3,4.5,67
+Tuesday,November,39.0,6.3,53,19.1,Bread Butter Toast,Dal Chawal Sabzi,Chicken Tikka Rice,84,1.5,4.8,84
+Sunday,November,31.2,28.8,63,10.3,Bread Butter Toast,Veg Biryani,Dal Fry Jeera Rice,71,4.2,3.4,67
+Tuesday,December,26.6,0.0,92,20.9,Masala Dosa,Rajma Chawal,Khichdi Kadhi,77,2.3,3.8,81
+Monday,August,31.0,6.5,74,11.4,Poha Upma,Chole Bhature,Egg Curry Roti,89,2.1,3.4,85
+Sunday,January,27.3,0.0,89,12.7,Masala Dosa,Veg Biryani,Dal Fry Jeera Rice,69,4.1,3.0,68
+Wednesday,September,20.0,7.4,90,24.2,Masala Dosa,Dal Chawal Sabzi,Roti Green Curry,76,0.7,4.4,80
+Monday,November,35.7,3.2,92,19.6,Puri Bhaji,Veg Biryani,Dal Fry Jeera Rice,81,0.3,2.6,84
+Friday,May,31.3,13.0,40,4.0,Poha Upma,Rajma Chawal,Dal Fry Jeera Rice,82,2.4,2.6,82
+Friday,December,30.5,6.0,76,8.3,Masala Dosa,Paneer Tadka Roti,Khichdi Kadhi,83,1.8,3.3,84
+Thursday,March,36.3,2.3,42,21.6,Puri Bhaji,Chole Bhature,Dal Fry Jeera Rice,75,0.5,3.9,75
+Thursday,June,34.7,0.0,61,12.9,Aloo Paratha,Veg Biryani,Egg Curry Roti,86,0.9,4.0,84
+Thursday,August,31.7,14.2,80,4.3,Masala Dosa,Veg Biryani,Khichdi Kadhi,80,1.4,4.2,77
+Wednesday,March,38.5,1.6,46,8.6,Puri Bhaji,Rajma Chawal,Roti Green Curry,76,1.8,3.5,77
+Thursday,November,30.5,0.0,54,23.3,Aloo Paratha,Paneer Tadka Roti,Khichdi Kadhi,79,0.2,2.9,80
+Saturday,February,35.5,0.0,60,15.0,Poha Upma,Dal Chawal Sabzi,Khichdi Kadhi,68,6.6,3.7,64
+Wednesday,December,31.3,2.7,47,19.3,Masala Dosa,Veg Biryani,Chicken Tikka Rice,89,1.3,2.7,86
+Tuesday,June,23.4,6.0,44,14.9,Puri Bhaji,Paneer Tadka Roti,Egg Curry Roti,80,2.6,4.6,77
+Sunday,February,28.5,0.0,63,17.2,Poha Upma,Chole Bhature,Chicken Tikka Rice,61,3.4,4.2,65
+Friday,July,25.3,0.0,91,12.3,Idli Sambar,Veg Biryani,Egg Curry Roti,88,2.5,3.1,86
+Sunday,August,30.6,0.2,54,24.8,Poha Upma,Rajma Chawal,Khichdi Kadhi,62,3.1,3.2,58
+Wednesday,March,19.7,1.2,77,22.9,Masala Dosa,Chole Bhature,Khichdi Kadhi,86,1.2,3.3,82
+Monday,August,35.9,0.0,56,13.9,Idli Sambar,Veg Biryani,Roti Green Curry,75,1.5,3.1,77
+Saturday,February,37.8,2.7,44,13.4,Puri Bhaji,Veg Biryani,Khichdi Kadhi,65,3.7,2.7,65
+Monday,October,36.9,0.0,70,24.3,Aloo Paratha,Paneer Tadka Roti,Chicken Tikka Rice,75,1.7,2.5,76
+Monday,February,39.3,0.0,47,21.9,Idli Sambar,Paneer Tadka Roti,Khichdi Kadhi,83,3.0,4.5,79
+Friday,September,19.8,2.6,55,16.5,Idli Sambar,Paneer Tadka Roti,Roti Green Curry,72,0.6,2.9,77
+Saturday,May,24.8,11.8,93,8.0,Masala Dosa,Paneer Tadka Roti,Dal Fry Jeera Rice,61,2.7,4.5,64
+Tuesday,May,28.9,0.3,59,14.5,Idli Sambar,Paneer Tadka Roti,Egg Curry Roti,77,1.3,4.2,81
+Tuesday,June,21.0,0.0,77,8.8,Aloo Paratha,Dal Chawal Sabzi,Khichdi Kadhi,77,0.3,2.8,81
+Wednesday,December,23.3,0.0,63,22.8,Idli Sambar,Chole Bhature,Dal Fry Jeera Rice,83,1.6,3.8,80
+Monday,April,30.9,4.6,84,22.8,Masala Dosa,Rajma Chawal,Chicken Tikka Rice,78,0.8,4.7,78
+Saturday,February,30.4,0.0,92,9.5,Masala Dosa,Dal Chawal Sabzi,Dal Fry Jeera Rice,64,2.7,3.2,65
+Thursday,May,32.2,6.8,68,10.6,Masala Dosa,Paneer Tadka Roti,Dal Fry Jeera Rice,73,0.8,3.9,75
+Sunday,January,34.6,0.6,67,21.1,Idli Sambar,Rajma Chawal,Chicken Tikka Rice,59,1.8,3.0,56
+Monday,December,24.3,0.0,80,10.7,Masala Dosa,Rajma Chawal,Roti Green Curry,80,0.7,3.6,80
+Tuesday,December,18.7,0.0,44,15.9,Bread Butter Toast,Chole Bhature,Khichdi Kadhi,89,2.7,4.7,86
+Tuesday,April,27.2,0.0,89,23.0,Masala Dosa,Chole Bhature,Chicken Tikka Rice,76,2.6,3.5,79
+Sunday,March,24.3,0.0,52,22.8,Poha Upma,Veg Biryani,Dal Fry Jeera Rice,62,3.3,2.7,64
+Wednesday,December,32.8,0.0,91,3.3,Puri Bhaji,Paneer Tadka Roti,Egg Curry Roti,80,1.2,4.5,77
+Monday,October,25.7,0.0,63,5.3,Poha Upma,Veg Biryani,Dal Fry Jeera Rice,74,1.0,2.6,74
+Monday,January,30.9,0.0,43,9.5,Bread Butter Toast,Dal Chawal Sabzi,Khichdi Kadhi,79,0.8,4.7,83
+Wednesday,August,20.2,0.0,88,18.7,Poha Upma,Dal Chawal Sabzi,Roti Green Curry,75,2.9,4.1,80
+Thursday,February,25.2,0.0,86,11.4,Bread Butter Toast,Paneer Tadka Roti,Chicken Tikka Rice,81,2.0,3.9,81
+Monday,June,25.0,0.0,60,11.2,Idli Sambar,Rajma Chawal,Chicken Tikka Rice,80,2.5,3.7,77
+Sunday,May,28.3,0.0,48,2.8,Aloo Paratha,Dal Chawal Sabzi,Roti Green Curry,68,7.5,3.1,68
+Tuesday,September,28.9,8.6,52,19.2,Poha Upma,Veg Biryani,Dal Fry Jeera Rice,73,2.5,4.3,76
+Sunday,December,34.2,0.0,40,6.3,Masala Dosa,Chole Bhature,Khichdi Kadhi,54,7.2,4.5,57
+Monday,June,35.8,0.0,87,20.2,Puri Bhaji,Rajma Chawal,Egg Curry Roti,79,0.9,4.8,76
+Thursday,September,28.9,12.4,94,6.0,Aloo Paratha,Veg Biryani,Egg Curry Roti,81,0.5,3.9,78
+Saturday,September,34.5,7.9,47,13.6,Puri Bhaji,Dal Chawal Sabzi,Roti Green Curry,58,3.9,4.6,63
+Saturday,January,27.7,0.0,40,9.4,Bread Butter Toast,Dal Chawal Sabzi,Khichdi Kadhi,67,1.9,3.4,63
+Monday,August,28.4,0.4,67,6.7,Idli Sambar,Veg Biryani,Chicken Tikka Rice,79,2.0,4.2,83
+Friday,August,30.6,0.0,42,27.9,Idli Sambar,Paneer Tadka Roti,Egg Curry Roti,81,1.8,3.5,77
+Saturday,February,33.7,0.0,93,10.4,Bread Butter Toast,Paneer Tadka Roti,Chicken Tikka Rice,62,7.4,2.9,63
+Tuesday,November,22.6,0.0,89,22.9,Idli Sambar,Chole Bhature,Dal Fry Jeera Rice,84,1.6,3.8,82
+Wednesday,October,20.0,0.4,66,6.5,Masala Dosa,Chole Bhature,Chicken Tikka Rice,84,2.2,3.8,84
+Monday,September,41.6,7.4,76,14.3,Aloo Paratha,Chole Bhature,Roti Green Curry,82,2.7,4.2,80
+Saturday,May,32.8,0.5,92,25.1,Bread Butter Toast,Rajma Chawal,Khichdi Kadhi,63,1.0,3.2,67
+Tuesday,December,30.0,0.0,73,18.2,Poha Upma,Paneer Tadka Roti,Chicken Tikka Rice,71,1.2,3.1,74
+Wednesday,October,20.3,0.0,94,22.0,Aloo Paratha,Paneer Tadka Roti,Chicken Tikka Rice,82,2.8,3.2,79
+Sunday,February,27.1,0.0,73,16.6,Idli Sambar,Chole Bhature,Roti Green Curry,55,4.6,2.9,58
+Monday,May,36.4,14.7,60,5.5,Masala Dosa,Veg Biryani,Roti Green Curry,68,1.2,3.2,71
+Tuesday,July,29.0,0.0,54,15.2,Bread Butter Toast,Veg Biryani,Egg Curry Roti,77,2.2,2.7,78
+Thursday,July,39.9,1.4,47,9.9,Bread Butter Toast,Paneer Tadka Roti,Dal Fry Jeera Rice,80,0.2,4.5,79
+Monday,November,26.1,0.0,73,24.6,Masala Dosa,Veg Biryani,Chicken Tikka Rice,80,1.8,4.4,79
+Wednesday,May,19.1,9.9,48,23.1,Puri Bhaji,Veg Biryani,Roti Green Curry,75,0.2,4.4,80
+Sunday,October,35.3,0.0,54,7.0,Bread Butter Toast,Dal Chawal Sabzi,Dal Fry Jeera Rice,68,1.5,2.9,70
+Sunday,October,25.7,5.1,41,13.2,Masala Dosa,Veg Biryani,Dal Fry Jeera Rice,73,1.6,2.7,70
+Monday,August,40.8,0.0,58,27.0,Bread Butter Toast,Veg Biryani,Roti Green Curry,87,2.9,3.6,83
+Monday,March,29.7,0.0,75,5.4,Aloo Paratha,Paneer Tadka Roti,Dal Fry Jeera Rice,76,1.3,4.5,78
+Friday,October,30.6,0.0,59,3.7,Puri Bhaji,Chole Bhature,Roti Green Curry,85,0.8,3.2,82
+Monday,September,27.7,0.0,84,21.3,Puri Bhaji,Chole Bhature,Khichdi Kadhi,81,1.6,2.7,84
+Saturday,May,23.6,0.0,54,19.0,Poha Upma,Paneer Tadka Roti,Egg Curry Roti,65,1.6,4.4,70
+Saturday,March,28.9,0.0,78,26.5,Puri Bhaji,Veg Biryani,Khichdi Kadhi,71,1.8,3.6,67
+Tuesday,June,34.9,0.0,54,19.0,Poha Upma,Dal Chawal Sabzi,Chicken Tikka Rice,78,0.5,3.6,78
+Monday,November,22.5,5.6,74,4.6,Masala Dosa,Dal Chawal Sabzi,Roti Green Curry,75,2.1,3.1,78
+Wednesday,June,22.2,4.1,77,10.5,Idli Sambar,Rajma Chawal,Roti Green Curry,77,2.0,3.3,76
+Friday,December,35.7,0.7,41,19.9,Idli Sambar,Chole Bhature,Roti Green Curry,73,1.8,4.1,74
+Wednesday,April,29.9,0.0,43,4.3,Aloo Paratha,Dal Chawal Sabzi,Egg Curry Roti,81,1.5,3.7,84
+Tuesday,November,25.3,0.0,44,20.6,Puri Bhaji,Paneer Tadka Roti,Chicken Tikka Rice,75,2.2,4.0,80
+Tuesday,October,34.0,0.0,65,7.0,Poha Upma,Paneer Tadka Roti,Roti Green Curry,75,2.6,4.6,76
+Monday,January,18.8,7.5,64,21.6,Idli Sambar,Rajma Chawal,Dal Fry Jeera Rice,80,2.7,4.2,81
+Tuesday,March,34.2,0.0,45,9.6,Poha Upma,Veg Biryani,Egg Curry Roti,75,3.0,3.0,78
+Saturday,January,39.9,0.0,60,12.0,Idli Sambar,Paneer Tadka Roti,Khichdi Kadhi,70,4.9,3.9,67
+Monday,April,34.0,0.0,87,13.6,Masala Dosa,Paneer Tadka Roti,Chicken Tikka Rice,73,1.5,4.2,76
+Friday,January,39.1,15.8,88,26.3,Bread Butter Toast,Dal Chawal Sabzi,Dal Fry Jeera Rice,76,0.3,2.9,77
+Friday,January,23.1,3.9,85,5.3,Puri Bhaji,Chole Bhature,Chicken Tikka Rice,75,0.8,4.7,77
+Tuesday,January,40.3,27.0,41,4.9,Masala Dosa,Paneer Tadka Roti,Chicken Tikka Rice,77,2.9,3.1,80
+Tuesday,March,35.4,0.0,86,13.1,Puri Bhaji,Rajma Chawal,Roti Green Curry,68,2.5,3.0,73
+Friday,July,22.7,8.9,56,24.7,Poha Upma,Paneer Tadka Roti,Chicken Tikka Rice,82,0.8,4.2,79
+Saturday,April,34.9,2.6,76,14.1,Puri Bhaji,Dal Chawal Sabzi,Roti Green Curry,68,4.8,2.9,68
+Saturday,March,33.1,0.0,56,12.2,Poha Upma,Veg Biryani,Egg Curry Roti,63,6.1,2.6,68
+Saturday,April,31.9,12.4,78,19.5,Puri Bhaji,Veg Biryani,Roti Green Curry,74,1.2,2.8,71
+Tuesday,November,32.6,0.0,91,3.2,Masala Dosa,Veg Biryani,Chicken Tikka Rice,82,3.0,4.5,78
+Friday,July,34.0,0.0,71,25.5,Masala Dosa,Dal Chawal Sabzi,Roti Green Curry,83,2.4,4.4,83
+Saturday,November,25.1,9.2,66,3.0,Puri Bhaji,Paneer Tadka Roti,Roti Green Curry,66,6.0,4.6,63
+Monday,September,34.3,0.0,48,12.6,Puri Bhaji,Rajma Chawal,Egg Curry Roti,78,1.0,2.6,76
+Wednesday,May,34.0,0.0,57,18.2,Poha Upma,Chole Bhature,Roti Green Curry,78,0.6,4.7,79
+Monday,July,20.9,0.0,77,22.3,Masala Dosa,Dal Chawal Sabzi,Khichdi Kadhi,80,2.3,2.7,78
+Monday,December,35.2,3.2,75,3.0,Puri Bhaji,Dal Chawal Sabzi,Roti Green Curry,78,2.1,3.2,79
+Friday,August,30.7,0.0,71,21.5,Puri Bhaji,Dal Chawal Sabzi,Dal Fry Jeera Rice,82,2.8,3.1,80
+Sunday,April,32.8,0.0,45,22.0,Poha Upma,Rajma Chawal,Roti Green Curry,59,4.9,3.9,61
+Monday,September,29.1,11.4,54,20.5,Puri Bhaji,Dal Chawal Sabzi,Khichdi Kadhi,83,0.2,3.8,81
+Thursday,March,31.3,3.9,86,2.9,Bread Butter Toast,Paneer Tadka Roti,Chicken Tikka Rice,76,1.7,2.7,79
+Wednesday,January,18.1,11.7,47,4.5,Poha Upma,Veg Biryani,Khichdi Kadhi,84,0.6,3.7,82
+Wednesday,August,27.2,0.0,88,16.7,Masala Dosa,Rajma Chawal,Khichdi Kadhi,79,0.5,4.0,80
+Sunday,August,41.8,0.0,64,3.2,Puri Bhaji,Chole Bhature,Chicken Tikka Rice,62,6.6,4.0,59
+Sunday,December,30.5,0.0,76,27.0,Masala Dosa,Chole Bhature,Egg Curry Roti,68,7.9,2.5,65
+Tuesday,June,27.1,0.0,79,15.1,Puri Bhaji,Veg Biryani,Dal Fry Jeera Rice,84,0.8,3.2,80
+Tuesday,March,33.1,2.9,91,18.4,Aloo Paratha,Veg Biryani,Egg Curry Roti,76,2.6,2.5,79
+Friday,May,32.0,0.0,52,13.2,Poha Upma,Rajma Chawal,Egg Curry Roti,82,2.6,3.0,82
+Monday,December,22.5,0.0,84,13.8,Masala Dosa,Dal Chawal Sabzi,Egg Curry Roti,87,0.7,3.4,83
+Monday,March,20.5,0.0,52,15.4,Aloo Paratha,Chole Bhature,Roti Green Curry,76,1.2,4.0,80
+Sunday,July,35.5,0.0,87,26.5,Puri Bhaji,Paneer Tadka Roti,Roti Green Curry,62,4.5,3.4,62
+Sunday,January,23.0,9.1,65,12.7,Poha Upma,Chole Bhature,Dal Fry Jeera Rice,69,6.7,2.7,67
+Wednesday,June,29.9,0.0,40,9.9,Idli Sambar,Paneer Tadka Roti,Khichdi Kadhi,76,0.5,3.6,74
+Wednesday,July,19.3,0.0,40,18.3,Bread Butter Toast,Paneer Tadka Roti,Egg Curry Roti,71,3.0,2.9,75
+Monday,July,32.4,6.9,58,17.9,Bread Butter Toast,Dal Chawal Sabzi,Chicken Tikka Rice,78,0.3,3.5,78
+Wednesday,October,31.2,0.6,85,7.5,Poha Upma,Chole Bhature,Dal Fry Jeera Rice,70,1.6,3.4,75
+Sunday,March,28.6,0.0,86,20.4,Idli Sambar,Paneer Tadka Roti,Dal Fry Jeera Rice,65,6.5,4.5,64
+Thursday,January,41.8,0.0,83,12.3,Poha Upma,Rajma Chawal,Khichdi Kadhi,78,0.1,3.5,77
+Monday,October,20.9,0.0,62,18.8,Aloo Paratha,Paneer Tadka Roti,Khichdi Kadhi,76,2.3,3.2,77
+Monday,April,37.7,4.5,58,8.8,Poha Upma,Dal Chawal Sabzi,Dal Fry Jeera Rice,82,1.2,4.8,80
+Tuesday,June,39.6,0.0,60,5.7,Bread Butter Toast,Paneer Tadka Roti,Chicken Tikka Rice,82,2.4,4.6,80
+Saturday,February,39.1,1.4,81,17.2,Aloo Paratha,Paneer Tadka Roti,Dal Fry Jeera Rice,66,7.5,2.8,62
+Friday,November,20.0,0.0,41,2.9,Puri Bhaji,Veg Biryani,Roti Green Curry,78,2.1,3.4,81
+Thursday,October,25.8,1.8,76,5.6,Bread Butter Toast,Dal Chawal Sabzi,Egg Curry Roti,79,0.4,3.9,83
+Tuesday,March,23.0,0.0,89,4.7,Bread Butter Toast,Chole Bhature,Chicken Tikka Rice,76,0.8,3.3,78
+Sunday,November,19.4,9.3,61,15.6,Masala Dosa,Chole Bhature,Egg Curry Roti,61,6.8,4.6,60
+Thursday,October,27.9,0.0,62,23.5,Puri Bhaji,Dal Chawal Sabzi,Khichdi Kadhi,79,2.4,3.3,76
+Saturday,March,24.5,2.1,93,27.5,Masala Dosa,Chole Bhature,Chicken Tikka Rice,71,2.2,4.1,72
+Wednesday,January,38.9,0.0,47,6.6,Aloo Paratha,Dal Chawal Sabzi,Egg Curry Roti,79,1.1,3.4,76
+Sunday,July,20.9,0.0,61,26.4,Idli Sambar,Chole Bhature,Khichdi Kadhi,65,4.8,3.0,67
+Tuesday,November,28.0,5.8,85,8.5,Masala Dosa,Paneer Tadka Roti,Chicken Tikka Rice,69,2.4,3.4,74
+Tuesday,April,39.4,0.0,69,12.8,Bread Butter Toast,Chole Bhature,Egg Curry Roti,77,1.8,3.1,79
+Saturday,October,30.8,0.4,50,13.5,Idli Sambar,Paneer Tadka Roti,Khichdi Kadhi,62,2.0,4.4,58
+Tuesday,May,34.4,0.0,83,2.5,Bread Butter Toast,Paneer Tadka Roti,Khichdi Kadhi,84,0.8,4.2,81
+Saturday,September,37.1,5.7,94,2.7,Bread Butter Toast,Dal Chawal Sabzi,Khichdi Kadhi,65,4.7,4.6,69
+Saturday,May,37.0,0.0,57,18.0,Puri Bhaji,Rajma Chawal,Chicken Tikka Rice,55,0.8,4.5,58
+Saturday,January,35.0,0.0,56,22.3,Idli Sambar,Rajma Chawal,Khichdi Kadhi,69,7.0,4.0,65
+Saturday,November,34.3,0.0,66,14.8,Idli Sambar,Veg Biryani,Roti Green Curry,65,0.9,3.4,65
+Wednesday,March,41.7,5.3,50,8.2,Aloo Paratha,Veg Biryani,Roti Green Curry,82,1.1,3.0,78
+Sunday,December,21.2,0.6,52,11.1,Puri Bhaji,Dal Chawal Sabzi,Khichdi Kadhi,61,7.5,4.1,66
+Friday,October,33.9,0.0,46,3.5,Masala Dosa,Chole Bhature,Egg Curry Roti,81,1.7,4.8,77
+Tuesday,December,35.4,8.2,48,8.5,Idli Sambar,Chole Bhature,Khichdi Kadhi,84,1.3,3.8,84
+Thursday,August,28.8,4.5,45,16.2,Poha Upma,Dal Chawal Sabzi,Egg Curry Roti,83,2.1,2.6,83
+Wednesday,May,34.0,0.0,61,22.6,Aloo Paratha,Paneer Tadka Roti,Chicken Tikka Rice,80,1.3,3.0,82
+Tuesday,August,22.3,0.0,58,7.5,Bread Butter Toast,Rajma Chawal,Chicken Tikka Rice,83,2.0,4.6,79
+Thursday,May,32.7,2.1,45,3.8,Masala Dosa,Dal Chawal Sabzi,Roti Green Curry,83,1.6,4.0,79
+Sunday,January,27.6,0.0,58,27.4,Poha Upma,Chole Bhature,Khichdi Kadhi,62,7.8,4.4,63
+Tuesday,April,19.7,0.0,82,23.9,Poha Upma,Dal Chawal Sabzi,Chicken Tikka Rice,81,1.5,3.0,80
+Saturday,June,23.2,0.0,51,6.6,Poha Upma,Rajma Chawal,Khichdi Kadhi,68,1.2,3.9,71
+Sunday,March,38.8,9.8,67,5.4,Bread Butter Toast,Veg Biryani,Dal Fry Jeera Rice,68,1.4,2.6,69
+Thursday,May,38.7,0.0,80,18.1,Bread Butter Toast,Dal Chawal Sabzi,Dal Fry Jeera Rice,77,1.5,3.8,75
+Tuesday,May,36.8,4.0,49,14.2,Puri Bhaji,Veg Biryani,Egg Curry Roti,73,2.0,4.5,77
+Saturday,November,38.0,0.0,81,23.7,Poha Upma,Rajma Chawal,Roti Green Curry,63,5.2,3.7,63
+Thursday,February,33.6,9.9,64,3.6,Puri Bhaji,Paneer Tadka Roti,Roti Green Curry,80,1.5,4.2,83
+Tuesday,October,24.7,0.0,48,10.9,Puri Bhaji,Dal Chawal Sabzi,Khichdi Kadhi,80,2.9,2.7,80
+Friday,September,29.3,7.3,93,21.4,Poha Upma,Veg Biryani,Khichdi Kadhi,85,1.4,3.8,83
+Sunday,May,30.0,4.4,69,13.8,Aloo Paratha,Dal Chawal Sabzi,Dal Fry Jeera Rice,55,3.9,2.7,58
+Thursday,October,19.2,4.2,81,5.9,Puri Bhaji,Paneer Tadka Roti,Egg Curry Roti,80,0.5,3.0,80
+Thursday,August,20.8,1.8,47,7.2,Poha Upma,Dal Chawal Sabzi,Roti Green Curry,76,1.3,4.5,78
+Saturday,November,23.0,2.7,49,19.9,Bread Butter Toast,Veg Biryani,Chicken Tikka Rice,57,5.7,4.0,62
+Sunday,September,39.9,1.1,86,7.3,Puri Bhaji,Dal Chawal Sabzi,Roti Green Curry,61,0.6,3.7,64
+Monday,December,24.8,0.0,49,24.7,Puri Bhaji,Chole Bhature,Roti Green Curry,76,2.9,4.3,75
+Saturday,December,40.3,6.4,82,4.4,Puri Bhaji,Veg Biryani,Chicken Tikka Rice,66,7.5,2.9,67
+Wednesday,January,41.5,4.1,49,10.2,Aloo Paratha,Rajma Chawal,Chicken Tikka Rice,80,0.1,4.0,80
+Friday,December,40.0,0.0,50,18.9,Masala Dosa,Dal Chawal Sabzi,Egg Curry Roti,80,1.5,3.1,83
+Sunday,May,33.9,0.0,66,20.1,Poha Upma,Paneer Tadka Roti,Dal Fry Jeera Rice,65,7.3,4.1,62
+Friday,March,31.4,3.9,57,5.5,Aloo Paratha,Dal Chawal Sabzi,Egg Curry Roti,83,2.4,4.2,83
+Wednesday,August,27.6,0.0,84,11.7,Aloo Paratha,Dal Chawal Sabzi,Egg Curry Roti,76,1.3,4.7,81
+Saturday,October,34.3,0.0,72,22.1,Puri Bhaji,Veg Biryani,Dal Fry Jeera Rice,65,1.1,3.5,64
+Thursday,May,25.5,0.0,92,13.5,Bread Butter Toast,Paneer Tadka Roti,Chicken Tikka Rice,76,0.3,3.1,80
+Wednesday,May,22.1,0.0,43,9.0,Poha Upma,Rajma Chawal,Roti Green Curry,84,1.6,2.7,81
+Sunday,March,38.3,0.0,62,25.6,Poha Upma,Dal Chawal Sabzi,Khichdi Kadhi,71,3.3,4.6,68
+Monday,March,18.0,0.0,81,23.4,Aloo Paratha,Veg Biryani,Khichdi Kadhi,83,2.7,3.1,82
+Monday,February,20.5,0.0,92,26.9,Poha Upma,Dal Chawal Sabzi,Dal Fry Jeera Rice,83,3.0,2.7,80
+Tuesday,April,38.0,2.1,54,13.2,Bread Butter Toast,Chole Bhature,Dal Fry Jeera Rice,72,2.8,2.6,75
+Wednesday,November,32.5,2.8,55,8.9,Idli Sambar,Veg Biryani,Chicken Tikka Rice,78,1.8,3.2,77
+Tuesday,December,33.6,16.2,67,4.9,Idli Sambar,Dal Chawal Sabzi,Egg Curry Roti,74,1.4,3.7,78
+Saturday,March,18.9,0.0,70,16.5,Bread Butter Toast,Dal Chawal Sabzi,Chicken Tikka Rice,63,4.3,4.4,59
+Sunday,February,18.8,0.0,67,17.4,Idli Sambar,Paneer Tadka Roti,Khichdi Kadhi,62,4.9,2.8,66
+Thursday,June,20.1,0.0,50,13.1,Idli Sambar,Paneer Tadka Roti,Chicken Tikka Rice,86,0.1,2.5,82
+Tuesday,March,19.5,2.7,65,11.1,Bread Butter Toast,Veg Biryani,Roti Green Curry,85,0.3,3.1,85
+Friday,February,30.1,8.9,80,24.0,Idli Sambar,Paneer Tadka Roti,Dal Fry Jeera Rice,83,2.5,3.1,80
+Friday,February,23.3,0.0,87,20.8,Idli Sambar,Veg Biryani,Egg Curry Roti,79,2.4,3.0,77
+Thursday,August,24.8,0.0,64,5.1,Puri Bhaji,Dal Chawal Sabzi,Egg Curry Roti,81,2.2,2.9,85
+Thursday,September,21.6,0.0,46,4.6,Masala Dosa,Paneer Tadka Roti,Dal Fry Jeera Rice,81,2.6,3.0,81
+Thursday,June,25.9,0.0,67,2.5,Puri Bhaji,Paneer Tadka Roti,Roti Green Curry,81,0.3,3.1,81
+Friday,May,27.6,0.0,54,8.8,Bread Butter Toast,Paneer Tadka Roti,Dal Fry Jeera Rice,83,2.5,3.3,79
+Thursday,October,21.9,0.0,64,2.4,Masala Dosa,Rajma Chawal,Dal Fry Jeera Rice,82,2.7,2.8,78
+Monday,June,33.1,0.0,57,2.6,Aloo Paratha,Chole Bhature,Roti Green Curry,79,1.5,2.9,79
+Tuesday,June,34.5,2.7,82,3.1,Aloo Paratha,Dal Chawal Sabzi,Khichdi Kadhi,79,1.0,2.6,84
+Thursday,May,36.2,0.0,65,8.2,Bread Butter Toast,Chole Bhature,Khichdi Kadhi,82,1.1,3.4,83
+Thursday,August,35.3,0.0,91,3.1,Puri Bhaji,Dal Chawal Sabzi,Dal Fry Jeera Rice,78,1.0,2.6,80
+Thursday,September,20.0,0.0,50,15.3,Bread Butter Toast,Veg Biryani,Dal Fry Jeera Rice,73,2.1,2.6,78
+Thursday,August,23.1,0.0,71,18.2,Poha Upma,Chole Bhature,Chicken Tikka Rice,90,2.5,4.5,90
+Wednesday,May,28.0,0.0,75,11.1,Poha Upma,Dal Chawal Sabzi,Egg Curry Roti,71,2.8,4.0,76
+Monday,January,39.9,0.0,59,2.2,Bread Butter Toast,Paneer Tadka Roti,Roti Green Curry,77,0.6,3.2,75
+Saturday,February,22.2,1.8,72,15.1,Bread Butter Toast,Veg Biryani,Dal Fry Jeera Rice,58,6.2,4.7,60
+Wednesday,November,38.9,0.6,48,13.1,Bread Butter Toast,Chole Bhature,Roti Green Curry,72,2.2,3.7,77
+Thursday,September,18.9,8.8,48,17.5,Bread Butter Toast,Veg Biryani,Egg Curry Roti,84,2.0,2.7,84
+Tuesday,April,20.1,2.5,57,14.0,Aloo Paratha,Veg Biryani,Khichdi Kadhi,79,1.0,3.2,78
+Sunday,March,36.8,1.4,71,9.1,Puri Bhaji,Chole Bhature,Dal Fry Jeera Rice,67,1.1,4.5,71
+Saturday,December,22.6,5.3,92,22.2,Idli Sambar,Dal Chawal Sabzi,Roti Green Curry,66,1.0,4.2,66
+Monday,April,32.3,0.0,44,13.2,Idli Sambar,Paneer Tadka Roti,Egg Curry Roti,79,2.0,4.0,76
+Tuesday,November,32.7,0.0,78,23.7,Masala Dosa,Dal Chawal Sabzi,Roti Green Curry,81,2.1,3.6,84
+Thursday,July,33.0,0.0,92,22.6,Puri Bhaji,Paneer Tadka Roti,Chicken Tikka Rice,82,1.1,2.6,82
+Monday,September,31.9,0.0,71,9.5,Bread Butter Toast,Veg Biryani,Roti Green Curry,76,0.8,4.0,81
+Wednesday,June,20.5,0.2,76,9.1,Poha Upma,Paneer Tadka Roti,Egg Curry Roti,70,2.4,3.2,72
+Saturday,July,21.0,0.0,55,8.4,Poha Upma,Veg Biryani,Dal Fry Jeera Rice,70,2.6,3.5,70
+Friday,December,23.1,0.0,57,27.4,Masala Dosa,Paneer Tadka Roti,Roti Green Curry,82,3.0,2.6,84
+Tuesday,July,20.7,29.3,56,11.3,Bread Butter Toast,Rajma Chawal,Dal Fry Jeera Rice,76,1.4,4.4,74
+Tuesday,June,30.1,0.0,47,25.1,Poha Upma,Dal Chawal Sabzi,Dal Fry Jeera Rice,78,2.4,2.7,82
+Sunday,January,22.9,0.0,65,10.6,Idli Sambar,Chole Bhature,Dal Fry Jeera Rice,65,6.5,2.8,66
+Wednesday,May,27.1,0.0,45,17.6,Puri Bhaji,Veg Biryani,Egg Curry Roti,80,0.5,3.2,83
+Sunday,June,26.4,8.0,63,14.8,Aloo Paratha,Chole Bhature,Dal Fry Jeera Rice,57,5.2,4.3,62
+Saturday,December,41.7,9.9,88,14.2,Idli Sambar,Dal Chawal Sabzi,Roti Green Curry,67,7.6,4.6,66
+Monday,April,35.9,0.0,54,22.2,Idli Sambar,Rajma Chawal,Chicken Tikka Rice,78,2.8,3.6,82
+Tuesday,October,32.3,0.0,49,18.5,Bread Butter Toast,Veg Biryani,Dal Fry Jeera Rice,82,0.5,3.4,86
+Monday,April,22.1,0.0,91,17.7,Idli Sambar,Paneer Tadka Roti,Dal Fry Jeera Rice,86,1.9,3.8,86
+Wednesday,August,23.3,0.0,55,15.9,Idli Sambar,Dal Chawal Sabzi,Dal Fry Jeera Rice,73,0.9,3.1,78
+Wednesday,May,23.6,4.1,40,13.2,Idli Sambar,Chole Bhature,Roti Green Curry,82,2.2,4.0,79
+Wednesday,May,25.5,8.9,65,16.4,Masala Dosa,Paneer Tadka Roti,Roti Green Curry,78,0.5,4.4,80
+Saturday,January,27.9,0.7,88,15.3,Idli Sambar,Dal Chawal Sabzi,Chicken Tikka Rice,60,3.3,4.1,63
+Saturday,May,31.3,0.0,74,17.5,Bread Butter Toast,Rajma Chawal,Khichdi Kadhi,69,6.7,3.1,67
+Wednesday,March,30.0,0.0,64,8.7,Idli Sambar,Chole Bhature,Khichdi Kadhi,88,1.4,2.8,87
+Tuesday,August,26.8,0.0,45,14.9,Puri Bhaji,Paneer Tadka Roti,Chicken Tikka Rice,82,0.8,4.1,83
+Sunday,December,22.5,0.0,69,23.6,Aloo Paratha,Paneer Tadka Roti,Egg Curry Roti,75,0.8,3.0,71
+Wednesday,November,36.6,0.0,64,15.2,Poha Upma,Chole Bhature,Roti Green Curry,80,0.9,2.6,76
+Tuesday,August,30.5,2.4,79,10.7,Aloo Paratha,Veg Biryani,Egg Curry Roti,75,2.8,2.7,77
+Saturday,September,40.4,5.2,73,14.2,Aloo Paratha,Chole Bhature,Dal Fry Jeera Rice,64,7.3,4.7,64
+Friday,June,37.2,0.5,54,14.9,Poha Upma,Rajma Chawal,Dal Fry Jeera Rice,90,1.5,2.9,86
+Saturday,January,27.5,0.0,59,20.5,Idli Sambar,Veg Biryani,Chicken Tikka Rice,72,2.0,3.8,70
+Wednesday,April,23.0,4.8,63,6.7,Idli Sambar,Rajma Chawal,Chicken Tikka Rice,81,1.1,3.3,79
+Sunday,January,28.6,2.4,51,18.4,Puri Bhaji,Chole Bhature,Khichdi Kadhi,53,7.1,4.1,55
+Monday,May,27.5,0.0,70,7.9,Idli Sambar,Chole Bhature,Egg Curry Roti,81,2.5,4.1,78
+Thursday,June,38.5,3.7,85,12.9,Aloo Paratha,Paneer Tadka Roti,Khichdi Kadhi,82,1.8,4.3,78
+Sunday,August,38.7,0.0,82,14.8,Aloo Paratha,Rajma Chawal,Khichdi Kadhi,69,0.2,3.4,71
+Wednesday,November,41.7,4.8,42,24.9,Poha Upma,Dal Chawal Sabzi,Chicken Tikka Rice,81,0.4,3.3,80
+Saturday,July,18.2,0.0,65,14.7,Poha Upma,Chole Bhature,Khichdi Kadhi,71,0.6,3.2,67
+Saturday,January,30.8,0.0,67,6.1,Idli Sambar,Paneer Tadka Roti,Roti Green Curry,58,6.3,2.6,61
+Saturday,June,38.0,0.0,51,18.0,Idli Sambar,Dal Chawal Sabzi,Roti Green Curry,69,0.9,4.3,65
+Friday,February,40.2,0.0,76,28.0,Puri Bhaji,Dal Chawal Sabzi,Egg Curry Roti,76,0.1,3.0,78
+Thursday,September,31.5,0.0,48,22.6,Bread Butter Toast,Rajma Chawal,Egg Curry Roti,79,1.2,2.7,75
+Friday,November,33.9,0.0,77,2.5,Idli Sambar,Paneer Tadka Roti,Egg Curry Roti,80,0.9,3.6,82
+Friday,July,25.6,0.6,49,10.2,Poha Upma,Dal Chawal Sabzi,Khichdi Kadhi,73,0.4,2.7,77
+Sunday,March,25.0,8.2,89,18.2,Idli Sambar,Paneer Tadka Roti,Dal Fry Jeera Rice,66,6.7,3.3,66
+Saturday,May,32.0,0.0,44,14.1,Puri Bhaji,Rajma Chawal,Chicken Tikka Rice,67,7.6,4.7,68
+Sunday,July,18.6,0.0,72,3.6,Poha Upma,Dal Chawal Sabzi,Chicken Tikka Rice,63,4.5,4.1,67
+Saturday,April,25.7,14.0,76,3.9,Aloo Paratha,Dal Chawal Sabzi,Egg Curry Roti,65,3.2,4.8,66
+Tuesday,July,41.1,0.0,52,7.9,Idli Sambar,Rajma Chawal,Khichdi Kadhi,77,1.1,4.0,76
+Thursday,February,19.1,0.0,62,13.7,Aloo Paratha,Rajma Chawal,Roti Green Curry,77,1.0,4.7,81
+Saturday,February,24.0,1.6,67,22.4,Masala Dosa,Paneer Tadka Roti,Roti Green Curry,73,5.2,4.1,69
+Tuesday,April,29.9,2.6,45,3.6,Aloo Paratha,Chole Bhature,Chicken Tikka Rice,86,0.6,2.9,82
+Saturday,May,27.7,0.0,40,6.0,Masala Dosa,Paneer Tadka Roti,Khichdi Kadhi,63,1.5,3.4,67
+Tuesday,January,35.0,0.0,90,3.7,Masala Dosa,Rajma Chawal,Dal Fry Jeera Rice,81,2.3,4.6,83
+Friday,June,19.1,7.4,84,14.8,Masala Dosa,Chole Bhature,Roti Green Curry,71,2.6,3.6,76
+Friday,June,22.0,2.8,55,14.2,Idli Sambar,Dal Chawal Sabzi,Dal Fry Jeera Rice,70,2.4,3.4,73
+Saturday,January,19.1,0.0,48,20.1,Masala Dosa,Rajma Chawal,Dal Fry Jeera Rice,68,1.5,3.2,71
+Monday,August,25.7,0.0,60,19.5,Poha Upma,Veg Biryani,Dal Fry Jeera Rice,80,1.6,3.9,81
+Monday,August,40.9,0.0,78,26.0,Masala Dosa,Dal Chawal Sabzi,Egg Curry Roti,82,0.8,4.6,79
+Wednesday,March,18.9,0.0,80,3.2,Poha Upma,Veg Biryani,Egg Curry Roti,77,1.4,3.4,80
+Friday,March,27.3,0.0,61,17.1,Aloo Paratha,Rajma Chawal,Egg Curry Roti,81,2.8,3.3,78
+Thursday,March,28.8,0.0,56,12.0,Masala Dosa,Veg Biryani,Khichdi Kadhi,76,2.3,3.5,80
+Tuesday,March,39.6,0.0,46,12.4,Idli Sambar,Dal Chawal Sabzi,Egg Curry Roti,78,2.9,4.1,78
+Thursday,January,38.8,0.0,47,7.7,Idli Sambar,Chole Bhature,Dal Fry Jeera Rice,83,0.7,3.6,83
+Thursday,July,22.1,7.4,65,20.6,Puri Bhaji,Dal Chawal Sabzi,Chicken Tikka Rice,84,0.5,3.3,86
+Wednesday,December,25.5,2.8,79,15.3,Idli Sambar,Rajma Chawal,Egg Curry Roti,87,2.5,3.6,84
+Sunday,October,26.4,5.1,91,23.9,Masala Dosa,Paneer Tadka Roti,Chicken Tikka Rice,69,1.1,3.6,65
+Monday,September,31.8,0.8,93,26.6,Masala Dosa,Rajma Chawal,Khichdi Kadhi,77,2.3,4.4,77
+Sunday,March,29.4,1.6,50,19.7,Masala Dosa,Paneer Tadka Roti,Dal Fry Jeera Rice,67,3.7,3.4,63
+Monday,December,20.3,5.2,41,2.0,Idli Sambar,Veg Biryani,Egg Curry Roti,71,0.2,3.7,75
+Monday,April,31.8,5.2,62,26.2,Bread Butter Toast,Veg Biryani,Egg Curry Roti,75,2.2,3.6,78
+Tuesday,April,18.4,0.0,76,2.8,Poha Upma,Chole Bhature,Dal Fry Jeera Rice,77,1.4,4.1,74
+Thursday,October,26.5,7.0,77,7.2,Poha Upma,Dal Chawal Sabzi,Egg Curry Roti,69,2.0,4.5,74
+Sunday,July,35.3,12.4,42,6.0,Idli Sambar,Rajma Chawal,Chicken Tikka Rice,64,5.6,3.4,65
+Thursday,January,37.6,0.0,74,2.2,Aloo Paratha,Veg Biryani,Chicken Tikka Rice,83,2.6,2.6,83
+Tuesday,August,26.1,0.0,62,11.5,Idli Sambar,Paneer Tadka Roti,Chicken Tikka Rice,83,2.0,4.1,80
+Friday,August,18.8,0.0,82,7.3,Idli Sambar,Rajma Chawal,Chicken Tikka Rice,66,2.2,3.1,71
+Saturday,January,37.7,0.0,93,7.6,Poha Upma,Dal Chawal Sabzi,Chicken Tikka Rice,64,2.1,3.1,63
+Thursday,August,37.5,6.5,45,20.7,Idli Sambar,Chole Bhature,Egg Curry Roti,75,1.3,4.5,78
+Tuesday,September,26.2,12.1,74,17.1,Idli Sambar,Rajma Chawal,Roti Green Curry,84,2.8,2.8,84
+Thursday,November,39.8,0.0,69,2.5,Idli Sambar,Dal Chawal Sabzi,Roti Green Curry,74,2.5,3.7,79
+Sunday,April,37.8,0.0,52,2.1,Masala Dosa,Veg Biryani,Dal Fry Jeera Rice,69,6.8,2.7,67
+Friday,August,20.2,0.0,47,25.8,Masala Dosa,Chole Bhature,Roti Green Curry,74,2.4,3.7,76
+Thursday,November,35.8,5.5,52,17.3,Idli Sambar,Rajma Chawal,Chicken Tikka Rice,84,1.2,3.8,84
+Friday,February,20.6,0.7,43,27.4,Masala Dosa,Veg Biryani,Dal Fry Jeera Rice,72,2.9,4.4,72
+Sunday,March,26.5,1.9,90,24.6,Poha Upma,Veg Biryani,Khichdi Kadhi,59,1.4,3.2,59
+Monday,August,35.0,0.0,53,19.9,Aloo Paratha,Chole Bhature,Dal Fry Jeera Rice,78,2.3,4.6,81
+Monday,November,34.9,0.0,66,2.8,Poha Upma,Dal Chawal Sabzi,Dal Fry Jeera Rice,83,0.6,4.7,79
+Sunday,August,32.2,0.0,41,20.3,Puri Bhaji,Paneer Tadka Roti,Khichdi Kadhi,59,7.2,3.0,63
+Monday,October,26.3,1.7,70,4.6,Puri Bhaji,Veg Biryani,Egg Curry Roti,84,1.9,2.5,80
+Wednesday,November,20.8,0.0,41,18.7,Idli Sambar,Dal Chawal Sabzi,Egg Curry Roti,81,1.5,4.1,83
+Friday,June,30.6,0.0,54,3.0,Puri Bhaji,Chole Bhature,Khichdi Kadhi,70,2.6,2.8,70
+Thursday,February,39.6,23.2,50,4.3,Aloo Paratha,Rajma Chawal,Egg Curry Roti,71,1.8,4.0,75
+Monday,December,33.7,0.0,41,17.9,Bread Butter Toast,Veg Biryani,Chicken Tikka Rice,76,2.0,2.6,81
+Sunday,April,26.4,0.0,93,27.1,Masala Dosa,Veg Biryani,Roti Green Curry,79,2.9,3.1,77
+Monday,June,29.6,0.0,69,19.6,Masala Dosa,Veg Biryani,Roti Green Curry,83,0.2,3.8,82
+Monday,February,22.1,0.0,73,4.4,Aloo Paratha,Rajma Chawal,Chicken Tikka Rice,82,2.5,3.1,80
+Saturday,September,34.4,1.3,74,14.0,Aloo Paratha,Paneer Tadka Roti,Egg Curry Roti,62,5.6,3.9,64
+Sunday,August,25.4,0.0,90,24.6,Puri Bhaji,Dal Chawal Sabzi,Egg Curry Roti,70,1.5,4.3,72
+Sunday,May,24.7,0.0,83,12.8,Aloo Paratha,Rajma Chawal,Roti Green Curry,66,6.6,2.8,68
+Tuesday,December,27.9,0.0,41,19.5,Idli Sambar,Chole Bhature,Roti Green Curry,80,1.3,3.7,80
+Wednesday,May,31.0,3.2,64,13.6,Masala Dosa,Paneer Tadka Roti,Roti Green Curry,78,1.1,3.4,76
+Wednesday,March,20.3,0.0,63,6.9,Puri Bhaji,Veg Biryani,Egg Curry Roti,77,2.2,4.1,79
+Friday,November,22.8,0.0,68,6.5,Aloo Paratha,Rajma Chawal,Chicken Tikka Rice,75,0.7,3.5,77
+Wednesday,July,35.5,0.0,67,24.1,Masala Dosa,Dal Chawal Sabzi,Dal Fry Jeera Rice,77,0.9,3.9,81
+Tuesday,March,23.7,10.1,74,14.3,Idli Sambar,Rajma Chawal,Chicken Tikka Rice,72,1.6,2.9,74
+Friday,August,38.7,0.0,83,17.1,Poha Upma,Dal Chawal Sabzi,Chicken Tikka Rice,78,2.2,3.5,80
+Monday,September,21.8,20.7,41,20.2,Idli Sambar,Dal Chawal Sabzi,Egg Curry Roti,77,0.1,3.4,74
+Saturday,June,22.4,0.0,54,9.9,Idli Sambar,Dal Chawal Sabzi,Roti Green Curry,69,0.9,4.6,66
+Thursday,December,32.7,6.3,67,3.1,Poha Upma,Paneer Tadka Roti,Roti Green Curry,73,2.4,4.4,78
+Tuesday,October,27.0,8.8,45,4.8,Puri Bhaji,Paneer Tadka Roti,Khichdi Kadhi,80,1.5,4.0,80
+Wednesday,July,39.0,0.0,42,24.0,Poha Upma,Rajma Chawal,Chicken Tikka Rice,85,2.7,3.1,82
+Thursday,October,28.0,0.0,90,7.0,Puri Bhaji,Rajma Chawal,Chicken Tikka Rice,79,2.4,3.8,84
+Thursday,July,19.4,1.8,70,9.5,Aloo Paratha,Chole Bhature,Dal Fry Jeera Rice,74,0.2,2.7,78
+Thursday,September,24.0,0.0,59,24.3,Bread Butter Toast,Chole Bhature,Roti Green Curry,77,2.6,2.8,81
+Saturday,October,18.2,0.0,69,7.2,Aloo Paratha,Rajma Chawal,Roti Green Curry,67,6.4,3.5,68
+Tuesday,August,20.4,10.6,88,26.9,Idli Sambar,Veg Biryani,Chicken Tikka Rice,82,1.2,4.4,83
+Monday,June,30.1,0.0,94,14.8,Bread Butter Toast,Chole Bhature,Dal Fry Jeera Rice,72,2.4,3.1,75
+Monday,March,35.0,0.0,87,25.2,Poha Upma,Dal Chawal Sabzi,Dal Fry Jeera Rice,76,1.7,3.2,75
+Tuesday,May,31.1,0.0,81,15.1,Idli Sambar,Paneer Tadka Roti,Roti Green Curry,76,2.9,2.9,81
+Sunday,February,24.5,0.0,73,6.0,Aloo Paratha,Dal Chawal Sabzi,Dal Fry Jeera Rice,63,4.7,2.7,65
+Wednesday,July,28.8,2.0,82,23.9,Aloo Paratha,Rajma Chawal,Khichdi Kadhi,78,2.5,4.4,80
+Thursday,November,20.0,3.2,89,11.4,Poha Upma,Chole Bhature,Khichdi Kadhi,77,0.9,2.8,75
+Wednesday,July,27.5,3.2,94,21.0,Poha Upma,Dal Chawal Sabzi,Roti Green Curry,87,1.4,3.3,83
+Friday,June,26.9,0.0,68,15.1,Bread Butter Toast,Dal Chawal Sabzi,Roti Green Curry,87,1.3,2.5,85
+Monday,July,19.3,0.0,74,23.9,Idli Sambar,Rajma Chawal,Khichdi Kadhi,84,1.0,3.6,80
+Thursday,March,29.7,0.0,53,20.1,Puri Bhaji,Rajma Chawal,Dal Fry Jeera Rice,84,0.5,2.6,80
+Wednesday,April,37.1,6.2,56,15.2,Masala Dosa,Dal Chawal Sabzi,Khichdi Kadhi,79,0.2,4.3,81
+Monday,September,25.6,2.8,64,15.3,Idli Sambar,Chole Bhature,Roti Green Curry,81,1.0,3.3,86
+Monday,December,38.7,0.0,91,17.6,Poha Upma,Paneer Tadka Roti,Khichdi Kadhi,73,2.6,2.8,77
+Saturday,December,35.1,0.2,71,24.2,Masala Dosa,Paneer Tadka Roti,Dal Fry Jeera Rice,67,4.9,3.9,64
+Thursday,June,37.8,0.0,49,10.1,Masala Dosa,Rajma Chawal,Dal Fry Jeera Rice,79,0.7,4.5,79
+Sunday,April,29.2,0.0,75,3.9,Poha Upma,Chole Bhature,Roti Green Curry,71,5.8,3.2,68
+Monday,June,32.2,9.3,56,11.2,Puri Bhaji,Rajma Chawal,Egg Curry Roti,79,2.5,4.6,79
+Monday,December,41.8,0.0,70,15.8,Masala Dosa,Paneer Tadka Roti,Roti Green Curry,81,1.7,3.2,81
+Friday,March,33.4,0.0,40,10.7,Bread Butter Toast,Paneer Tadka Roti,Egg Curry Roti,77,1.7,2.7,79
+Tuesday,February,40.8,0.0,57,26.0,Poha Upma,Dal Chawal Sabzi,Dal Fry Jeera Rice,79,1.2,4.5,80
+Thursday,September,40.3,0.7,49,11.3,Masala Dosa,Paneer Tadka Roti,Chicken Tikka Rice,79,1.6,3.2,79
+Thursday,February,31.9,2.6,56,19.7,Aloo Paratha,Paneer Tadka Roti,Roti Green Curry,77,1.3,3.5,82
+Monday,August,24.2,0.0,55,19.9,Aloo Paratha,Rajma Chawal,Roti Green Curry,81,1.2,4.8,82
+Sunday,November,25.6,3.4,73,6.7,Masala Dosa,Chole Bhature,Dal Fry Jeera Rice,59,5.8,3.8,63
+Wednesday,September,33.6,0.0,43,12.8,Idli Sambar,Rajma Chawal,Dal Fry Jeera Rice,83,0.1,2.7,82
+Sunday,December,39.0,1.0,55,14.4,Poha Upma,Dal Chawal Sabzi,Roti Green Curry,56,2.8,3.5,60
+Thursday,June,18.9,0.0,52,23.1,Puri Bhaji,Dal Chawal Sabzi,Egg Curry Roti,79,2.2,2.6,78
+Monday,April,22.4,0.0,49,27.5,Bread Butter Toast,Dal Chawal Sabzi,Khichdi Kadhi,88,2.0,3.9,86
+Sunday,November,36.0,0.0,89,8.3,Bread Butter Toast,Veg Biryani,Egg Curry Roti,74,0.8,3.8,70
+Friday,April,39.3,2.5,60,13.8,Idli Sambar,Paneer Tadka Roti,Roti Green Curry,72,1.2,2.6,76
+Wednesday,August,29.7,0.0,50,6.3,Aloo Paratha,Veg Biryani,Chicken Tikka Rice,82,1.4,4.2,80
+Wednesday,June,39.1,3.0,40,13.1,Masala Dosa,Chole Bhature,Egg Curry Roti,80,0.9,4.0,81
+Wednesday,May,19.1,0.0,91,27.4,Puri Bhaji,Veg Biryani,Khichdi Kadhi,72,1.8,3.1,77
+Monday,June,29.6,0.0,65,20.2,Puri Bhaji,Paneer Tadka Roti,Khichdi Kadhi,86,1.5,3.0,82
+Tuesday,March,25.6,0.0,76,18.4,Idli Sambar,Paneer Tadka Roti,Khichdi Kadhi,81,1.6,4.1,81
+Monday,May,35.0,1.1,76,8.6,Aloo Paratha,Dal Chawal Sabzi,Roti Green Curry,86,1.8,4.0,82
+Sunday,February,19.5,0.0,56,16.0,Aloo Paratha,Dal Chawal Sabzi,Khichdi Kadhi,57,6.7,4.2,60
+Saturday,July,31.9,6.0,51,13.2,Masala Dosa,Paneer Tadka Roti,Chicken Tikka Rice,68,4.3,3.4,68
+Monday,November,22.4,0.0,93,7.2,Poha Upma,Dal Chawal Sabzi,Dal Fry Jeera Rice,80,1.8,3.8,77
+Saturday,June,33.6,0.0,87,14.3,Masala Dosa,Veg Biryani,Khichdi Kadhi,61,5.6,3.8,65
+Sunday,February,29.8,0.6,64,9.5,Puri Bhaji,Veg Biryani,Egg Curry Roti,64,4.0,4.4,68
+Thursday,September,34.2,0.0,84,7.1,Masala Dosa,Dal Chawal Sabzi,Chicken Tikka Rice,79,2.7,2.7,83
+Friday,March,28.8,0.0,45,26.2,Poha Upma,Chole Bhature,Dal Fry Jeera Rice,85,1.8,3.8,85
+Wednesday,December,36.1,1.3,80,8.7,Puri Bhaji,Chole Bhature,Khichdi Kadhi,71,1.5,3.3,76
+Tuesday,March,40.9,5.5,69,22.6,Aloo Paratha,Paneer Tadka Roti,Dal Fry Jeera Rice,82,1.3,2.9,81
+Friday,November,22.3,0.0,84,9.6,Bread Butter Toast,Chole Bhature,Khichdi Kadhi,75,2.0,2.7,79
+Sunday,February,32.3,0.0,41,21.5,Idli Sambar,Chole Bhature,Khichdi Kadhi,67,2.2,4.6,67
+Thursday,April,26.9,0.0,82,13.3,Masala Dosa,Dal Chawal Sabzi,Egg Curry Roti,78,2.0,4.5,79
+Wednesday,July,25.7,0.0,77,3.5,Poha Upma,Chole Bhature,Khichdi Kadhi,82,0.6,4.8,79
+Monday,November,40.7,0.9,62,23.6,Masala Dosa,Chole Bhature,Dal Fry Jeera Rice,77,2.7,3.7,73
+Saturday,July,35.3,0.0,61,12.7,Idli Sambar,Paneer Tadka Roti,Chicken Tikka Rice,64,3.9,3.5,66
+Tuesday,April,34.6,0.0,88,11.3,Bread Butter Toast,Paneer Tadka Roti,Khichdi Kadhi,79,1.9,3.8,82
+Monday,April,32.3,7.0,81,15.5,Bread Butter Toast,Rajma Chawal,Khichdi Kadhi,73,1.8,4.6,78
+Sunday,November,40.8,10.5,77,11.3,Aloo Paratha,Chole Bhature,Dal Fry Jeera Rice,64,4.4,4.5,63
+Friday,October,18.7,0.3,76,3.9,Poha Upma,Dal Chawal Sabzi,Dal Fry Jeera Rice,73,1.5,3.8,78
+Monday,June,35.0,0.0,50,2.4,Masala Dosa,Paneer Tadka Roti,Egg Curry Roti,78,0.3,4.3,80
+Saturday,November,39.3,0.0,46,26.5,Idli Sambar,Veg Biryani,Egg Curry Roti,68,6.3,3.6,66
+Friday,January,38.8,0.0,72,13.7,Idli Sambar,Dal Chawal Sabzi,Chicken Tikka Rice,79,2.2,4.2,79
+Sunday,May,33.6,0.0,44,9.8,Masala Dosa,Rajma Chawal,Roti Green Curry,64,7.7,3.1,67
+Tuesday,April,18.3,0.0,80,7.6,Aloo Paratha,Rajma Chawal,Dal Fry Jeera Rice,72,1.2,3.5,72
+Wednesday,February,20.5,5.8,80,21.1,Bread Butter Toast,Rajma Chawal,Khichdi Kadhi,82,0.1,4.7,80
+Wednesday,April,24.5,7.3,59,21.1,Puri Bhaji,Rajma Chawal,Khichdi Kadhi,86,2.6,3.7,82
+Wednesday,May,28.2,0.0,84,12.5,Puri Bhaji,Dal Chawal Sabzi,Egg Curry Roti,73,2.0,4.7,76
+Wednesday,May,39.3,5.2,89,15.2,Idli Sambar,Chole Bhature,Khichdi Kadhi,79,1.4,3.2,81
+Tuesday,October,34.5,7.3,91,7.6,Bread Butter Toast,Dal Chawal Sabzi,Roti Green Curry,82,2.6,3.6,85
+Sunday,September,18.5,2.3,62,23.6,Puri Bhaji,Rajma Chawal,Dal Fry Jeera Rice,60,6.2,2.6,63
+Saturday,June,31.9,0.0,43,18.3,Masala Dosa,Veg Biryani,Egg Curry Roti,67,4.7,4.1,63
+Sunday,November,41.4,0.2,79,25.5,Puri Bhaji,Chole Bhature,Khichdi Kadhi,67,6.8,2.7,63
+Sunday,April,32.9,0.0,54,23.7,Poha Upma,Dal Chawal Sabzi,Chicken Tikka Rice,62,5.2,3.2,64
+Friday,January,36.1,12.4,82,7.9,Aloo Paratha,Dal Chawal Sabzi,Egg Curry Roti,79,1.0,4.1,78
+Monday,January,19.3,0.0,91,9.4,Puri Bhaji,Chole Bhature,Chicken Tikka Rice,80,2.1,4.3,80
+Sunday,October,34.9,1.6,64,22.7,Idli Sambar,Veg Biryani,Dal Fry Jeera Rice,67,4.0,3.9,67
+Wednesday,June,23.5,0.9,63,6.9,Puri Bhaji,Rajma Chawal,Dal Fry Jeera Rice,78,1.8,3.3,78
+Wednesday,September,39.5,2.0,92,2.6,Poha Upma,Veg Biryani,Dal Fry Jeera Rice,81,0.8,2.6,80
+Thursday,July,23.0,0.0,75,24.9,Puri Bhaji,Chole Bhature,Egg Curry Roti,84,0.5,4.0,83
+Friday,July,19.1,0.0,82,3.8,Masala Dosa,Rajma Chawal,Egg Curry Roti,80,2.8,4.6,76
+Tuesday,February,28.6,4.4,57,16.4,Poha Upma,Chole Bhature,Dal Fry Jeera Rice,84,2.5,2.5,81
+Sunday,September,27.8,0.0,46,3.0,Masala Dosa,Rajma Chawal,Egg Curry Roti,70,2.4,3.2,71
+Sunday,May,29.2,14.5,82,17.7,Puri Bhaji,Rajma Chawal,Roti Green Curry,63,0.6,4.3,67
+Friday,September,40.7,0.0,64,5.0,Bread Butter Toast,Rajma Chawal,Roti Green Curry,75,1.6,2.8,80
+Tuesday,August,21.8,0.0,80,25.8,Masala Dosa,Paneer Tadka Roti,Egg Curry Roti,78,2.9,4.3,81
+Wednesday,December,21.5,0.0,87,12.2,Idli Sambar,Paneer Tadka Roti,Khichdi Kadhi,83,1.3,4.0,79
+Sunday,November,26.9,0.0,80,12.9,Idli Sambar,Dal Chawal Sabzi,Roti Green Curry,68,1.0,4.6,68
+Friday,October,21.2,0.0,50,25.0,Aloo Paratha,Paneer Tadka Roti,Chicken Tikka Rice,80,0.2,3.0,84
+Tuesday,May,26.4,0.0,72,13.3,Masala Dosa,Rajma Chawal,Dal Fry Jeera Rice,78,1.9,2.9,78
+Sunday,October,34.5,0.0,70,5.8,Masala Dosa,Veg Biryani,Khichdi Kadhi,68,4.3,4.4,65
+Thursday,October,20.9,0.0,44,4.6,Idli Sambar,Dal Chawal Sabzi,Khichdi Kadhi,83,2.3,4.6,86
+Friday,March,34.9,0.0,91,15.8,Masala Dosa,Dal Chawal Sabzi,Roti Green Curry,74,2.4,3.9,76
+Friday,February,41.1,10.9,63,10.6,Bread Butter Toast,Dal Chawal Sabzi,Khichdi Kadhi,83,0.7,2.8,84
+Wednesday,January,29.6,11.3,62,2.5,Puri Bhaji,Chole Bhature,Dal Fry Jeera Rice,78,3.0,3.1,80
+Thursday,April,23.5,0.0,70,5.7,Aloo Paratha,Veg Biryani,Roti Green Curry,69,2.1,3.1,74
+Friday,July,33.5,2.6,85,6.0,Idli Sambar,Paneer Tadka Roti,Dal Fry Jeera Rice,80,1.8,3.0,80
+Monday,April,27.3,0.0,71,6.3,Poha Upma,Chole Bhature,Egg Curry Roti,77,1.5,3.1,79
+Friday,July,41.2,0.7,59,27.1,Poha Upma,Veg Biryani,Chicken Tikka Rice,79,2.7,3.1,81
+Saturday,October,39.2,0.0,58,10.7,Poha Upma,Chole Bhature,Chicken Tikka Rice,68,0.6,4.5,70
+Wednesday,July,37.3,13.7,62,20.4,Masala Dosa,Chole Bhature,Roti Green Curry,78,1.7,3.3,76
+Monday,January,41.3,0.0,89,5.3,Poha Upma,Chole Bhature,Egg Curry Roti,78,1.8,4.0,77
+Sunday,October,28.8,0.0,44,14.0,Aloo Paratha,Chole Bhature,Roti Green Curry,76,2.5,3.7,73
+Saturday,July,30.6,0.0,58,14.7,Puri Bhaji,Veg Biryani,Roti Green Curry,62,0.8,3.1,62
+Wednesday,October,18.1,0.0,45,21.6,Masala Dosa,Veg Biryani,Khichdi Kadhi,81,2.8,3.2,78
+Saturday,April,25.3,0.0,67,2.6,Puri Bhaji,Rajma Chawal,Chicken Tikka Rice,66,4.4,4.0,68
+Friday,May,39.6,0.0,56,24.7,Aloo Paratha,Rajma Chawal,Chicken Tikka Rice,75,1.2,2.8,76
+Monday,November,19.3,11.1,74,26.4,Poha Upma,Dal Chawal Sabzi,Khichdi Kadhi,86,0.7,4.6,82
+Monday,March,23.2,1.8,61,20.2,Idli Sambar,Veg Biryani,Egg Curry Roti,88,2.3,4.3,84
+Monday,April,28.8,0.0,55,4.0,Poha Upma,Veg Biryani,Dal Fry Jeera Rice,88,1.9,4.5,85
+Friday,October,27.6,8.6,63,20.9,Masala Dosa,Chole Bhature,Egg Curry Roti,74,1.8,4.1,77
+Sunday,February,36.3,0.0,42,6.4,Poha Upma,Dal Chawal Sabzi,Roti Green Curry,67,6.5,3.2,63
+Friday,December,26.5,0.0,85,19.9,Puri Bhaji,Veg Biryani,Dal Fry Jeera Rice,76,1.3,2.8,80
+Saturday,July,20.8,0.0,60,4.1,Masala Dosa,Chole Bhature,Roti Green Curry,68,1.4,4.2,65
+Thursday,September,20.4,0.0,80,6.5,Puri Bhaji,Paneer Tadka Roti,Chicken Tikka Rice,78,0.5,4.5,79
+Monday,July,20.6,0.0,48,18.5,Aloo Paratha,Paneer Tadka Roti,Chicken Tikka Rice,74,1.8,2.7,79
+Thursday,March,20.8,2.6,51,12.5,Masala Dosa,Chole Bhature,Dal Fry Jeera Rice,74,0.3,3.1,77
+Thursday,February,41.4,0.0,85,16.6,Idli Sambar,Rajma Chawal,Chicken Tikka Rice,77,2.1,3.6,78
+Tuesday,May,37.3,0.0,88,23.7,Puri Bhaji,Rajma Chawal,Egg Curry Roti,78,2.7,3.5,78
+Sunday,July,20.7,0.0,87,21.2,Idli Sambar,Veg Biryani,Roti Green Curry,70,2.5,3.7,70
+Saturday,February,30.2,0.6,71,8.5,Idli Sambar,Rajma Chawal,Roti Green Curry,78,0.8,4.1,74
+Wednesday,August,38.9,0.0,42,6.2,Bread Butter Toast,Paneer Tadka Roti,Dal Fry Jeera Rice,78,2.1,3.8,80
+Thursday,September,20.3,6.7,76,7.9,Idli Sambar,Dal Chawal Sabzi,Roti Green Curry,87,2.1,2.5,83
+Friday,April,36.7,0.0,55,19.3,Puri Bhaji,Paneer Tadka Roti,Dal Fry Jeera Rice,81,0.2,4.2,79
+Thursday,June,41.2,1.1,48,8.3,Masala Dosa,Dal Chawal Sabzi,Roti Green Curry,75,2.0,3.0,77
+Thursday,July,22.5,0.7,53,8.3,Bread Butter Toast,Chole Bhature,Chicken Tikka Rice,79,2.8,3.6,83
+Sunday,October,38.9,9.3,54,4.5,Masala Dosa,Veg Biryani,Roti Green Curry,62,2.9,4.8,62
+Sunday,August,24.9,10.6,81,16.7,Puri Bhaji,Paneer Tadka Roti,Khichdi Kadhi,66,7.3,4.3,63
+Monday,February,37.4,7.8,47,4.1,Puri Bhaji,Chole Bhature,Dal Fry Jeera Rice,78,1.5,3.9,79
+Thursday,September,23.8,0.0,88,9.1,Masala Dosa,Veg Biryani,Egg Curry Roti,78,0.6,3.6,80
+Sunday,November,38.4,15.9,64,18.8,Poha Upma,Dal Chawal Sabzi,Khichdi Kadhi,59,4.1,2.8,62
+Wednesday,December,37.6,5.4,68,4.5,Masala Dosa,Rajma Chawal,Khichdi Kadhi,80,1.5,4.8,82
+Friday,August,18.3,4.6,51,25.9,Masala Dosa,Chole Bhature,Egg Curry Roti,81,2.5,2.8,80
+Friday,June,23.5,0.0,93,9.7,Masala Dosa,Veg Biryani,Chicken Tikka Rice,73,2.5,4.1,78
+Sunday,November,22.5,2.7,45,14.6,Bread Butter Toast,Paneer Tadka Roti,Khichdi Kadhi,66,3.0,3.1,63
+Friday,December,21.3,0.0,77,2.5,Bread Butter Toast,Rajma Chawal,Dal Fry Jeera Rice,82,1.1,4.4,84
+Tuesday,April,34.9,0.0,42,6.1,Poha Upma,Veg Biryani,Egg Curry Roti,82,0.8,4.6,80
+Tuesday,January,20.3,0.0,61,18.2,Poha Upma,Veg Biryani,Egg Curry Roti,87,2.8,3.4,84
+Friday,May,24.6,0.0,40,15.8,Bread Butter Toast,Dal Chawal Sabzi,Dal Fry Jeera Rice,78,0.2,3.9,77
+Sunday,May,34.4,6.1,62,2.8,Bread Butter Toast,Chole Bhature,Roti Green Curry,66,5.6,3.7,65
+Monday,October,30.7,2.8,87,13.7,Poha Upma,Dal Chawal Sabzi,Khichdi Kadhi,81,0.9,4.6,78
+Monday,July,38.1,0.0,43,12.4,Masala Dosa,Dal Chawal Sabzi,Dal Fry Jeera Rice,81,0.3,3.2,81
+Thursday,February,31.6,0.0,57,15.1,Bread Butter Toast,Veg Biryani,Egg Curry Roti,77,2.3,3.8,80
+Sunday,February,22.7,3.1,83,2.6,Bread Butter Toast,Rajma Chawal,Egg Curry Roti,74,0.8,4.8,71
+Sunday,August,25.9,7.1,81,15.3,Poha Upma,Paneer Tadka Roti,Roti Green Curry,57,4.8,3.0,60
+Monday,March,40.3,0.0,58,27.4,Bread Butter Toast,Veg Biryani,Chicken Tikka Rice,81,0.5,2.7,81
+Wednesday,September,27.7,1.0,70,2.6,Bread Butter Toast,Chole Bhature,Roti Green Curry,76,0.3,3.9,79
+Friday,October,24.1,5.0,82,10.4,Poha Upma,Chole Bhature,Dal Fry Jeera Rice,81,1.1,2.9,78
+Monday,April,19.2,0.0,46,2.8,Bread Butter Toast,Chole Bhature,Khichdi Kadhi,79,1.3,4.1,82
+Monday,April,36.6,6.1,89,8.1,Masala Dosa,Rajma Chawal,Chicken Tikka Rice,76,1.1,4.3,78
+Saturday,May,32.3,2.0,90,9.0,Puri Bhaji,Rajma Chawal,Dal Fry Jeera Rice,60,1.4,3.0,64
+Wednesday,June,26.3,4.7,45,24.2,Puri Bhaji,Chole Bhature,Chicken Tikka Rice,87,0.6,3.5,83
+Monday,March,33.6,0.0,40,5.4,Bread Butter Toast,Veg Biryani,Dal Fry Jeera Rice,74,0.3,4.6,78
+Tuesday,June,21.7,0.0,74,16.2,Aloo Paratha,Dal Chawal Sabzi,Egg Curry Roti,76,2.3,3.9,76
+Monday,June,26.7,0.0,88,3.0,Idli Sambar,Chole Bhature,Khichdi Kadhi,81,2.4,4.1,80
+Sunday,April,38.3,0.0,73,13.4,Poha Upma,Rajma Chawal,Roti Green Curry,69,4.3,4.1,68
+Sunday,May,32.2,0.0,91,17.3,Aloo Paratha,Paneer Tadka Roti,Dal Fry Jeera Rice,60,6.2,2.9,61
+Monday,July,38.7,11.2,82,20.7,Bread Butter Toast,Chole Bhature,Khichdi Kadhi,83,1.9,3.7,81
+Friday,February,18.1,4.0,58,6.4,Bread Butter Toast,Chole Bhature,Roti Green Curry,81,1.5,3.6,79
+Monday,September,24.5,18.9,46,7.5,Puri Bhaji,Rajma Chawal,Egg Curry Roti,84,1.6,3.9,84
+Tuesday,August,18.9,0.5,77,5.5,Puri Bhaji,Veg Biryani,Roti Green Curry,76,2.4,2.5,81
+Friday,January,32.3,0.0,70,15.9,Aloo Paratha,Veg Biryani,Egg Curry Roti,87,1.4,4.0,83
+Thursday,April,28.7,0.0,49,22.6,Idli Sambar,Chole Bhature,Chicken Tikka Rice,83,1.2,4.4,81
+Wednesday,February,41.8,0.0,62,9.6,Aloo Paratha,Chole Bhature,Roti Green Curry,80,2.7,3.3,83
+Tuesday,October,33.0,1.2,94,20.3,Poha Upma,Chole Bhature,Khichdi Kadhi,81,2.7,2.7,81
+Tuesday,November,30.1,0.9,79,18.0,Masala Dosa,Dal Chawal Sabzi,Dal Fry Jeera Rice,83,0.1,3.5,79
+Sunday,February,28.4,0.8,72,7.2,Aloo Paratha,Rajma Chawal,Chicken Tikka Rice,68,4.3,4.0,66
+Sunday,March,21.6,2.0,58,19.2,Poha Upma,Chole Bhature,Roti Green Curry,70,0.9,2.9,67
+Tuesday,July,39.8,0.0,70,26.8,Aloo Paratha,Chole Bhature,Khichdi Kadhi,83,2.3,3.6,79
+Monday,April,33.2,0.0,73,6.0,Idli Sambar,Veg Biryani,Roti Green Curry,86,2.9,3.1,84
+Friday,March,26.9,0.0,90,21.5,Bread Butter Toast,Paneer Tadka Roti,Khichdi Kadhi,78,1.7,4.1,78
+Monday,December,36.1,0.0,92,8.8,Masala Dosa,Rajma Chawal,Khichdi Kadhi,84,2.6,2.8,80
+Sunday,December,32.4,0.0,69,8.0,Puri Bhaji,Veg Biryani,Khichdi Kadhi,61,0.8,4.0,64
+Friday,March,41.3,5.3,88,7.6,Aloo Paratha,Chole Bhature,Roti Green Curry,76,1.8,2.7,80
+Monday,February,26.8,2.8,48,14.1,Poha Upma,Veg Biryani,Chicken Tikka Rice,77,3.0,3.6,75
+Tuesday,May,39.3,0.0,53,26.8,Aloo Paratha,Chole Bhature,Dal Fry Jeera Rice,85,1.6,4.4,81
+Friday,January,32.8,0.0,71,23.5,Puri Bhaji,Chole Bhature,Egg Curry Roti,76,1.1,4.5,78
+Monday,February,38.9,13.1,83,18.7,Poha Upma,Chole Bhature,Roti Green Curry,80,2.3,2.8,82
+Sunday,September,23.1,0.0,87,19.6,Bread Butter Toast,Paneer Tadka Roti,Roti Green Curry,59,3.4,3.0,63
+Tuesday,February,19.6,1.2,61,3.7,Idli Sambar,Dal Chawal Sabzi,Dal Fry Jeera Rice,81,0.7,3.2,79
+Tuesday,February,21.2,0.0,94,19.0,Puri Bhaji,Paneer Tadka Roti,Egg Curry Roti,75,2.0,4.2,76
+Saturday,July,23.4,0.0,53,4.1,Masala Dosa,Rajma Chawal,Dal Fry Jeera Rice,63,7.9,2.9,62
+Sunday,May,19.7,5.0,88,10.9,Bread Butter Toast,Rajma Chawal,Khichdi Kadhi,68,1.9,3.4,65
+Monday,October,31.6,0.0,61,7.0,Puri Bhaji,Paneer Tadka Roti,Egg Curry Roti,76,1.9,4.5,77
+Thursday,June,24.2,0.0,73,19.7,Aloo Paratha,Paneer Tadka Roti,Roti Green Curry,81,1.9,3.7,82
+Wednesday,November,32.1,1.4,77,25.5,Aloo Paratha,Paneer Tadka Roti,Chicken Tikka Rice,70,1.8,3.2,75
+Saturday,September,31.1,0.0,57,15.1,Puri Bhaji,Veg Biryani,Khichdi Kadhi,59,1.1,2.6,60
+Sunday,December,38.2,0.4,74,19.8,Poha Upma,Dal Chawal Sabzi,Khichdi Kadhi,71,3.4,3.0,67
+Sunday,October,33.0,0.0,55,14.3,Aloo Paratha,Veg Biryani,Khichdi Kadhi,65,3.9,3.6,62
+Monday,January,39.5,11.1,54,2.9,Bread Butter Toast,Veg Biryani,Egg Curry Roti,81,0.3,4.6,79
+Thursday,May,21.7,6.6,87,26.5,Poha Upma,Paneer Tadka Roti,Chicken Tikka Rice,78,1.8,2.7,79
+Saturday,March,29.8,0.0,43,16.0,Aloo Paratha,Dal Chawal Sabzi,Chicken Tikka Rice,62,5.9,4.2,61
+Monday,October,41.4,0.0,48,3.4,Puri Bhaji,Dal Chawal Sabzi,Chicken Tikka Rice,84,0.2,3.0,81
+Friday,January,40.6,9.3,90,15.1,Aloo Paratha,Chole Bhature,Khichdi Kadhi,81,2.0,4.2,80
+Wednesday,June,26.3,7.1,57,4.7,Puri Bhaji,Chole Bhature,Roti Green Curry,83,0.5,2.6,83
+Friday,May,23.9,6.9,61,7.5,Idli Sambar,Paneer Tadka Roti,Khichdi Kadhi,74,0.8,2.9,77
+Tuesday,June,31.4,0.6,53,5.6,Masala Dosa,Paneer Tadka Roti,Khichdi Kadhi,75,2.2,4.2,80
+Tuesday,March,39.0,0.0,83,13.9,Bread Butter Toast,Chole Bhature,Dal Fry Jeera Rice,73,2.4,2.8,78
+Friday,January,30.6,0.0,86,17.9,Puri Bhaji,Paneer Tadka Roti,Egg Curry Roti,78,0.5,4.6,81
+Monday,December,25.9,0.0,61,16.5,Masala Dosa,Veg Biryani,Khichdi Kadhi,77,0.8,4.6,80
+Friday,March,20.0,0.0,41,16.6,Idli Sambar,Chole Bhature,Roti Green Curry,79,0.6,4.6,78
+Monday,September,21.3,0.0,42,19.1,Idli Sambar,Dal Chawal Sabzi,Egg Curry Roti,81,1.6,4.0,79
+Monday,April,32.9,0.0,73,21.8,Poha Upma,Paneer Tadka Roti,Egg Curry Roti,78,1.8,4.7,77
+Wednesday,June,27.0,0.0,63,6.6,Puri Bhaji,Dal Chawal Sabzi,Chicken Tikka Rice,74,0.5,2.8,75
+Thursday,May,31.0,0.2,94,13.8,Aloo Paratha,Chole Bhature,Dal Fry Jeera Rice,76,0.9,2.9,81
+Wednesday,July,27.0,0.0,63,14.3,Bread Butter Toast,Dal Chawal Sabzi,Chicken Tikka Rice,80,1.8,4.4,79
+Friday,June,20.6,0.0,81,17.9,Aloo Paratha,Veg Biryani,Dal Fry Jeera Rice,78,1.3,2.5,80
+Wednesday,October,21.5,0.0,47,17.9,Idli Sambar,Paneer Tadka Roti,Chicken Tikka Rice,77,1.2,2.8,79
+Sunday,October,26.5,0.0,60,12.9,Aloo Paratha,Paneer Tadka Roti,Khichdi Kadhi,72,2.3,3.0,68
+Wednesday,September,41.3,3.9,92,6.0,Masala Dosa,Paneer Tadka Roti,Roti Green Curry,82,2.6,4.3,81
+Wednesday,November,26.0,0.0,84,18.2,Poha Upma,Veg Biryani,Chicken Tikka Rice,77,0.5,3.3,80
+Thursday,August,26.2,0.0,72,19.3,Bread Butter Toast,Rajma Chawal,Roti Green Curry,76,0.3,3.8,81
+Thursday,November,28.4,5.5,70,7.3,Aloo Paratha,Chole Bhature,Roti Green Curry,74,2.9,4.3,78
+Wednesday,January,33.8,0.0,49,27.4,Aloo Paratha,Rajma Chawal,Chicken Tikka Rice,74,2.6,3.5,79
+Sunday,April,18.3,1.6,42,24.0,Aloo Paratha,Dal Chawal Sabzi,Roti Green Curry,65,4.6,3.8,67
+Thursday,September,41.9,0.0,86,15.0,Aloo Paratha,Rajma Chawal,Khichdi Kadhi,82,2.2,2.6,82
+Friday,February,24.0,2.6,40,5.3,Aloo Paratha,Veg Biryani,Roti Green Curry,80,1.2,4.5,80
+Friday,June,19.6,0.0,89,20.3,Aloo Paratha,Veg Biryani,Roti Green Curry,87,2.5,4.2,84
+Tuesday,December,31.8,0.0,73,2.8,Puri Bhaji,Paneer Tadka Roti,Egg Curry Roti,81,3.0,3.5,81
+Friday,August,19.2,0.0,75,5.5,Bread Butter Toast,Rajma Chawal,Dal Fry Jeera Rice,79,1.6,4.5,84
+Saturday,December,33.2,0.9,74,3.4,Idli Sambar,Chole Bhature,Khichdi Kadhi,68,3.2,3.7,68
+Tuesday,September,20.8,0.0,82,16.1,Bread Butter Toast,Rajma Chawal,Roti Green Curry,75,0.6,3.4,79
+Tuesday,April,41.8,0.0,71,18.0,Poha Upma,Paneer Tadka Roti,Egg Curry Roti,77,2.6,3.3,78
+Saturday,December,41.0,9.4,69,12.8,Puri Bhaji,Chole Bhature,Chicken Tikka Rice,61,2.3,4.7,65
+Wednesday,December,24.1,0.6,77,8.8,Bread Butter Toast,Veg Biryani,Roti Green Curry,79,2.2,2.6,81
+Sunday,January,31.1,0.0,93,11.5,Puri Bhaji,Paneer Tadka Roti,Roti Green Curry,74,2.9,2.9,74
+Saturday,May,40.3,0.0,94,17.1,Masala Dosa,Rajma Chawal,Egg Curry Roti,65,6.5,4.1,65
+Sunday,April,35.0,1.3,82,4.3,Aloo Paratha,Dal Chawal Sabzi,Dal Fry Jeera Rice,52,1.9,3.4,57
+Thursday,February,40.8,8.5,75,23.8,Aloo Paratha,Paneer Tadka Roti,Chicken Tikka Rice,82,0.4,2.9,85
+Thursday,June,32.3,0.0,53,27.4,Poha Upma,Paneer Tadka Roti,Khichdi Kadhi,81,2.3,4.6,79
+Friday,August,41.5,0.0,59,13.1,Aloo Paratha,Dal Chawal Sabzi,Roti Green Curry,73,2.4,4.1,76
+Friday,January,23.4,0.0,45,13.3,Masala Dosa,Dal Chawal Sabzi,Egg Curry Roti,82,2.0,3.3,84
+Sunday,March,40.4,0.0,78,25.7,Idli Sambar,Paneer Tadka Roti,Chicken Tikka Rice,64,4.8,4.5,60
+Tuesday,February,24.3,5.7,59,23.0,Poha Upma,Dal Chawal Sabzi,Dal Fry Jeera Rice,82,2.9,3.1,81
+Wednesday,April,35.4,4.7,79,21.8,Poha Upma,Paneer Tadka Roti,Egg Curry Roti,72,1.5,2.5,76
+Saturday,August,24.3,6.1,56,21.7,Poha Upma,Chole Bhature,Roti Green Curry,62,1.9,3.2,58
+Thursday,October,34.6,0.0,63,12.1,Idli Sambar,Dal Chawal Sabzi,Dal Fry Jeera Rice,81,1.1,3.9,81
+Monday,January,38.8,2.0,43,13.0,Aloo Paratha,Rajma Chawal,Khichdi Kadhi,80,0.3,3.3,80
+Thursday,February,21.7,2.2,71,4.6,Idli Sambar,Chole Bhature,Khichdi Kadhi,77,2.1,3.9,79
+Monday,September,22.6,0.2,65,10.2,Poha Upma,Chole Bhature,Roti Green Curry,79,2.9,4.1,80
+Tuesday,February,39.5,0.0,52,12.7,Poha Upma,Chole Bhature,Egg Curry Roti,84,2.5,3.2,80
+Monday,November,34.2,1.4,78,27.4,Idli Sambar,Veg Biryani,Dal Fry Jeera Rice,78,1.3,2.7,83
+Friday,November,28.5,0.6,54,15.2,Poha Upma,Chole Bhature,Egg Curry Roti,72,2.2,4.4,76
+Sunday,June,41.0,0.0,80,26.9,Bread Butter Toast,Paneer Tadka Roti,Chicken Tikka Rice,62,3.6,3.3,60
+Wednesday,July,40.4,0.8,89,6.5,Puri Bhaji,Dal Chawal Sabzi,Roti Green Curry,82,2.6,3.9,80
+Sunday,March,35.9,0.0,91,23.4,Masala Dosa,Chole Bhature,Roti Green Curry,66,6.0,3.0,65
+Tuesday,May,31.7,5.7,88,8.1,Bread Butter Toast,Paneer Tadka Roti,Egg Curry Roti,77,1.0,2.9,78
+Friday,May,33.3,0.0,45,7.1,Idli Sambar,Dal Chawal Sabzi,Chicken Tikka Rice,82,0.9,3.8,79
+Wednesday,September,40.3,0.0,58,16.9,Poha Upma,Veg Biryani,Khichdi Kadhi,75,0.6,3.3,80
+Friday,October,40.5,12.7,56,8.4,Idli Sambar,Veg Biryani,Roti Green Curry,78,2.5,4.1,74
+Friday,March,25.1,0.0,60,19.3,Masala Dosa,Dal Chawal Sabzi,Khichdi Kadhi,75,1.3,4.5,76
+Tuesday,February,18.8,5.3,80,2.1,Puri Bhaji,Dal Chawal Sabzi,Chicken Tikka Rice,80,1.9,3.1,77
+Tuesday,September,39.6,5.0,82,4.2,Masala Dosa,Chole Bhature,Chicken Tikka Rice,72,2.6,3.5,74
+Tuesday,November,33.7,2.3,62,16.4,Aloo Paratha,Dal Chawal Sabzi,Egg Curry Roti,82,2.3,2.9,78
+Sunday,September,18.2,5.4,60,14.2,Masala Dosa,Paneer Tadka Roti,Roti Green Curry,64,7.6,4.1,69
+Tuesday,April,18.9,0.0,90,13.9,Puri Bhaji,Rajma Chawal,Khichdi Kadhi,83,2.3,4.1,80
+Sunday,December,35.5,0.0,79,12.0,Masala Dosa,Dal Chawal Sabzi,Egg Curry Roti,59,4.4,4.3,57
+Saturday,January,27.3,0.0,56,22.0,Puri Bhaji,Rajma Chawal,Chicken Tikka Rice,62,0.6,4.2,62
+Sunday,May,37.6,0.0,83,18.8,Aloo Paratha,Paneer Tadka Roti,Khichdi Kadhi,66,5.4,2.9,67
+Monday,February,30.7,1.3,64,6.0,Puri Bhaji,Paneer Tadka Roti,Roti Green Curry,78,1.6,3.3,76
+Friday,September,39.0,0.0,50,22.6,Poha Upma,Chole Bhature,Khichdi Kadhi,77,0.8,4.3,80
+Wednesday,September,38.5,0.0,54,13.6,Idli Sambar,Paneer Tadka Roti,Roti Green Curry,80,0.4,3.4,80
+Friday,March,23.4,0.9,43,5.1,Puri Bhaji,Chole Bhature,Chicken Tikka Rice,76,1.5,4.6,76
+Wednesday,November,35.9,0.2,70,14.1,Poha Upma,Veg Biryani,Chicken Tikka Rice,81,1.3,4.7,83
+Wednesday,October,21.1,4.1,87,23.6,Poha Upma,Paneer Tadka Roti,Khichdi Kadhi,83,3.0,2.7,79
+Saturday,May,38.8,0.0,60,8.8,Masala Dosa,Veg Biryani,Chicken Tikka Rice,65,2.0,2.6,70
+Tuesday,November,35.2,0.0,91,25.4,Masala Dosa,Dal Chawal Sabzi,Roti Green Curry,82,0.5,4.1,81
+Thursday,March,20.2,0.0,43,11.3,Bread Butter Toast,Dal Chawal Sabzi,Chicken Tikka Rice,81,1.3,3.6,80
+Tuesday,July,28.9,9.5,47,2.8,Poha Upma,Rajma Chawal,Khichdi Kadhi,85,1.5,4.0,83
+Thursday,June,34.1,0.0,47,7.3,Masala Dosa,Chole Bhature,Chicken Tikka Rice,81,2.7,2.5,85
+Wednesday,November,23.7,0.0,63,25.9,Idli Sambar,Veg Biryani,Egg Curry Roti,79,2.8,3.4,75
+Saturday,January,22.8,0.0,67,2.5,Puri Bhaji,Dal Chawal Sabzi,Khichdi Kadhi,72,7.1,3.1,69
+Friday,March,25.8,0.0,66,21.4,Aloo Paratha,Veg Biryani,Dal Fry Jeera Rice,83,2.6,2.5,79
+Saturday,October,28.9,0.0,67,3.1,Aloo Paratha,Veg Biryani,Khichdi Kadhi,59,6.9,2.6,61
+Sunday,October,24.4,0.0,77,4.7,Bread Butter Toast,Rajma Chawal,Egg Curry Roti,63,5.6,4.0,68
+Thursday,May,18.0,0.0,72,27.3,Puri Bhaji,Paneer Tadka Roti,Dal Fry Jeera Rice,74,0.3,3.4,73
+Wednesday,July,24.0,5.8,65,24.8,Masala Dosa,Chole Bhature,Roti Green Curry,80,2.7,4.6,79
+Saturday,January,37.2,0.7,74,3.5,Poha Upma,Chole Bhature,Chicken Tikka Rice,66,4.5,4.7,69
+Friday,May,24.8,0.0,40,14.1,Masala Dosa,Veg Biryani,Roti Green Curry,82,1.5,2.6,78
+Sunday,June,37.4,0.0,61,21.7,Poha Upma,Dal Chawal Sabzi,Egg Curry Roti,67,6.2,4.2,66
+Tuesday,July,41.5,0.0,91,2.0,Aloo Paratha,Dal Chawal Sabzi,Roti Green Curry,78,1.0,2.9,80
+Tuesday,October,21.4,2.5,49,15.3,Puri Bhaji,Veg Biryani,Roti Green Curry,72,0.8,3.2,75
+Monday,October,22.5,8.8,49,24.7,Masala Dosa,Dal Chawal Sabzi,Dal Fry Jeera Rice,80,3.0,4.1,80
+Friday,August,21.1,0.0,71,19.6,Bread Butter Toast,Veg Biryani,Khichdi Kadhi,77,1.1,2.9,81
+Monday,March,22.4,0.0,40,14.5,Idli Sambar,Chole Bhature,Roti Green Curry,84,1.8,3.4,82
+Friday,December,22.6,0.0,84,22.0,Aloo Paratha,Veg Biryani,Khichdi Kadhi,73,0.4,3.1,78
+Thursday,March,23.0,1.2,54,9.7,Bread Butter Toast,Veg Biryani,Roti Green Curry,75,0.8,4.1,80
+Thursday,September,33.1,10.5,86,27.1,Aloo Paratha,Chole Bhature,Chicken Tikka Rice,77,0.1,3.9,78
+Saturday,December,37.2,0.0,61,9.1,Poha Upma,Chole Bhature,Egg Curry Roti,63,4.9,4.4,60
+Saturday,October,24.2,0.0,75,5.2,Bread Butter Toast,Paneer Tadka Roti,Roti Green Curry,64,4.5,4.0,62
+Wednesday,March,18.8,0.0,61,5.6,Aloo Paratha,Veg Biryani,Roti Green Curry,80,2.3,4.0,77
+Monday,March,21.1,0.0,55,6.2,Poha Upma,Dal Chawal Sabzi,Chicken Tikka Rice,76,0.5,2.8,79
+Sunday,May,32.0,0.5,55,24.6,Idli Sambar,Rajma Chawal,Chicken Tikka Rice,66,6.7,3.7,64
+Wednesday,July,26.0,0.0,40,25.5,Poha Upma,Dal Chawal Sabzi,Dal Fry Jeera Rice,76,1.6,4.0,76
+Friday,May,22.8,1.5,55,12.7,Poha Upma,Paneer Tadka Roti,Egg Curry Roti,77,0.1,4.0,82
+Tuesday,April,34.4,9.2,56,26.2,Masala Dosa,Veg Biryani,Khichdi Kadhi,86,2.9,3.9,82
+Sunday,September,24.1,4.8,86,15.4,Poha Upma,Chole Bhature,Roti Green Curry,63,2.0,2.6,63
+Thursday,January,29.4,8.2,80,26.1,Bread Butter Toast,Rajma Chawal,Chicken Tikka Rice,75,1.9,3.1,79
+Saturday,May,18.9,0.0,85,17.4,Masala Dosa,Veg Biryani,Chicken Tikka Rice,65,2.6,4.8,62
+Monday,February,36.7,0.0,92,11.3,Bread Butter Toast,Dal Chawal Sabzi,Chicken Tikka Rice,83,1.3,4.6,82
+Sunday,April,39.6,7.0,93,22.5,Puri Bhaji,Veg Biryani,Roti Green Curry,59,3.2,4.2,58
+Thursday,September,41.4,0.0,64,7.8,Poha Upma,Rajma Chawal,Dal Fry Jeera Rice,80,1.7,3.7,83
+Tuesday,April,36.2,2.5,73,3.0,Bread Butter Toast,Chole Bhature,Khichdi Kadhi,73,2.1,4.4,77
+Sunday,March,38.2,0.0,76,17.0,Puri Bhaji,Paneer Tadka Roti,Khichdi Kadhi,60,3.7,3.1,63
+Friday,February,30.0,0.0,81,3.9,Poha Upma,Rajma Chawal,Khichdi Kadhi,78,2.5,3.9,82
+Sunday,October,24.1,1.5,51,26.6,Masala Dosa,Chole Bhature,Dal Fry Jeera Rice,66,4.6,2.9,69
+Tuesday,October,33.8,0.0,43,4.6,Poha Upma,Dal Chawal Sabzi,Roti Green Curry,73,2.3,2.7,78
+Thursday,May,27.8,0.0,47,2.7,Puri Bhaji,Chole Bhature,Roti Green Curry,79,0.7,4.4,76
+Sunday,April,19.9,0.0,90,2.5,Idli Sambar,Dal Chawal Sabzi,Dal Fry Jeera Rice,64,6.7,3.8,65
+Monday,August,41.6,16.9,68,14.3,Puri Bhaji,Rajma Chawal,Chicken Tikka Rice,81,1.4,4.7,78
+Monday,June,30.7,0.0,87,17.8,Masala Dosa,Veg Biryani,Egg Curry Roti,76,1.4,3.9,78
+Monday,August,21.5,6.5,53,20.8,Puri Bhaji,Paneer Tadka Roti,Dal Fry Jeera Rice,72,0.2,2.5,77
+Monday,February,25.6,0.0,66,15.7,Puri Bhaji,Veg Biryani,Roti Green Curry,81,0.6,4.6,83
+Tuesday,March,35.4,0.0,55,18.7,Poha Upma,Dal Chawal Sabzi,Egg Curry Roti,81,0.6,3.6,82
+Saturday,June,24.8,0.0,59,3.6,Puri Bhaji,Chole Bhature,Roti Green Curry,65,7.8,4.0,64
+Sunday,October,29.0,0.0,67,21.7,Bread Butter Toast,Veg Biryani,Roti Green Curry,65,2.9,3.6,65
+Saturday,June,21.7,6.6,70,7.8,Idli Sambar,Rajma Chawal,Khichdi Kadhi,60,7.0,2.6,63
+Tuesday,September,36.5,0.0,86,23.6,Masala Dosa,Chole Bhature,Khichdi Kadhi,77,0.4,4.1,79
+Tuesday,March,19.7,0.0,65,10.1,Masala Dosa,Dal Chawal Sabzi,Dal Fry Jeera Rice,81,1.8,2.8,78
+Sunday,September,41.9,19.3,60,13.9,Aloo Paratha,Rajma Chawal,Egg Curry Roti,69,1.0,3.2,68
+Tuesday,April,37.5,0.0,43,6.0,Bread Butter Toast,Veg Biryani,Dal Fry Jeera Rice,82,2.5,3.8,82
+Tuesday,December,24.2,0.0,62,20.2,Bread Butter Toast,Chole Bhature,Khichdi Kadhi,82,2.6,2.6,79
+Saturday,November,21.3,0.0,74,24.3,Idli Sambar,Dal Chawal Sabzi,Egg Curry Roti,74,1.8,4.4,71
+Tuesday,October,34.5,1.9,71,17.4,Puri Bhaji,Chole Bhature,Roti Green Curry,84,0.9,4.7,86
+Saturday,July,37.3,9.5,63,21.7,Aloo Paratha,Chole Bhature,Dal Fry Jeera Rice,52,6.9,4.2,55
+Monday,August,40.9,0.0,55,22.8,Masala Dosa,Chole Bhature,Dal Fry Jeera Rice,83,2.5,2.7,81
+Wednesday,October,37.9,1.2,92,3.6,Poha Upma,Veg Biryani,Chicken Tikka Rice,77,2.1,3.7,76
+Thursday,July,30.1,0.0,80,8.4,Idli Sambar,Paneer Tadka Roti,Egg Curry Roti,74,0.5,4.0,79
+Tuesday,February,34.5,0.0,87,22.2,Aloo Paratha,Rajma Chawal,Chicken Tikka Rice,81,2.1,2.9,85
+Wednesday,March,33.6,0.0,49,14.4,Puri Bhaji,Rajma Chawal,Chicken Tikka Rice,83,1.2,4.5,80
+Tuesday,August,18.5,13.6,79,3.0,Puri Bhaji,Dal Chawal Sabzi,Egg Curry Roti,80,2.6,2.6,83
+Monday,August,25.8,0.0,69,19.2,Aloo Paratha,Veg Biryani,Roti Green Curry,85,2.4,3.2,85
+Saturday,January,18.9,0.0,89,7.0,Poha Upma,Rajma Chawal,Roti Green Curry,58,5.7,4.1,60
+Tuesday,July,37.0,0.0,43,22.8,Poha Upma,Dal Chawal Sabzi,Chicken Tikka Rice,75,0.2,3.3,76
+Wednesday,September,37.0,9.7,44,14.0,Poha Upma,Paneer Tadka Roti,Dal Fry Jeera Rice,83,0.6,4.3,81
+Saturday,October,37.8,5.6,56,2.9,Idli Sambar,Rajma Chawal,Dal Fry Jeera Rice,68,7.4,2.8,65
+Monday,January,24.9,7.5,84,16.8,Aloo Paratha,Paneer Tadka Roti,Roti Green Curry,78,2.3,2.7,80
+Thursday,December,25.3,4.5,51,8.8,Poha Upma,Chole Bhature,Roti Green Curry,80,1.9,2.7,77
+Sunday,May,32.7,6.6,74,27.2,Masala Dosa,Veg Biryani,Roti Green Curry,57,4.1,3.7,60
+Friday,August,41.9,0.1,87,25.9,Masala Dosa,Rajma Chawal,Khichdi Kadhi,73,1.2,3.5,77
+Thursday,February,39.3,0.0,86,13.9,Bread Butter Toast,Dal Chawal Sabzi,Khichdi Kadhi,84,0.6,4.6,89
+Saturday,November,41.3,0.0,60,7.1,Idli Sambar,Paneer Tadka Roti,Chicken Tikka Rice,66,6.3,4.3,64
+Sunday,February,41.7,0.0,57,25.6,Poha Upma,Veg Biryani,Khichdi Kadhi,60,4.4,4.8,63
+Tuesday,February,41.4,0.0,51,4.1,Masala Dosa,Chole Bhature,Egg Curry Roti,87,1.3,4.0,88
+Friday,September,38.0,0.0,58,24.6,Bread Butter Toast,Chole Bhature,Khichdi Kadhi,80,1.4,3.9,83
+Sunday,February,39.7,0.0,68,2.9,Idli Sambar,Rajma Chawal,Roti Green Curry,53,6.2,4.0,58
+Monday,February,27.1,1.2,48,25.7,Aloo Paratha,Dal Chawal Sabzi,Dal Fry Jeera Rice,78,1.6,3.2,78
+Wednesday,December,37.8,0.0,68,27.5,Bread Butter Toast,Veg Biryani,Khichdi Kadhi,69,0.8,2.8,73
+Friday,September,40.1,1.6,66,24.0,Masala Dosa,Rajma Chawal,Dal Fry Jeera Rice,74,1.0,4.1,77
+Monday,February,36.3,1.5,62,15.0,Bread Butter Toast,Veg Biryani,Dal Fry Jeera Rice,85,2.5,4.5,81
+Saturday,August,21.6,11.0,82,12.7,Bread Butter Toast,Paneer Tadka Roti,Egg Curry Roti,59,1.6,4.1,64
+Tuesday,February,29.6,0.0,65,12.9,Bread Butter Toast,Paneer Tadka Roti,Roti Green Curry,83,2.6,2.6,79
+Saturday,February,38.3,0.0,91,24.8,Poha Upma,Rajma Chawal,Egg Curry Roti,64,1.7,4.7,62
+Thursday,September,20.1,0.0,82,24.2,Bread Butter Toast,Chole Bhature,Khichdi Kadhi,76,1.1,4.1,78
+Sunday,November,41.4,0.0,89,10.1,Poha Upma,Paneer Tadka Roti,Dal Fry Jeera Rice,74,0.9,3.3,71
+Friday,January,25.5,0.0,76,16.9,Puri Bhaji,Paneer Tadka Roti,Dal Fry Jeera Rice,67,1.0,3.1,71

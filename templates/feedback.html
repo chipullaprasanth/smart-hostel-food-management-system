@@ -1,197 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends "base.html" %}
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}Smart Hostel - Feedback{% endblock %}
 
-<title>Feedback</title>
+{% block page_title %}Provide Feedback{% endblock %}
+{% block page_subtitle %}Share your thoughts and help us improve the kitchen efficiency systems.{% endblock %}
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
-
-body{
-    background:#f4f4f4;
-}
-
-header{
-    background:green;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-.container{
-    width:500px;
-    margin:40px auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0px 0px 10px gray;
-}
-
-label{
-    font-size:18px;
-    font-weight:bold;
-}
-
-input,textarea,select{
-    width:100%;
-    padding:12px;
-    margin-top:10px;
-    margin-bottom:20px;
-    border:1px solid #ccc;
-    border-radius:5px;
-    font-size:16px;
-}
-
-textarea{
-    resize:none;
-}
-
-button{
-    width:100%;
-    padding:12px;
-    background:green;
-    color:white;
-    border:none;
-    border-radius:5px;
-    font-size:18px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:darkgreen;
-}
-
-.message{
-    margin-top:20px;
-    background:#e8f5e9;
-    color:green;
-    padding:15px;
-    border-radius:5px;
-    text-align:center;
-    font-weight:bold;
-}
-
-.buttons{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-    margin-top:20px;
-}
-
-.buttons a{
-    text-decoration:none;
-}
-
-.buttons button{
-    width:100%;
-}
-
-footer{
-    margin-top:40px;
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:15px;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<h1>📝 Feedback Form</h1>
-
-<p>Help us improve the Smart Hostel Food Management System</p>
-
-</header>
-
-<div class="container">
-
-<form method="POST">
-
-<label>Your Name</label>
-
-<input
-type="text"
-name="username"
-placeholder="Enter your name"
-required>
-
-<label>Rating</label>
-
-<select name="rating" required>
-
-<option value="">Select Rating</option>
-
-<option>⭐⭐⭐⭐⭐ Excellent</option>
-
-<option>⭐⭐⭐⭐ Good</option>
-
-<option>⭐⭐⭐ Average</option>
-
-<option>⭐⭐ Poor</option>
-
-<option>⭐ Very Poor</option>
-
-</select>
-
-<label>Your Feedback</label>
-
-<textarea
-name="feedback"
-rows="5"
-placeholder="Write your feedback..."
-required></textarea>
-
-<button type="submit">
-
-Submit Feedback
-
-</button>
-
-</form>
-
-{% if message %}
-
-<div class="message">
-
-{{ message }}
-
+{% block content %}
+<div style="max-width: 600px; margin: 0 auto;">
+    <div class="glass-card">
+        <h3 style="margin-bottom: 20px; font-weight: 700;">Submit Feedback</h3>
+        <form method="POST">
+            <div class="form-group">
+                <label for="username">Username / Profile Tag</label>
+                <input type="text" id="username" name="username" placeholder="e.g. resident_user" class="form-control" required value="{{ session.get('user') or '' }}">
+            </div>
+            
+            <div class="form-group">
+                <label for="feedback">Your Review or Comments</label>
+                <textarea id="feedback" name="feedback" rows="5" placeholder="Share your suggestions..." class="form-control" style="resize: none;" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fa-solid fa-paper-plane"></i> Submit Feedback
+            </button>
+        </form>
+    </div>
 </div>
-
-{% endif %}
-
-<div class="buttons">
-
-<a href="/">
-<button type="button">🏠 Home</button>
-</a>
-
-<a href="/dashboard">
-<button type="button">📊 Dashboard</button>
-</a>
-
-</div>
-
-</div>
-
-<footer>
-
-<p>© 2026 Smart Hostel Food Management System</p>
-
-</footer>
-
-</body>
-</html>
+{% endblock %}

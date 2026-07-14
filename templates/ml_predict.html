@@ -1,71 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Machine Learning Prediction</title>
+{% extends "base.html" %}
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding-top: 50px;
-        }
+{% block title %}Smart Hostel - ML Forecasting{% endblock %}
 
-        .container {
-            background: white;
-            width: 60%;
-            margin: auto;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px gray;
-        }
+{% block page_title %}ML Demand Forecasting{% endblock %}
+{% block page_subtitle %}Advanced Linear Regression modeling based on historical waste telemetry files.{% endblock %}
 
-        h1 {
-            color: green;
-        }
-
-        .result {
-            font-size: 24px;
-            color: blue;
-            margin-top: 20px;
-        }
-
-        button {
-            background-color: green;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: darkgreen;
-        }
-    </style>
-
-</head>
-<body>
-
-    <div class="container">
-
-        <h1>🤖 Machine Learning Prediction</h1>
-
-        <h2>Predicted Students for Next Day</h2>
-
-        <div class="result">
-            {{ predicted_students }} Students
-        </div>
-
-        <br>
-
-        <a href="/">
-            <button>Home</button>
-        </a>
-
+{% block content %}
+<div style="max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px;">
+    <div class="glass-card" style="border-left: 4px solid var(--accent-primary);">
+        <h3 style="margin-bottom: 8px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-microchip" style="color: var(--accent-primary)"></i> Predictive Engine Status
+        </h3>
+        <p style="color: var(--text-secondary); line-height: 1.6;">
+            The model analyzes daily student attendance frequencies using historical inputs in the repository. We train a linear trend fit to predict optimal attendance quantities for the next daily cooking cycle.
+        </p>
     </div>
 
-</body>
-</html>
+    <div class="glass-card" style="text-align: center; padding: 40px 24px;">
+        <p style="color: var(--text-secondary); font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Forecasted Students Present</p>
+        <h2 style="font-size: 54px; font-weight: 800; color: var(--accent-primary); margin-bottom: 24px;">{{ predicted_students }}</h2>
+        
+        <div style="border-top: 1px solid var(--border-color); padding-top: 24px;">
+            <h4 style="margin-bottom: 16px; font-weight: 600; text-align: left; color: var(--text-secondary);">Calculated Ingredient Forecast</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; text-align: left;">
+                <div style="background: var(--bg-primary); padding: 16px; border-radius: 12px; border: 1px solid var(--border-color);">
+                    <p style="font-size: 12px; color: var(--text-muted); font-weight: 600;">RICE NEEDED</p>
+                    <h4 style="font-size: 20px; font-weight: 700; color: var(--text-primary);">{{ rice }} Kg</h4>
+                </div>
+                <div style="background: var(--bg-primary); padding: 16px; border-radius: 12px; border: 1px solid var(--border-color);">
+                    <p style="font-size: 12px; color: var(--text-muted); font-weight: 600;">CURRY NEEDED</p>
+                    <h4 style="font-size: 20px; font-weight: 700; color: var(--text-primary);">{{ curry }} Kg</h4>
+                </div>
+                <div style="background: var(--bg-primary); padding: 16px; border-radius: 12px; border: 1px solid var(--border-color);">
+                    <p style="font-size: 12px; color: var(--text-muted); font-weight: 600;">CHAPATI NEEDED</p>
+                    <h4 style="font-size: 20px; font-weight: 700; color: var(--text-primary);">{{ chapati }} Pcs</h4>
+                </div>
+                <div style="background: var(--bg-primary); padding: 16px; border-radius: 12px; border: 1px solid var(--border-color);">
+                    <p style="font-size: 12px; color: var(--text-muted); font-weight: 600;">DAL NEEDED</p>
+                    <h4 style="font-size: 20px; font-weight: 700; color: var(--text-primary);">{{ dal }} Kg</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

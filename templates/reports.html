@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Hostel - Reports{% endblock %}
+
+{% block page_title %}Reports and Analytics{% endblock %}
+{% block page_subtitle %}Review performance indices, compile PDF logs, or export dataset telemetry to spreadsheets.{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+    <!-- Stats Column -->
+    <div class="col-md-7">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-4"><i class="fa-solid fa-list-check text-info me-2"></i>Performance Summary Indices</h5>
+            
+            <div class="table-responsive">
+                <table class="table table-dark table-hover mb-0">
+                    <tbody>
+                        <tr>
+                            <td class="text-secondary">Average Present Headcount</td>
+                            <td class="fw-bold text-end text-info">{{ avg_students }} students</td>
+                        </tr>
+                        <tr>
+                            <td class="text-secondary">Calculated Food Waste Ratio</td>
+                            <td class="fw-bold text-end text-danger">2.4 Kg (Avg)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-secondary">Total Calculation Batches Executed</td>
+                            <td class="fw-bold text-end">{{ total_predictions }} batches</td>
+                        </tr>
+                        <tr>
+                            <td class="text-secondary">Total Tracked Expenses</td>
+                            <td class="fw-bold text-end">₹{{ total_expense }}</td>
+                        </tr>
+                        <tr>
+                            <td class="text-secondary">Total Accumulated Savings</td>
+                            <td class="fw-bold text-end text-success">₹{{ savings }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Actions Column -->
+    <div class="col-md-5">
+        <div class="premium-card d-flex flex-column gap-3">
+            <h5 class="fw-bold"><i class="fa-solid fa-download text-info me-2"></i>Export Center</h5>
+            <p class="text-secondary small mb-3">Download generated files for local print presentation, B.Tech thesis appendix logs, or project audit reviews.</p>
+            
+            <a href="/download_report" class="btn btn-primary py-3 d-flex align-items-center justify-content-center gap-2">
+                <i class="fa-solid fa-file-pdf fs-5"></i> Generate & Download PDF Report
+            </a>
+            
+            <a href="/export_excel" class="btn btn-secondary py-3 d-flex align-items-center justify-content-center gap-2">
+                <i class="fa-solid fa-file-excel fs-5"></i> Export Predictions Logs to Excel
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

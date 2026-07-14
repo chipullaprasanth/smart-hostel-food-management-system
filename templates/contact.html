@@ -1,148 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends "base.html" %}
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}Smart Hostel - Contact Support{% endblock %}
 
-<title>Contact Us</title>
+{% block page_title %}Contact System Support{% endblock %}
+{% block page_subtitle %}Have questions or encountering technical problems? Get in touch with kitchen operators.{% endblock %}
 
+{% block content %}
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
-
-body{
-    background:#f4f4f4;
-}
-
-header{
-    background:green;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-.container{
-    width:70%;
-    margin:40px auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0px 0px 10px gray;
-}
-
-h2{
-    color:green;
-    margin-bottom:20px;
-}
-
-.info{
-    margin:20px 0;
-    padding:20px;
-    background:#f8f8f8;
-    border-left:5px solid green;
-    border-radius:8px;
-}
-
-.info p{
-    font-size:18px;
-    margin:12px 0;
-}
-
-.buttons{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:15px;
-    margin-top:30px;
-}
-
-button{
-    width:100%;
-    padding:12px;
-    background:green;
-    color:white;
-    border:none;
-    border-radius:5px;
-    font-size:16px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:darkgreen;
-}
-
-footer{
-    margin-top:40px;
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:15px;
-}
-
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    .contact-card {
+        padding: 30px;
+        text-align: center;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        transition: var(--transition);
+    }
+    .contact-card:hover {
+        border-color: var(--accent-primary);
+        transform: translateY(-4px);
+    }
+    .contact-card i {
+        font-size: 32px;
+        color: var(--accent-primary);
+        margin-bottom: 16px;
+    }
+    .contact-card h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+    .contact-card p {
+        font-size: 14px;
+        color: var(--text-secondary);
+        line-height: 1.6;
+    }
 </style>
 
-</head>
+<div class="contact-grid">
+    <div class="contact-card">
+        <i class="fa-solid fa-phone"></i>
+        <h3>Operator Support</h3>
+        <p>Call operational desk for system setup or updates.<br><strong>+1 (555) 019-2834</strong></p>
+    </div>
+    
+    <div class="contact-card">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Email Address</h3>
+        <p>Submit bug requests or custom integration specs.<br><strong>support@hostelsys.org</strong></p>
+    </div>
 
-<body>
-
-<header>
-
-<h1>📞 Contact Us</h1>
-
-<p>Smart Hostel Food Management System</p>
-
-</header>
-
-<div class="container">
-
-<h2>Project Contact Information</h2>
-
-<div class="info">
-
-<p><strong>👨 Student Name:</strong> Your Name</p>
-
-<p><strong>🎓 Project:</strong> Food Waste Reduction in Hostel Using Machine Learning</p>
-
-<p><strong>🏫 College:</strong> Your collage name</p>
-
-<p><strong>💻 Department:</strong> Computer Science Engineering</p>
-
-<p><strong>📧 Email:</strong> yourmail@gmail.com</p>
-
-<p><strong>📱 Mobile:</strong> +91 XXXXXXXXXX</p>
-
-<p><strong>📍 Location:</strong> India</p>
-
+    <div class="contact-card">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <h3>Hostel Location</h3>
+        <p>Visit primary administration offices during office hours.<br><strong>Sector 12, Tech Innovation Park</strong></p>
+    </div>
 </div>
-
-<div class="buttons">
-
-<a href="/">
-<button>🏠 Home</button>
-</a>
-
-<a href="/dashboard">
-<button>📊 Dashboard</button>
-</a>
-
-<a href="/feedback">
-<button>📝 Feedback</button>
-</a>
-
-</div>
-
-</div>
-
-<footer>
-
-<p>© 2026 Smart Hostel Food Management System</p>
-
-</footer>
-
-</body>
-</html>
+{% endblock %}

@@ -1,175 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Hostel - Account Registration</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --accent-primary: #10b981;
+            --accent-hover: #059669;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border-color: #334155;
+            --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+        }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
 
-<title>User Registration</title>
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
 
-<style>
+        .register-container {
+            width: 100%;
+            max-width: 440px;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
+        .register-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
 
-body{
-    background:#f4f4f4;
-}
+        .register-brand i {
+            font-size: 32px;
+            color: var(--accent-primary);
+        }
 
-header{
-    background:green;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
+        .register-brand span {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-.container{
-    width:420px;
-    margin:40px auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0px 0px 10px gray;
-}
+        .register-container h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
 
-label{
-    font-size:18px;
-    font-weight:bold;
-}
+        .register-container p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
 
-input{
-    width:100%;
-    padding:12px;
-    margin-top:10px;
-    margin-bottom:20px;
-    border:1px solid #ccc;
-    border-radius:5px;
-    font-size:16px;
-}
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
 
-button{
-    width:100%;
-    padding:12px;
-    background:green;
-    color:white;
-    border:none;
-    border-radius:5px;
-    font-size:18px;
-    cursor:pointer;
-}
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
 
-button:hover{
-    background:darkgreen;
-}
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 15px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
 
-.message{
-    margin-top:20px;
-    background:#e8f5e9;
-    color:green;
-    padding:10px;
-    border-radius:5px;
-    text-align:center;
-    font-weight:bold;
-}
+        .form-control:focus {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+        }
 
-.buttons{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-    margin-top:20px;
-}
+        .btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 15px;
+            font-weight: 600;
+            background: var(--accent-primary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
 
-.buttons a{
-    text-decoration:none;
-}
+        .btn:hover {
+            background: var(--accent-hover);
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+        }
 
-footer{
-    margin-top:40px;
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:15px;
-}
+        .register-footer {
+            margin-top: 24px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
 
-</style>
+        .register-footer a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
 
+        .register-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .toast-alert {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--accent-primary);
+            color: var(--text-primary);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
+<div class="register-container">
+    <div class="register-brand">
+        <i class="fa-solid fa-leaf"></i>
+        <span>Smart Hostel</span>
+    </div>
 
-<h1>👤 User Registration</h1>
+    <h2>Create Account</h2>
+    <p>Sign up to participate in daily kitchen optimization metrics.</p>
 
-<p>Create your account</p>
+    <!-- Display flashes inside register box if any -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <div class="toast-alert">
+                    <i class="fa-solid fa-circle-check" style="color: var(--accent-primary); margin-right: 6px;"></i> {{ msg }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
 
-</header>
+    <form method="POST">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Choose a username..." class="form-control" required>
+        </div>
 
-<div class="container">
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="••••••••" class="form-control" required>
+        </div>
 
-<form method="POST">
+        <button type="submit" class="btn">
+            Create Account <i class="fa-solid fa-user-plus" style="margin-left: 6px;"></i>
+        </button>
+    </form>
 
-<label>Username</label>
-
-<input
-type="text"
-name="username"
-placeholder="Enter Username"
-required>
-
-<label>Password</label>
-
-<input
-type="password"
-name="password"
-placeholder="Enter Password"
-required>
-
-<button type="submit">
-
-Register
-
-</button>
-
-</form>
-
-{% if message %}
-
-<div class="message">
-
-{{ message }}
-
+    <div class="register-footer">
+        Already have an account? <a href="/login">Sign In here</a>
+    </div>
 </div>
-
-{% endif %}
-
-<div class="buttons">
-
-<a href="/">
-<button type="button">
-🏠 Home
-</button>
-</a>
-
-<a href="/login">
-<button type="button">
-🔐 Login
-</button>
-</a>
-
-</div>
-
-</div>
-
-<footer>
-
-<p>© 2026 Smart Hostel Food Management System</p>
-
-</footer>
 
 </body>
 </html>

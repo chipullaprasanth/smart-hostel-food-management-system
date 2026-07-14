@@ -1,180 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Hostel AI - Login</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #0b0f19;
+            color: #f8fafc;
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        .login-card {
+            background: rgba(19, 26, 38, 0.85);
+            border: 1px solid #223047;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            width: 100%;
+            max-width: 420px;
+        }
 
-<title>Admin Login</title>
+        .form-control {
+            background-color: #0b0f19 !important;
+            border: 1px solid #223047 !important;
+            color: #f8fafc !important;
+            border-radius: 8px;
+            padding: 12px 14px;
+        }
 
-<style>
+        .form-control:focus {
+            box-shadow: 0 0 0 2px rgba(0, 242, 254, 0.2);
+            border-color: #00f2fe !important;
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
+        .btn-primary {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 12px;
+            border-radius: 8px;
+        }
 
-body{
-    background:#f4f4f4;
-}
-
-header{
-    background:green;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-.container{
-    width:400px;
-    margin:50px auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0px 0px 10px gray;
-}
-
-label{
-    font-size:18px;
-    font-weight:bold;
-}
-
-input{
-    width:100%;
-    padding:12px;
-    margin-top:10px;
-    margin-bottom:20px;
-    border:1px solid #ccc;
-    border-radius:5px;
-    font-size:16px;
-}
-
-button{
-    width:100%;
-    padding:12px;
-    background:green;
-    color:white;
-    border:none;
-    border-radius:5px;
-    font-size:18px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:darkgreen;
-}
-
-.message{
-    margin-top:20px;
-    text-align:center;
-    color:green;
-    font-weight:bold;
-}
-
-.buttons{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-    margin-top:25px;
-}
-
-.buttons a{
-    text-decoration:none;
-}
-
-footer{
-    margin-top:40px;
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:15px;
-}
-
-</style>
-
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
+<div class="login-card text-center">
+    <div class="mb-4">
+        <i class="fa-solid fa-leaf text-info fs-1 mb-2"></i>
+        <h4 class="fw-bold mb-1">Smart Hostel AI</h4>
+        <p class="text-secondary small">Administrator Secure Console</p>
+    </div>
 
-<h1>🔐 Admin Login</h1>
+    <!-- Alert notifications -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <div class="alert alert-danger border-0 small py-2 text-white" style="background: rgba(239, 68, 68, 0.25);" role="alert">
+                    <i class="fa-solid fa-circle-exclamation me-2"></i>{{ msg }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
 
-<p>Smart Hostel Food Management System</p>
+    <form method="POST">
+        <div class="mb-3 text-start">
+            <label for="username" class="form-label small text-secondary">Username</label>
+            <input type="text" id="username" name="username" placeholder="e.g. admin" class="form-control" required>
+        </div>
 
-</header>
+        <div class="mb-4 text-start">
+            <label for="password" class="form-label small text-secondary">Password</label>
+            <input type="password" id="password" name="password" placeholder="••••••••" class="form-control" required>
+        </div>
 
-<div class="container">
+        <button type="submit" class="btn btn-primary w-100 mb-3">
+            Sign In <i class="fa-solid fa-right-to-bracket ms-2"></i>
+        </button>
+    </form>
 
-<form method="POST">
-
-<label>Username</label>
-
-<input
-type="text"
-name="username"
-placeholder="Enter Username"
-required>
-
-<label>Password</label>
-
-<input
-type="password"
-name="password"
-placeholder="Enter Password"
-required>
-
-<button type="submit">
-
-Login
-
-</button>
-
-</form>
-
-{% if message %}
-
-<div class="message">
-
-{{ message }}
-
+    <div class="small text-secondary mt-3">
+        Back to <a href="/" class="text-info text-decoration-none">Home Portal</a> | Don't have an account? <a href="/register" class="text-info text-decoration-none">Sign Up</a>
+    </div>
 </div>
-
-{% endif %}
-
-<div class="buttons">
-
-<a href="/">
-
-<button type="button">
-
-🏠 Home
-
-</button>
-
-</a>
-
-<a href="/register">
-
-<button type="button">
-
-👤 Register
-
-</button>
-
-</a>
-
-</div>
-
-</div>
-
-<footer>
-
-<p>© 2026 Smart Hostel Food Management System</p>
-
-</footer>
 
 </body>
 </html>

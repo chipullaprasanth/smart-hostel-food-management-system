@@ -1,87 +1,73 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Student Attendance</title>
+{% extends "base.html" %}
 
-    <style>
-        body{
-            font-family:Arial,sans-serif;
-            background:#f4f4f4;
-            text-align:center;
-            padding:40px;
-        }
+{% block title %}Smart Hostel - Attendance Log{% endblock %}
 
-        .container{
-            width:60%;
-            margin:auto;
-            background:white;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 0 10px gray;
-        }
+{% block page_title %}Student Attendance Registry{% endblock %}
+{% block page_subtitle %}Log daily headcount parameters or search historic records.{% endblock %}
 
-        h1{
-            color:green;
-        }
+{% block content %}
+<div class="row g-4">
+    <!-- Log headcount form -->
+    <div class="col-md-4">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-calendar-plus text-info me-2"></i>Log Headcount</h5>
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="date" class="form-label small text-secondary">Date</label>
+                    <input type="date" id="date" name="date" class="form-control" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="students" class="form-label small text-secondary">Students Present</label>
+                    <input type="number" id="students" name="students" placeholder="e.g. 74" class="form-control" required>
+                </div>
 
-        input{
-            width:80%;
-            padding:10px;
-            margin:10px;
-            font-size:16px;
-        }
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fa-solid fa-save me-2"></i>Save Record
+                </button>
+            </form>
+        </div>
+    </div>
 
-        button{
-            background:green;
-            color:white;
-            padding:10px 20px;
-            border:none;
-            border-radius:5px;
-            cursor:pointer;
-        }
-
-        button:hover{
-            background:darkgreen;
-        }
-
-        h3{
-            color:blue;
-        }
-    </style>
-</head>
-
-<body>
-
-<div class="container">
-
-<h1>📅 Student Attendance</h1>
-
-<form method="POST">
-
-<input type="date" name="date" required><br>
-
-<input type="number"
-       name="students"
-       placeholder="Students Present"
-       required><br>
-
-<button type="submit">
-Save Attendance
-</button>
-
-</form>
-
-{% if message %}
-<h3>{{ message }}</h3>
-{% endif %}
-
-<br>
-
-<a href="/">
-<button>🏠 Home</button>
-</a>
-
+    <!-- Historical log table -->
+    <div class="col-md-8">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-clock-rotate-left text-info me-2"></i>Attendance Log</h5>
+            
+            <div class="table-responsive">
+                <table class="table table-dark table-hover align-middle mb-0">
+                    <thead>
+                        <tr class="text-secondary small">
+                            <th>Log Date</th>
+                            <th>Active Headcount</th>
+                            <th>Status Flag</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if not attendance_list %}
+                        <tr>
+                            <td colspan="3" class="text-center text-secondary py-4">No records stored yet.</td>
+                        </tr>
+                        {% endif %}
+                        {% for record in attendance_list %}
+                        <tr>
+                            <td class="fw-bold"><i class="fa-regular fa-calendar-days text-info me-2"></i>{{ record.date }}</td>
+                            <td class="fw-bold text-info">{{ record.students }} students</td>
+                            <td>
+                                {% if record.students >= 75 %}
+                                <span class="badge bg-success bg-opacity-10 text-success">High Volume</span>
+                                {% elif record.students >= 55 %}
+                                <span class="badge bg-warning bg-opacity-10 text-warning">Standard</span>
+                                {% else %}
+                                <span class="badge bg-danger bg-opacity-10 text-danger">Low Turnout</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
-
-</body>
-</html>
+{% endblock %}
