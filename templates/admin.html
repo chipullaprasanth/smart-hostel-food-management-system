@@ -63,11 +63,54 @@
     </div>
 </div>
 
-<div class="glass-card">
-    <h3 style="margin-bottom: 20px; font-weight: 700;">Recent User Feedback</h3>
+<div class="row g-4 mb-4">
+    <div class="col-12">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-users text-info me-2"></i>Registered User Accounts Registry</h5>
+            <div class="table-responsive">
+                <table class="table table-dark table-hover align-middle mb-0">
+                    <thead>
+                        <tr class="text-secondary small">
+                            <th>User ID</th>
+                            <th>Username</th>
+                            <th>Account Role</th>
+                            <th>Registered Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if not users_list %}
+                        <tr>
+                            <td colspan="4" class="text-center text-secondary py-4">No registered users found.</td>
+                        </tr>
+                        {% endif %}
+                        {% for u in users_list %}
+                        <tr>
+                            <td class="fw-bold text-secondary">#{{ u.id }}</td>
+                            <td class="fw-bold text-white">
+                                <i class="fa-solid fa-user-circle text-info me-2 fs-5"></i>{{ u.username }}
+                            </td>
+                            <td>
+                                {% if u.role == 'admin' %}
+                                <span class="badge bg-warning text-dark"><i class="fa-solid fa-user-shield me-1"></i>ADMIN</span>
+                                {% else %}
+                                <span class="badge bg-info text-dark"><i class="fa-solid fa-user me-1"></i>USER</span>
+                                {% endif %}
+                            </td>
+                            <td class="small text-secondary">{{ u.created_at or 'N/A' }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="premium-card">
+    <h5 class="fw-bold mb-3"><i class="fa-solid fa-comments text-info me-2"></i>Recent User Feedback</h5>
     
     {% if not feedback_list %}
-    <p style="color: var(--text-muted); text-align: center; padding: 20px;">No feedback logs recorded yet.</p>
+    <p class="text-secondary text-center py-4 mb-0">No feedback logs recorded yet.</p>
     {% endif %}
     
     {% for f in feedback_list %}
@@ -76,7 +119,7 @@
             <span style="font-weight: 600; color: var(--accent-primary);"><i class="fa-solid fa-user"></i> {{ f['username'] }}</span>
             <span style="color: var(--text-muted);">{{ f['created_at'] }}</span>
         </div>
-        <p style="color: var(--text-primary); font-size: 14px; line-height: 1.5;">{{ f['feedback'] }}</p>
+        <p style="color: var(--text-primary); font-size: 14px; line-height: 1.5; margin-bottom: 0;">{{ f['feedback'] }}</p>
     </div>
     {% endfor %}
 </div>

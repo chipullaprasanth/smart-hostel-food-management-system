@@ -1,9 +1,10 @@
--- MySQL Schema setup for Smart Hostel Food Management
+-- MySQL Schema Script for Smart Hostel Food Waste Management System
+-- Database: hostel_db
 
 CREATE DATABASE IF NOT EXISTS hostel_db;
 USE hostel_db;
 
--- User Credentials
+-- Users Table
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) UNIQUE NOT NULL,
@@ -12,32 +13,34 @@ CREATE TABLE IF NOT EXISTS users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Predictions Log
+-- Predictions Table
 CREATE TABLE IF NOT EXISTS predictions (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL DEFAULT 1,
-    day VARCHAR(15) NOT NULL,
-    month VARCHAR(15) NOT NULL,
+    date_str VARCHAR(20),
+    day VARCHAR(15),
+    month VARCHAR(15),
     temperature FLOAT,
     rainfall FLOAT,
     humidity INT,
     wind_speed FLOAT,
-    holiday VARCHAR(5),
-    festival VARCHAR(5),
-    exam VARCHAR(5),
-    sports_event VARCHAR(5),
     breakfast_menu VARCHAR(50),
     lunch_menu VARCHAR(50),
     dinner_menu VARCHAR(50),
     previous_attendance INT,
     previous_waste FLOAT,
     food_rating FLOAT,
+    festival VARCHAR(50),
     predicted_attendance INT,
+    rice_kg FLOAT,
+    dal_kg FLOAT,
+    curry_kg FLOAT,
+    chapati_count INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Feedback Logs
+-- Feedback Table
 CREATE TABLE IF NOT EXISTS feedback (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL DEFAULT 1,
@@ -47,27 +50,27 @@ CREATE TABLE IF NOT EXISTS feedback (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Daily Attendance Log
+-- Attendance Table
 CREATE TABLE IF NOT EXISTS attendance (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL DEFAULT 1,
-    date VARCHAR(20) NOT NULL,
-    students INT NOT NULL,
+    date VARCHAR(20),
+    students INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Store Inventory
+-- Inventory Table
 CREATE TABLE IF NOT EXISTS inventory (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL DEFAULT 1,
-    item VARCHAR(50) NOT NULL,
-    quantity VARCHAR(30) NOT NULL,
+    item VARCHAR(50),
+    quantity VARCHAR(30),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Donation logs
+-- Donations Table
 CREATE TABLE IF NOT EXISTS donations (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL DEFAULT 1,
@@ -78,7 +81,7 @@ CREATE TABLE IF NOT EXISTS donations (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Financial Expenses
+-- Expenses Table
 CREATE TABLE IF NOT EXISTS expenses (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL DEFAULT 1,
@@ -89,7 +92,7 @@ CREATE TABLE IF NOT EXISTS expenses (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Daily waste calculations
+-- Waste Records Table
 CREATE TABLE IF NOT EXISTS waste_records (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL DEFAULT 1,

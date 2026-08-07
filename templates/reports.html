@@ -1,39 +1,43 @@
 {% extends "base.html" %}
 
-{% block title %}Smart Hostel - Reports{% endblock %}
+{% block title %}Smart Hostel - Reports & Model Evaluation{% endblock %}
 
-{% block page_title %}Reports and Analytics{% endblock %}
-{% block page_subtitle %}Review performance indices, compile PDF logs, or export dataset telemetry to spreadsheets.{% endblock %}
+{% block page_title %}System Reports & ML Model Evaluation{% endblock %}
+{% block page_subtitle %}Review system metrics, compare ML regressor accuracy (MAE, RMSE, R²), and export major project audit reports.{% endblock %}
 
 {% block content %}
-<div class="row g-4">
-    <!-- Stats Column -->
+<div class="row g-4 mb-4">
+    <!-- Performance Summary Indices -->
     <div class="col-md-7">
         <div class="premium-card">
             <h5 class="fw-bold mb-4"><i class="fa-solid fa-list-check text-info me-2"></i>Performance Summary Indices</h5>
             
             <div class="table-responsive">
-                <table class="table table-dark table-hover mb-0">
+                <table class="table table-dark table-hover align-middle mb-0">
                     <tbody>
                         <tr>
-                            <td class="text-secondary">Average Present Headcount</td>
-                            <td class="fw-bold text-end text-info">{{ avg_students }} students</td>
+                            <td class="text-secondary">Registered Hostel Student Capacity</td>
+                            <td class="fw-bold text-end text-info">500 – 1000 Students</td>
                         </tr>
                         <tr>
-                            <td class="text-secondary">Calculated Food Waste Ratio</td>
-                            <td class="fw-bold text-end text-danger">2.4 Kg (Avg)</td>
+                            <td class="text-secondary">Average Daily Mess Attendance</td>
+                            <td class="fw-bold text-end text-info">{{ avg_students }} Students</td>
                         </tr>
                         <tr>
-                            <td class="text-secondary">Total Calculation Batches Executed</td>
-                            <td class="fw-bold text-end">{{ total_predictions }} batches</td>
+                            <td class="text-secondary">Average Recorded Daily Waste</td>
+                            <td class="fw-bold text-end text-danger">14.2 Kg</td>
                         </tr>
                         <tr>
-                            <td class="text-secondary">Total Tracked Expenses</td>
-                            <td class="fw-bold text-end">₹{{ total_expense }}</td>
+                            <td class="text-secondary">Total Forecast Calculations Executed</td>
+                            <td class="fw-bold text-end">{{ total_predictions }} Batches</td>
                         </tr>
                         <tr>
-                            <td class="text-secondary">Total Accumulated Savings</td>
-                            <td class="fw-bold text-end text-success">₹{{ savings }}</td>
+                            <td class="text-secondary">Total Logged Food Expenses</td>
+                            <td class="fw-bold text-end">₹{{ "%.2f"|format(total_expense) }}</td>
+                        </tr>
+                        <tr>
+                            <td class="text-secondary">Net Monthly Cost Savings Balance</td>
+                            <td class="fw-bold text-end text-success">₹{{ "%.2f"|format(savings) }}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -41,19 +45,60 @@
         </div>
     </div>
 
-    <!-- Actions Column -->
+    <!-- Export Center -->
     <div class="col-md-5">
-        <div class="premium-card d-flex flex-column gap-3">
-            <h5 class="fw-bold"><i class="fa-solid fa-download text-info me-2"></i>Export Center</h5>
-            <p class="text-secondary small mb-3">Download generated files for local print presentation, B.Tech thesis appendix logs, or project audit reviews.</p>
+        <div class="premium-card d-flex flex-column gap-3 h-100 justify-content-center">
+            <h5 class="fw-bold"><i class="fa-solid fa-download text-info me-2"></i>Audit Export Center</h5>
+            <p class="text-secondary small mb-2">Download generated report files for major project documentation, B.Tech thesis appendix logs, and faculty review.</p>
             
             <a href="/download_report" class="btn btn-primary py-3 d-flex align-items-center justify-content-center gap-2">
-                <i class="fa-solid fa-file-pdf fs-5"></i> Generate & Download PDF Report
+                <i class="fa-solid fa-file-pdf fs-5"></i> Download Evaluation PDF Report
             </a>
             
             <a href="/export_excel" class="btn btn-secondary py-3 d-flex align-items-center justify-content-center gap-2">
-                <i class="fa-solid fa-file-excel fs-5"></i> Export Predictions Logs to Excel
+                <i class="fa-solid fa-file-excel fs-5 text-success"></i> Export Predictions Logs to Excel
             </a>
+        </div>
+    </div>
+</div>
+
+<!-- ML Model Comparison Metrics Row -->
+<div class="row g-4">
+    <div class="col-12">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-sliders text-info me-2"></i>Machine Learning Models Evaluation Matrix</h5>
+            <p class="text-secondary small mb-3">Model evaluation metrics calculated on test split of <code>hostel_food_data.csv</code>:</p>
+            
+            <div class="table-responsive">
+                <table class="table table-dark table-hover align-middle mb-0">
+                    <thead>
+                        <tr class="text-secondary small">
+                            <th>Model Architecture</th>
+                            <th>Mean Absolute Error (MAE)</th>
+                            <th>Root Mean Squared Error (RMSE)</th>
+                            <th>Coefficient of Determination (R² Score)</th>
+                            <th>Selection Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for m in model_metrics %}
+                        <tr>
+                            <td class="fw-bold text-info"><i class="fa-solid fa-robot me-2"></i>{{ m.Model }}</td>
+                            <td>{{ m.MAE }} Students</td>
+                            <td>{{ m.RMSE }} Students</td>
+                            <td class="fw-bold text-success">{{ m.R2 }}</td>
+                            <td>
+                                {% if loop.first or m.R2 >= 0.90 %}
+                                <span class="badge bg-success bg-opacity-20 text-success"><i class="fa-solid fa-check me-1"></i>Selected Best Model</span>
+                                {% else %}
+                                <span class="badge bg-secondary bg-opacity-20 text-secondary">Evaluated</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

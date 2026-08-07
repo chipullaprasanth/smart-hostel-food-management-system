@@ -45,6 +45,7 @@
             <table class="donation-table">
                 <thead>
                     <tr>
+                        {% if donations and donations[0].username %}<th>User</th>{% endif %}
                         <th>NGO / Organization</th>
                         <th>Food Item Details</th>
                         <th>Quantity</th>
@@ -54,13 +55,16 @@
                 <tbody>
                     {% if not donations %}
                     <tr>
-                        <td colspan="4" style="text-align: center; color: var(--text-secondary); padding: 30px;">
+                        <td colspan="{% if donations and donations[0].username %}5{% else %}4{% endif %}" style="text-align: center; color: var(--text-secondary); padding: 30px;">
                             No donation dispatches registered yet.
                         </td>
                     </tr>
                     {% endif %}
                     {% for d in donations %}
                     <tr>
+                        {% if d.username %}
+                        <td><span class="badge bg-secondary font-monospace"><i class="fa-solid fa-user me-1"></i>{{ d.username }}</span></td>
+                        {% endif %}
                         <td style="font-weight: 600; color: var(--accent-primary);">
                             <i class="fa-solid fa-heart" style="color: #ef4444; margin-right: 8px;"></i> {{ d['organization'] }}
                         </td>

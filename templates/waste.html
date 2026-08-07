@@ -2,40 +2,55 @@
 
 {% block title %}Smart Hostel - Waste Analysis{% endblock %}
 
-{% block page_title %}Food Waste Telemetry{% endblock %}
-{% block page_subtitle %}Log prepared vs consumed food to analyze daily wastage levels and trigger optimization alerts.{% endblock %}
+{% block page_title %}Food Waste Telemetry Log{% endblock %}
+{% block page_subtitle %}Log prepared vs consumed food to analyze daily wastage levels (Capacity: 500-1000 Students).{% endblock %}
 
 {% block content %}
 <div class="row g-4">
     <!-- Log daily waste form -->
-    <div class="col-md-4">
+    <div class="col-md-5">
         <div class="premium-card">
             <h5 class="fw-bold mb-3"><i class="fa-solid fa-scale-unbalanced text-info me-2"></i>Log Daily Weights</h5>
+            
             <form method="POST">
-                <div class="mb-3">
-                    <label for="date" class="form-label small text-secondary">Log Date</label>
-                    <input type="date" id="date" name="date" class="form-control" required>
-                </div>
-                
-                <div class="mb-3">
-                    <label for="prepared" class="form-label small text-secondary">Prepared Food (Kg)</label>
-                    <input type="number" step="0.1" id="prepared" name="prepared" placeholder="e.g. 50.0" class="form-control" required>
+                <!-- Interactive Date Selector with Integrated Up/Down Stepper Buttons -->
+                <div class="p-3 mb-3 rounded-3" style="background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.2);">
+                    <div class="d-flex align-items-center gap-2">
+                        <button type="button" id="open-calendar-btn" class="btn btn-info text-white p-2 rounded-3" title="Click to open interactive calendar modal">
+                            <i class="fa-solid fa-calendar-days fs-4"></i>
+                        </button>
+                        <div>
+                            <label for="date-picker-input" class="text-secondary small d-block mb-1">Calendar Date (Click to Pick)</label>
+                            <div class="position-relative" style="width: 175px;">
+                                <input type="text" id="date-picker-input" name="date" class="form-control form-control-sm text-info fw-bold font-monospace bg-dark border-secondary pe-4" style="font-size: 14px; cursor: pointer; height: 38px;" value="{{ date_info.date_str }}" readonly required>
+                                <div class="d-flex flex-column position-absolute end-0 top-0 bottom-0 px-1 justify-content-center bg-dark rounded-end border-start border-secondary" style="width: 26px;">
+                                    <a href="?date={{ date_info.next_date }}" class="text-info text-decoration-none text-center lh-1 py-1" style="font-size: 11px;" title="Next Day (+1 Day)"><i class="fa-solid fa-chevron-up"></i></a>
+                                    <a href="?date={{ date_info.prev_date }}" class="text-info text-decoration-none text-center lh-1 py-1" style="font-size: 11px;" title="Previous Day (-1 Day)"><i class="fa-solid fa-chevron-down"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="consumed" class="form-label small text-secondary">Consumed Food (Kg)</label>
-                    <input type="number" step="0.1" id="consumed" name="consumed" placeholder="e.g. 47.2" class="form-control" required>
+                    <label for="prepared" class="form-label small text-secondary">Prepared Food Volume (Kg)</label>
+                    <input type="number" step="0.1" id="prepared" name="prepared" placeholder="e.g. 400.0" value="400.0" class="form-control" required>
                 </div>
 
-                <button type="submit" class="btn btn-primary w-100">
-                    <i class="fa-solid fa-calculator me-2"></i>Calculate & Log
+                <div class="mb-3">
+                    <label for="consumed" class="form-label small text-secondary">Consumed Food Volume (Kg)</label>
+                    <input type="number" step="0.1" id="consumed" name="consumed" placeholder="e.g. 385.0" value="385.0" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 py-2">
+                    <i class="fa-solid fa-calculator me-2"></i>Calculate & Record Wastage
                 </button>
             </form>
         </div>
     </div>
 
     <!-- History log table -->
-    <div class="col-md-8">
+    <div class="col-md-7">
         <div class="premium-card">
             <h5 class="fw-bold mb-3"><i class="fa-solid fa-triangle-exclamation text-info me-2"></i>Telemetry Logs</h5>
             
@@ -43,38 +58,46 @@
                 <table class="table table-dark table-hover align-middle mb-0">
                     <thead>
                         <tr class="text-secondary small">
+                            {% if waste_list and waste_list[0].username %}<th>User</th>{% endif %}
                             <th>Log Date</th>
                             <th>Prepared</th>
                             <th>Consumed</th>
                             <th>Wasted Weight</th>
                             <th>Waste Ratio</th>
-                            <th>Alert level</th>
+                            <th>Alert Level</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% if not waste_list %}
                         <tr>
-                            <td colspan="6" class="text-center text-secondary py-4">No records stored yet.</td>
+                            <td colspan="{% if waste_list and waste_list[0].username %}7{% else %}6{% endif %}" class="text-center text-secondary py-4">No records stored yet.</td>
                         </tr>
                         {% endif %}
                         {% for record in waste_list %}
                         <tr>
+                            {% if record.username %}
+                            <td><span class="badge bg-secondary font-monospace"><i class="fa-solid fa-user me-1"></i>{{ record.username }}</span></td>
+                            {% endif %}
                             <td class="fw-bold"><i class="fa-regular fa-calendar-days text-info me-2"></i>{{ record.date }}</td>
                             <td>{{ record.prepared }} Kg</td>
                             <td>{{ record.consumed }} Kg</td>
                             <td class="fw-bold text-danger">{{ record.waste }} Kg</td>
                             <td class="fw-bold">
-                                {% set ratio = (record.waste / record.prepared * 100) if record.prepared > 0 else 0 %}
+                                {% set p_val = record.prepared|float %}
+                                {% set w_val = record.waste|float %}
+                                {% set ratio = (w_val / p_val * 100) if p_val > 0 else 0 %}
                                 {{ "%.1f"|format(ratio) }}%
                             </td>
                             <td>
-                                {% set ratio = (record.waste / record.prepared * 100) if record.prepared > 0 else 0 %}
+                                {% set p_val = record.prepared|float %}
+                                {% set w_val = record.waste|float %}
+                                {% set ratio = (w_val / p_val * 100) if p_val > 0 else 0 %}
                                 {% if ratio >= 15.0 %}
-                                <span class="badge bg-danger bg-opacity-10 text-danger"><i class="fa-solid fa-circle-exclamation me-1"></i>Critical Waste</span>
+                                <span class="badge bg-danger bg-opacity-20 text-danger"><i class="fa-solid fa-circle-exclamation me-1"></i>Critical Waste</span>
                                 {% elif ratio >= 5.0 %}
-                                <span class="badge bg-warning bg-opacity-10 text-warning"><i class="fa-solid fa-triangle-exclamation me-1"></i>Moderate Warning</span>
+                                <span class="badge bg-warning bg-opacity-20 text-warning"><i class="fa-solid fa-triangle-exclamation me-1"></i>Moderate Waste</span>
                                 {% else %}
-                                <span class="badge bg-success bg-opacity-10 text-success"><i class="fa-solid fa-circle-check me-1"></i>Optimal Green</span>
+                                <span class="badge bg-success bg-opacity-20 text-success"><i class="fa-solid fa-circle-check me-1"></i>Optimal</span>
                                 {% endif %}
                             </td>
                         </tr>
@@ -85,4 +108,25 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const fp = flatpickr("#date-picker-input", {
+            dateFormat: "Y-m-d",
+            defaultDate: "{{ date_info.date_str }}",
+            theme: "dark",
+            monthSelectorType: "dropdown",
+            onChange: function(selectedDates, dateStr) {
+                if (dateStr) {
+                    window.location.href = "?date=" + dateStr;
+                }
+            }
+        });
+        document.getElementById("open-calendar-btn").addEventListener("click", function() {
+            fp.open();
+        });
+    });
+</script>
 {% endblock %}
