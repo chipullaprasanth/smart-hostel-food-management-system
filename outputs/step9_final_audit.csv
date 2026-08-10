@@ -1,0 +1,65 @@
+category,check,status,expected,observed,notes
+Project Structure,Artifact Existence: Dataset Propely.csv,PASS,File Exists,Exists=True,"Original legacy/reference dataset (CSV File, 107.22 KB)"
+Project Structure,Artifact Existence: datasets/messy_food_waste/train.csv,PASS,File Exists,Exists=True,"Approved training dataset (CSV File, 118.70 KB)"
+Project Structure,Artifact Existence: datasets/messy_food_waste/test.csv,PASS,File Exists,Exists=True,"Approved test dataset (CSV File, 20.33 KB)"
+Project Structure,Artifact Existence: model/preprocessor.pkl,PASS,File Exists,Exists=True,"Preserved Step 3 preprocessor artifact (Pickle Model, 1.87 KB)"
+Project Structure,Artifact Existence: model/final_food_waste_model.pkl,PASS,File Exists,Exists=True,"Final fitted Step 7 model artifact (Pickle Model, 3.49 KB)"
+Project Structure,Artifact Existence: outputs/step7_model_comparison.csv,PASS,File Exists,Exists=True,"Step 7 model comparison metrics (CSV File, 1.70 KB)"
+Project Structure,Artifact Existence: outputs/final_test_predictions.csv,PASS,File Exists,Exists=True,"Final test predictions CSV (CSV File, 23.93 KB)"
+Project Structure,Artifact Existence: outputs/step8_oof_predictions.csv,PASS,File Exists,Exists=True,"Step 8 out-of-fold predictions CSV (CSV File, 148.76 KB)"
+Project Structure,Artifact Existence: outputs/step8_error_analysis.csv,PASS,File Exists,Exists=True,"Step 8 group error analysis CSV (CSV File, 1.49 KB)"
+Project Structure,Artifact Existence: outputs/step8_largest_errors.csv,PASS,File Exists,Exists=True,"Step 8 20 largest errors CSV (CSV File, 3.77 KB)"
+Project Structure,Artifact Existence: outputs/step8_ridge_coefficients.csv,PASS,File Exists,Exists=True,"Step 8 Ridge coefficients CSV (CSV File, 1.15 KB)"
+Project Structure,Artifact Existence: reports/step8/oof_actual_vs_predicted.png,PASS,File Exists,Exists=True,"OOF Actual vs Predicted plot (Image (PNG), 544.81 KB)"
+Project Structure,Artifact Existence: reports/step8/oof_residual_distribution.png,PASS,File Exists,Exists=True,"OOF Residual distribution plot (Image (PNG), 142.61 KB)"
+Project Structure,Artifact Existence: reports/step8/oof_residuals_over_time.png,PASS,File Exists,Exists=True,"OOF Residuals over time plot (Image (PNG), 307.49 KB)"
+Project Structure,Artifact Existence: reports/step8/error_by_waste_category.png,PASS,File Exists,Exists=True,"Error by waste category plot (Image (PNG), 64.72 KB)"
+Project Structure,Artifact Existence: reports/step8/error_by_staff_experience.png,PASS,File Exists,Exists=True,"Error by staff experience plot (Image (PNG), 53.45 KB)"
+Project Structure,Artifact Existence: reports/step8/ridge_coefficients.png,PASS,File Exists,Exists=True,"Ridge coefficients plot (Image (PNG), 183.66 KB)"
+Project Structure,Artifact Existence: reports/step8/error_by_month.png,PASS,File Exists,Exists=True,"Error by month plot (Image (PNG), 58.99 KB)"
+Project Structure,Artifact Existence: STEP7_MODEL_TRAINING_REPORT.md,PASS,File Exists,Exists=True,"Step 7 report (Markdown Report, 9.15 KB)"
+Project Structure,Artifact Existence: STEP8_MODEL_INTERPRETATION_REPORT.md,PASS,File Exists,Exists=True,"Step 8 report (Markdown Report, 11.25 KB)"
+Project Structure,Artifact Existence: step7_training.py,PASS,File Exists,Exists=True,"Step 7 execution script (Python Script, 27.48 KB)"
+Project Structure,Artifact Existence: step8_analysis.py,PASS,File Exists,Exists=True,"Step 8 execution script (Python Script, 29.47 KB)"
+Dataset Integrity,Train Row Count,PASS,1000,1000,train.csv row count
+Dataset Integrity,Test Row Count,PASS,200,200,test.csv row count
+Dataset Integrity,Target in Train,PASS,True,True,
+Dataset Integrity,Target Absent in Test,PASS,False,False,
+Dataset Integrity,Train Duplicate Rows,PASS,0,0,
+Dataset Integrity,Test Duplicate Rows,PASS,0,0,
+Dataset Integrity,No Synthetic Records Added,PASS,1000 Train / 200 Test,1000/200,
+Dataset Integrity,No Datasets Merged,PASS,Independent train & test,Verified separate files,
+Dataset Integrity,Dataset Propely.csv Untouched,PASS,True,True,
+Model Artifact,Step 3 Preprocessor Loadable,PASS,True,True,Preserved model/preprocessor.pkl
+Model Artifact,Artifact Loadable,PASS,True,True,
+Model Artifact,Pipeline Class,PASS,Pipeline,Pipeline,
+Model Artifact,Pipeline Steps,PASS,"['preprocessor', 'model']","['preprocessor', 'model']",
+Model Artifact,Final Estimator Class,PASS,Ridge,Ridge,
+Model Artifact,Estimator Alpha Parameter,PASS,1,1,
+Model Artifact,Transformed Feature Count,PASS,19,19,
+Model Artifact,Schema Compatibility,PASS,True,True,
+Reproducibility,"Predictions Match Tolerance (rtol=1e-9, atol=1e-9)",PASS,0,0,"Max diff=7.1054273576e-15, Mean diff=5.6843418861e-16"
+Reproducibility,Max Absolute Prediction Difference,PASS,< 1e-9,7.1054273576e-15,
+Step 7/8 Consistency,OOF MAE Consistency,PASS,2.3966,2.3966,Recalculated from artifacts
+Step 7/8 Consistency,OOF RMSE Consistency,PASS,2.9871,2.9871,Recalculated from artifacts
+Step 7/8 Consistency,OOF R² Consistency,PASS,0.7959,0.7959,Recalculated from artifacts
+Step 7/8 Consistency,Mean Residual Bias Consistency,PASS,0.2074,0.2074,Recalculated from artifacts
+Step 7/8 Consistency,Max Absolute Error Consistency,PASS,9.0914,9.0914,Recalculated from artifacts
+Step 7/8 Consistency,OOF Predictions Count Consistency,PASS,830,830,Recalculated from artifacts
+Step 7/8 Consistency,Test Prediction Count Consistency,PASS,200,200,Recalculated from artifacts
+Step 7/8 Consistency,Test Prediction Min Consistency,PASS,9.916,9.916,Recalculated from artifacts
+Step 7/8 Consistency,Test Prediction Max Consistency,PASS,37.486,37.486,Recalculated from artifacts
+Step 7/8 Consistency,Test Prediction Mean Consistency,PASS,23.6981,23.6981,Recalculated from artifacts
+Step 7/8 Consistency,Test Prediction Median Consistency,PASS,23.2971,23.2971,Recalculated from artifacts
+Step 7/8 Consistency,Test Prediction Std Consistency,PASS,6.2975,6.2975,Recalculated from artifacts
+Step 7/8 Consistency,Negative Test Predictions Consistency,PASS,0,0,Recalculated from artifacts
+Leakage Audit,Chronological TimeSeriesSplit Validation,PASS,VERIFIED,VERIFIED,TimeSeriesSplit(n_splits=5) used on sorted date data
+Leakage Audit,Five Validation Splits,PASS,VERIFIED,VERIFIED,5 validation folds executed
+Leakage Audit,Validation Exclusion from Fold Fitting,PASS,VERIFIED,VERIFIED,Strict train/val split per fold via Pipeline clone
+Leakage Audit,Test Data Excluded from Model Selection,PASS,VERIFIED,VERIFIED,Model selected solely via lowest CV MAE
+Leakage Audit,Test Data Excluded from Cross-Validation,PASS,VERIFIED,VERIFIED,test.csv never passed to TimeSeriesSplit or GridSearchCV
+Leakage Audit,Target Column Excluded from Inputs,PASS,VERIFIED,VERIFIED,food_waste_kg absent from X_train and X_test
+Leakage Audit,Preprocessing Fitted inside CV Pipeline,PASS,VERIFIED,VERIFIED,ColumnTransformer wrapped inside Pipeline
+Leakage Audit,Final Model Fitted on 1000 Train Rows,PASS,VERIFIED,VERIFIED,Pipeline refitted on full training set after selection
+Leakage Audit,No Use of Test Ground Truth,PASS,VERIFIED,VERIFIED,test.csv contains no food_waste_kg column
+Leakage Audit,No Target Leakage in Features,PASS,VERIFIED,VERIFIED,Source features derived from operational predictors only
