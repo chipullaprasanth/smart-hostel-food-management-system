@@ -13,6 +13,7 @@
             <h5 class="fw-bold mb-3"><i class="fa-solid fa-scale-unbalanced text-info me-2"></i>Log Daily Weights</h5>
             
             <form method="POST">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                 <!-- Interactive Date Selector with Integrated Up/Down Stepper Buttons -->
                 <div class="p-3 mb-3 rounded-3" style="background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.2);">
                     <div class="d-flex align-items-center gap-2">

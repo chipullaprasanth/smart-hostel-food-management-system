@@ -62,6 +62,7 @@
     <div class="glass-card" style="height: fit-content;">
         <h3 style="margin-bottom: 20px; font-weight: 700;">Update Stock Level</h3>
         <form method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
             <div class="form-group">
                 <label for="item">Select / Type Food Item</label>
                 <input type="text" id="item" name="item" list="items-datalist" placeholder="e.g. Rice" class="form-control" required>

@@ -5,12 +5,33 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Table, TableStyle
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
 import os
+import secrets
 import datetime
 import database
+from werkzeug.utils import secure_filename
 from model.prediction import predict_attendance, predict_and_recommend, get_model_metrics
 
 app = Flask(__name__)
-app.secret_key = "btech-hostel-reduction-placement-secret-key"
+# Secret key configured via environment variable with documented development fallback
+app.secret_key = os.environ.get("SECRET_KEY", "btech-hostel-reduction-placement-secret-key-dev-fallback")
+app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # 5 MB max file upload size
+
+# CSRF Protection Helpers
+def get_csrf_token():
+    if 'csrf_token' not in session:
+        session['csrf_token'] = secrets.token_hex(16)
+    return session['csrf_token']
+
+app.jinja_env.globals['csrf_token'] = get_csrf_token
+
+@app.before_request
+def csrf_protect():
+    if request.method == 'POST':
+        token = session.get('csrf_token')
+        form_token = request.form.get('csrf_token') or request.headers.get('X-CSRF-Token')
+        if not token or form_token != token:
+            flash("Security Warning: CSRF token missing or invalid. Please try submitting again.")
+            return redirect(request.referrer or url_for('home'))
 
 # Initialize Database
 database.init_db()
@@ -198,21 +219,45 @@ def predict():
             season_input = request.form.get('Season', date_info['season'])
             festival_input = request.form.get('Festival', 'Normal Day')
             
+            temp = float(request.form['Temperature'])
+            rainfall = float(request.form['Rainfall'])
+            humidity = int(request.form['Humidity'])
+            wind_speed = float(request.form['Wind_Speed'])
+            prev_att = int(request.form['Previous_Attendance'])
+            prev_waste = float(request.form['Previous_Waste'])
+            food_rating = float(request.form['Food_Rating'])
+            
+            # Input validation range checks
+            if not (-10.0 <= temp <= 60.0):
+                raise ValueError("Temperature must be between -10°C and 60°C.")
+            if not (0.0 <= rainfall <= 1000.0):
+                raise ValueError("Rainfall must be between 0 and 1000 mm.")
+            if not (0 <= humidity <= 100):
+                raise ValueError("Humidity must be between 0% and 100%.")
+            if not (0.0 <= wind_speed <= 200.0):
+                raise ValueError("Wind Speed must be between 0 and 200 km/h.")
+            if not (1 <= prev_att <= 2000):
+                raise ValueError("Previous Attendance must be between 1 and 2000 students.")
+            if not (0.0 <= prev_waste <= 500.0):
+                raise ValueError("Previous Waste must be between 0 and 500 kg.")
+            if not (1.0 <= food_rating <= 5.0):
+                raise ValueError("Food Rating must be between 1.0 and 5.0.")
+
             input_features = {
                 'Date': date_info['date_str'],
                 'Day': request.form.get('Day', date_info['day']),
                 'Month': request.form.get('Month', date_info['month']),
                 'Season': season_input,
-                'Temperature': float(request.form['Temperature']),
-                'Rainfall': float(request.form['Rainfall']),
-                'Humidity': int(request.form['Humidity']),
-                'Wind_Speed': float(request.form['Wind_Speed']),
-                'Breakfast_Menu': request.form['Breakfast_Menu'],
-                'Lunch_Menu': request.form['Lunch_Menu'],
-                'Dinner_Menu': request.form['Dinner_Menu'],
-                'Previous_Attendance': int(request.form['Previous_Attendance']),
-                'Previous_Waste': float(request.form['Previous_Waste']),
-                'Food_Rating': float(request.form['Food_Rating']),
+                'Temperature': temp,
+                'Rainfall': rainfall,
+                'Humidity': humidity,
+                'Wind_Speed': wind_speed,
+                'Breakfast_Menu': request.form.get('Breakfast_Menu', 'Idli / Dosa'),
+                'Lunch_Menu': request.form.get('Lunch_Menu', 'Rice & Dal'),
+                'Dinner_Menu': request.form.get('Dinner_Menu', 'Roti & Sabzi'),
+                'Previous_Attendance': prev_att,
+                'Previous_Waste': prev_waste,
+                'Food_Rating': food_rating,
                 'Festival': festival_input
             }
             
@@ -257,6 +302,8 @@ def attendance():
         try:
             date_val = request.form['date']
             students_val = int(request.form['students'])
+            if not (1 <= students_val <= 2000):
+                raise ValueError("Attendance must be between 1 and 2000 students.")
             database.save_attendance(date_val, students_val, user_id=user_id)
             flash(f"Attendance registered successfully: {students_val} students on {date_val}.")
             date_info = parse_date_info(date_val)
@@ -280,7 +327,9 @@ def waste():
             prep = float(request.form['prepared'])
             cons = float(request.form['consumed'])
             
-            if prep < cons:
+            if prep < 0 or cons < 0:
+                flash("Error: Quantities cannot be negative.")
+            elif prep < cons:
                 flash("Error: Consumed quantity cannot exceed prepared volume.")
             else:
                 w_val = round(prep - cons, 2)
@@ -342,25 +391,31 @@ def upload_menu():
         return redirect(url_for('settings'))
         
     allowed_extensions = {'csv', 'png', 'jpg', 'jpeg', 'pdf', 'doc', 'docx'}
-    ext = file.filename.split('.')[-1].lower()
+    filename_raw = secure_filename(file.filename)
+    if not filename_raw or '.' not in filename_raw:
+        flash("Invalid file name format.")
+        return redirect(url_for('settings'))
+        
+    ext = filename_raw.rsplit('.', 1)[1].lower()
     
-    if file and ext in allowed_extensions:
+    if ext in allowed_extensions:
         try:
             upload_dir = os.path.join("static", "uploads")
-            if os.path.exists(upload_dir):
-                for f in os.listdir(upload_dir):
-                    if f.startswith("uploaded_menu."):
+            os.makedirs(upload_dir, exist_ok=True)
+            for f in os.listdir(upload_dir):
+                if f.startswith("uploaded_menu."):
+                    try:
                         os.remove(os.path.join(upload_dir, f))
-            else:
-                os.makedirs(upload_dir)
+                    except Exception:
+                        pass
                 
-            filename = f"uploaded_menu.{ext}"
-            file.save(os.path.join(upload_dir, filename))
+            safe_name = f"uploaded_menu.{ext}"
+            file.save(os.path.join(upload_dir, safe_name))
             flash(f"Weekly hostel menu uploaded successfully ({ext.upper()} format).")
         except Exception as e:
             flash(f"Error saving menu file: {str(e)}")
     else:
-        flash("Invalid file format. Allowed: CSV, Images (PNG/JPG), PDF, DOCX.")
+        flash("Invalid file format. Allowed: CSV, Images (PNG/JPG), PDF, DOC, DOCX.")
         
     return redirect(url_for('settings'))
 
@@ -368,10 +423,14 @@ def upload_menu():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        role = request.form.get('role', 'user')
-        if database.register_user(username, password, role=role):
+        username = request.form.get('username', '').strip()
+        password = request.form.get('password', '').strip()
+        if not username or not password:
+            flash("Username and password are required.")
+            return render_template('register.html')
+
+        # Public registration strictly forces role='user' regardless of request parameters
+        if database.register_user(username, password, role='user', allow_admin_creation=False):
             flash("User registration successful! Please log in.")
             return redirect(url_for('login'))
         else:
@@ -782,9 +841,12 @@ def export_excel():
 
 # ---------------- RUN APPLICATION ----------------
 if __name__ == "__main__":
+    debug_mode = os.environ.get("FLASK_DEBUG", "False").lower() in ("true", "1", "t")
+    host_val = os.environ.get("HOST", "127.0.0.1")
+    port_val = int(os.environ.get("PORT", 5000))
     app.run(
-        debug=True,
-        host="127.0.0.1",
-        port=5000
+        debug=debug_mode,
+        host=host_val,
+        port=port_val
     )
 

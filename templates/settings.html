@@ -41,6 +41,7 @@
             <h5 class="fw-bold mb-3"><i class="fa-solid fa-file-arrow-up text-info me-2"></i>Upload Weekly Menu</h5>
             <p class="text-secondary small mb-3">Upload a weekly menu schedule file. Supported formats: <code>CSV, PNG, JPG, PDF, DOC, DOCX</code>.</p>
             <form action="/upload_menu" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                 <div class="mb-3">
                     <input type="file" name="menu_file" class="form-control" accept=".csv, .png, .jpg, .jpeg, .pdf, .doc, .docx" required>
                 </div>

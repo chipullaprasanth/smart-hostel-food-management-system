@@ -63,11 +63,37 @@
 </div>
 
 <!-- ML Model Comparison Metrics Row -->
+<div class="row g-4 mb-4">
+    <div class="col-12">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-layer-group text-info me-2"></i>Dual ML Architecture Workflow Overview</h5>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="p-3 rounded-3" style="background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.2);">
+                        <h6 class="fw-bold text-info"><i class="fa-solid fa-users me-2"></i>1. Web App Attendance Forecasting Model</h6>
+                        <p class="text-secondary small mb-1"><strong>Target Variable:</strong> <code>Students_Present</code></p>
+                        <p class="text-secondary small mb-1"><strong>Selected Model:</strong> Random Forest Regressor (saved in <code>model/best_model.pkl</code>)</p>
+                        <p class="text-secondary small mb-0"><strong>Purpose:</strong> Predicts daily mess turnout based on calendar, weather, menu, rating, and festival parameters.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-3 rounded-3" style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2);">
+                        <h6 class="fw-bold text-success"><i class="fa-solid fa-trash-can-arrow-up me-2"></i>2. Food Waste Analysis Model (Step 7–9 Audit)</h6>
+                        <p class="text-secondary small mb-1"><strong>Target Variable:</strong> <code>food_waste_kg</code></p>
+                        <p class="text-secondary small mb-1"><strong>Final Model:</strong> Ridge Regression ($\alpha=1$) (saved in <code>model/final_food_waste_model.pkl</code>)</p>
+                        <p class="text-secondary small mb-0"><strong>Performance:</strong> TimeSeriesSplit 5 Folds, $R^2=0.7959$, $\text{MAE}=2.3966$ Kg (64/64 Audit Checks Passed).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="row g-4">
     <div class="col-12">
         <div class="premium-card">
-            <h5 class="fw-bold mb-3"><i class="fa-solid fa-sliders text-info me-2"></i>Machine Learning Models Evaluation Matrix</h5>
-            <p class="text-secondary small mb-3">Model evaluation metrics calculated on test split of <code>hostel_food_data.csv</code>:</p>
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-sliders text-info me-2"></i>Attendance Forecasting Model Comparison Matrix</h5>
+            <p class="text-secondary small mb-3">Model evaluation metrics calculated on test split of <code>hostel_food_data.csv</code> for Attendance Forecasting:</p>
             
             <div class="table-responsive">
                 <table class="table table-dark table-hover align-middle mb-0">

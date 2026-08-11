@@ -81,6 +81,7 @@
     <div class="glass-card" style="height: fit-content;">
         <h3 style="margin-bottom: 20px; font-weight: 700;">Log Excess Food</h3>
         <form method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
             <div class="form-group mb-3">
                 <label for="organization" class="form-label small text-secondary">NGO / Target Organization Name</label>
                 <input type="text" id="organization" name="organization" placeholder="e.g. Hope Foundation Network" class="form-control" required>

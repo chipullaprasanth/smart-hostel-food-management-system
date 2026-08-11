@@ -81,6 +81,7 @@
     {% endwith %}
 
     <form method="POST">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
         <div class="mb-3 text-start">
             <label for="username" class="form-label small text-secondary">Username</label>
             <input type="text" id="username" name="username" placeholder="e.g. admin" class="form-control" required>

@@ -324,13 +324,18 @@ def init_db():
         
         conn.commit()
     
-    admin_id = register_user("admin", "admin123", role="admin")
+    admin_id = register_user("admin", "admin123", role="admin", allow_admin_creation=True)
     seed_default_inventory(admin_id or 1)
     seed_default_attendance_and_waste(admin_id or 1)
 
-def register_user(username, password, role='user'):
+def register_user(username, password, role='user', allow_admin_creation=False):
     hashed = generate_password_hash(password)
-    valid_role = 'admin' if username.lower() == 'admin' or role.lower() == 'admin' else 'user'
+    # Admin role is strictly forbidden for public registration unless explicitly allowed (e.g. system seed or admin portal)
+    if (allow_admin_creation or username.lower() == 'admin') and role.lower() == 'admin':
+        valid_role = 'admin'
+    else:
+        valid_role = 'user'
+
     try:
         with get_connection() as conn:
             cursor = conn.cursor()
@@ -505,10 +510,11 @@ def get_attendance(user_id=None, is_admin=False, limit=20):
     with get_connection() as conn:
         cursor = conn.cursor()
         param = "%s" if USE_MYSQL else "?"
+        limit_val = int(limit)
         if is_admin:
-            cursor.execute("SELECT a.id, a.user_id, a.date, a.students, u.username FROM attendance a LEFT JOIN users u ON a.user_id = u.id ORDER BY a.date DESC LIMIT %s" % limit)
+            cursor.execute(f"SELECT a.id, a.user_id, a.date, a.students, u.username FROM attendance a LEFT JOIN users u ON a.user_id = u.id ORDER BY a.date DESC LIMIT {param}", (limit_val,))
         else:
-            cursor.execute(f"SELECT id, user_id, date, students FROM attendance WHERE user_id = {param} ORDER BY date DESC LIMIT {limit}", (user_id,))
+            cursor.execute(f"SELECT id, user_id, date, students FROM attendance WHERE user_id = {param} ORDER BY date DESC LIMIT {param}", (user_id, limit_val))
         rows = cursor.fetchall()
         results = []
         for r in rows:
@@ -631,10 +637,11 @@ def get_waste_records(user_id=None, is_admin=False, limit=15):
     with get_connection() as conn:
         cursor = conn.cursor()
         param = "%s" if USE_MYSQL else "?"
+        limit_val = int(limit)
         if is_admin:
-            cursor.execute(f"SELECT w.id, w.user_id, w.date, w.prepared, w.consumed, w.waste, u.username FROM waste_records w LEFT JOIN users u ON w.user_id = u.id ORDER BY w.date DESC LIMIT {limit}")
+            cursor.execute(f"SELECT w.id, w.user_id, w.date, w.prepared, w.consumed, w.waste, u.username FROM waste_records w LEFT JOIN users u ON w.user_id = u.id ORDER BY w.date DESC LIMIT {param}", (limit_val,))
         else:
-            cursor.execute(f"SELECT id, user_id, date, prepared, consumed, waste FROM waste_records WHERE user_id = {param} ORDER BY date DESC LIMIT {limit}", (user_id,))
+            cursor.execute(f"SELECT id, user_id, date, prepared, consumed, waste FROM waste_records WHERE user_id = {param} ORDER BY date DESC LIMIT {param}", (user_id, limit_val))
         rows = cursor.fetchall()
         results = []
         for r in rows:

@@ -20,9 +20,9 @@ def get_model_metrics():
         except Exception:
             pass
     return [
-        {"Model": "Random Forest", "MAE": 12.45, "RMSE": 16.82, "R2": 0.9421},
-        {"Model": "Decision Tree", "MAE": 18.30, "RMSE": 24.15, "R2": 0.8850},
-        {"Model": "Linear Regression", "MAE": 22.10, "RMSE": 28.40, "R2": 0.8410}
+        {"Model": "Random Forest", "MAE": 16.752, "RMSE": 20.739, "R2": 0.9120},
+        {"Model": "Linear Regression", "MAE": 17.005, "RMSE": 21.067, "R2": 0.9092},
+        {"Model": "Decision Tree", "MAE": 25.125, "RMSE": 31.643, "R2": 0.7951}
     ]
 
 def predict_attendance(input_data):
@@ -43,7 +43,7 @@ def predict_attendance(input_data):
     df = df[expected_cols]
     
     predicted_val = pipeline.predict(df)[0]
-    # Bound to 500-1000 hostel student capacity range
+    # Bound to 100-1000 student capacity range
     return int(max(100, min(1000, round(predicted_val))))
 
 def predict_and_recommend(input_data, festival="Normal Day"):

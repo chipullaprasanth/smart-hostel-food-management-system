@@ -10,6 +10,7 @@
     <div class="glass-card">
         <h3 style="margin-bottom: 20px; font-weight: 700;">Submit Feedback</h3>
         <form method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
             <div class="form-group">
                 <label for="username">Username / Profile Tag</label>
                 <input type="text" id="username" name="username" placeholder="e.g. resident_user" class="form-control" required value="{{ session.get('user') or '' }}">
