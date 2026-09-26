@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Hostel - ML Demand Forecast{% endblock %}
+
+{% block page_title %}ML Mess Demand Forecast & Recommendations{% endblock %}
+{% block page_subtitle %}Random Forest Regression forecasting for 500-1000 student hostel capacity with automated model evaluation.{% endblock %}
+
+{% block content %}
+<div class="row g-4 justify-content-center">
+    <div class="col-lg-8">
+        <div class="premium-card mb-4" style="border-left: 4px solid var(--accent-primary);">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                <div>
+                    <h5 class="fw-bold mb-1"><i class="fa-solid fa-microchip text-info me-2"></i>Predictive Model Pipeline Status</h5>
+                    <p class="text-secondary small mb-0">Best Model: <strong>Random Forest Regressor</strong> (R² Score: <strong>0.9120</strong>, MAE: <strong>16.75</strong>)</p>
+                </div>
+                <a href="/predict" class="btn btn-primary btn-sm"><i class="fa-solid fa-wand-magic-sparkles me-1"></i>Run Custom Forecast</a>
+            </div>
+        </div>
+
+        <div class="premium-card text-center mb-4 p-5">
+            <p class="text-secondary small text-uppercase fw-bold mb-1">Forecasted Students Present (Capacity: 500-1000)</p>
+            <h1 class="display-3 fw-bold text-info mb-3">{{ predicted_students }}</h1>
+            <span class="badge bg-success bg-opacity-20 text-success mb-4 fs-6"><i class="fa-solid fa-check-circle me-1"></i>Optimized Cooking Target</span>
+            
+            <div class="border-top border-secondary pt-4 text-start">
+                <h6 class="fw-bold text-secondary mb-3"><i class="fa-solid fa-utensils text-info me-2"></i>Calculated Food Quantities (Portion Recommendation)</h6>
+                <div class="row g-3">
+                    <div class="col-md-3 col-6">
+                        <div class="p-3 rounded bg-dark border border-secondary text-center">
+                            <span class="text-secondary small d-block">RICE NEEDED</span>
+                            <h4 class="fw-bold text-warning mb-0">{{ rice }} Kg</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="p-3 rounded bg-dark border border-secondary text-center">
+                            <span class="text-secondary small d-block">DAL NEEDED</span>
+                            <h4 class="fw-bold text-warning mb-0">{{ dal }} Kg</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="p-3 rounded bg-dark border border-secondary text-center">
+                            <span class="text-secondary small d-block">CURRY NEEDED</span>
+                            <h4 class="fw-bold text-warning mb-0">{{ curry }} Kg</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="p-3 rounded bg-dark border border-secondary text-center">
+                            <span class="text-secondary small d-block">CHAPATI NEEDED</span>
+                            <h4 class="fw-bold text-warning mb-0">{{ chapati }} Pcs</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

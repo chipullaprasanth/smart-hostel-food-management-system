@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Hostel - Feedback{% endblock %}
+
+{% block page_title %}Provide Feedback{% endblock %}
+{% block page_subtitle %}Share your thoughts and help us improve the kitchen efficiency systems.{% endblock %}
+
+{% block content %}
+<div style="max-width: 600px; margin: 0 auto;">
+    <div class="glass-card">
+        <h3 style="margin-bottom: 20px; font-weight: 700;">Submit Feedback</h3>
+        <form method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <div class="form-group">
+                <label for="username">Username / Profile Tag</label>
+                <input type="text" id="username" name="username" placeholder="e.g. resident_user" class="form-control" required value="{{ session.get('user') or '' }}">
+            </div>
+            
+            <div class="form-group">
+                <label for="feedback">Your Review or Comments</label>
+                <textarea id="feedback" name="feedback" rows="5" placeholder="Share your suggestions..." class="form-control" style="resize: none;" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fa-solid fa-paper-plane"></i> Submit Feedback
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

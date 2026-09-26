@@ -1,0 +1,431 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Hostel - Dashboard Analytics{% endblock %}
+
+{% block page_title %}Operational Dashboard Analytics{% endblock %}
+{% block page_subtitle %}Real-time demand tracking, ML forecasts, and hostel food waste reduction statistics (Capacity: 500-1000 Students).{% endblock %}
+
+{% block extra_head %}
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+    .chart-container {
+        position: relative;
+        height: 260px;
+        width: 100%;
+    }
+    @media (max-width: 768px) {
+        .chart-container {
+            height: 220px;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+{% if is_admin %}
+<!-- Admin Dashboard Top Metrics Row -->
+<div class="row g-3 g-lg-4 mb-4">
+    <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+        <div class="premium-card d-flex align-items-center gap-3" style="border-left: 4px solid var(--accent-primary);">
+            <div class="rounded-3 p-3 bg-primary bg-opacity-10 text-primary fs-3 flex-shrink-0"><i class="fa-solid fa-users"></i></div>
+            <div class="overflow-hidden min-w-0" style="flex-grow: 1;">
+                <h3 class="fw-bold mb-1 text-truncate" style="font-size: 1.5rem;">{{ admin_metrics.total_users }}</h3>
+                <p class="text-secondary small mb-0 text-truncate">Total Registered Users</p>
+                <span class="badge bg-primary bg-opacity-10 text-primary font-monospace mt-1 text-wrap" style="font-size: 10px;">System Accounts</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+        <div class="premium-card d-flex align-items-center gap-3" style="border-left: 4px solid #3b82f6;">
+            <div class="rounded-3 p-3 bg-info bg-opacity-10 text-info fs-3 flex-shrink-0"><i class="fa-solid fa-microchip"></i></div>
+            <div class="overflow-hidden min-w-0" style="flex-grow: 1;">
+                <h3 class="fw-bold mb-1 text-truncate" style="font-size: 1.5rem;">{{ admin_metrics.total_predictions }}</h3>
+                <p class="text-secondary small mb-0 text-truncate">Total System Predictions</p>
+                <span class="badge bg-info bg-opacity-10 text-info font-monospace mt-1 text-wrap" style="font-size: 10px;">All User Executions</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+        <div class="premium-card d-flex align-items-center gap-3" style="border-left: 4px solid #ef4444;">
+            <div class="rounded-3 p-3 bg-danger bg-opacity-10 text-danger fs-3 flex-shrink-0"><i class="fa-solid fa-trash-can"></i></div>
+            <div class="overflow-hidden min-w-0" style="flex-grow: 1;">
+                <h3 class="fw-bold mb-1 text-truncate" style="font-size: 1.4rem;">{{ "%.1f"|format(admin_metrics.overall_food_waste) }} Kg</h3>
+                <p class="text-secondary small mb-0 text-truncate">Overall Food Waste</p>
+                <span class="badge bg-danger bg-opacity-10 text-danger font-monospace mt-1 text-wrap" style="font-size: 10px;">Aggregate Waste</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+        <div class="premium-card d-flex align-items-center gap-3" style="border-left: 4px solid #10b981;">
+            <div class="rounded-3 p-3 bg-success bg-opacity-10 text-success fs-3 flex-shrink-0"><i class="fa-solid fa-coins"></i></div>
+            <div class="overflow-hidden min-w-0" style="flex-grow: 1;">
+                <h3 class="fw-bold mb-1 text-truncate" style="font-size: 1.4rem;">₹ {{ "{:,.0f}".format(admin_metrics.overall_cost_savings) }}</h3>
+                <p class="text-secondary small mb-0 text-truncate">Overall Cost Savings</p>
+                <span class="badge bg-success bg-opacity-10 text-success font-monospace mt-1 text-wrap" style="font-size: 10px;">System Savings</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Admin Recent System Activities Section -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-clock-rotate-left me-2 text-warning"></i>Recent User Activities (System Audit)</h5>
+            <div class="table-responsive">
+                <table class="table table-dark table-hover mb-0 align-middle">
+                    <thead>
+                        <tr class="text-secondary small">
+                            <th>Timestamp</th>
+                            <th>User</th>
+                            <th>Activity Type</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if not admin_metrics.recent_activities %}
+                        <tr><td colspan="4" class="text-center text-secondary py-3">No recent activities recorded.</td></tr>
+                        {% endif %}
+                        {% for act in admin_metrics.recent_activities %}
+                        <tr>
+                            <td class="small text-secondary">{{ act.created_at }}</td>
+                            <td><span class="badge bg-secondary font-monospace"><i class="fa-solid fa-user me-1"></i>{{ act.username }}</span></td>
+                            <td><span class="badge {% if act.type == 'Prediction' %}bg-info{% else %}bg-success{% endif %} bg-opacity-20 text-light">{{ act.type }}</span></td>
+                            <td class="fw-semibold">{{ act.details }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% else %}
+<!-- User Dashboard Top Metrics Row -->
+<div class="row g-3 g-lg-4 mb-4">
+    <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+        <div class="premium-card d-flex align-items-center gap-3" style="border-left: 4px solid #3b82f6;">
+            <div class="rounded-3 p-3 bg-info bg-opacity-10 text-info fs-3 flex-shrink-0"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="overflow-hidden min-w-0" style="flex-grow: 1;">
+                <h3 class="fw-bold mb-1 text-truncate" style="font-size: 1.5rem;">{{ user_metrics.my_predictions_count }}</h3>
+                <p class="text-secondary small mb-0 text-truncate">My Predictions</p>
+                <span class="badge bg-info bg-opacity-10 text-info font-monospace mt-1 text-wrap" style="font-size: 10px;">Personal Runs</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+        <div class="premium-card d-flex align-items-center gap-3" style="border-left: 4px solid var(--accent-primary);">
+            <div class="rounded-3 p-3 bg-primary bg-opacity-10 text-primary fs-3 flex-shrink-0"><i class="fa-solid fa-user-check"></i></div>
+            <div class="overflow-hidden min-w-0" style="flex-grow: 1;">
+                <h3 class="fw-bold mb-1 text-truncate" style="font-size: 1.5rem;">{{ user_metrics.my_attendance }} Students</h3>
+                <p class="text-secondary small mb-0 text-truncate">Students Served</p>
+                <span class="badge bg-primary bg-opacity-10 text-primary font-monospace mt-1 text-wrap" style="font-size: 10px;">Latest Mess Log</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+        <div class="premium-card d-flex align-items-center gap-3" style="border-left: 4px solid #f59e0b;">
+            <div class="rounded-3 p-3 bg-warning bg-opacity-10 text-warning fs-3 flex-shrink-0"><i class="fa-solid fa-file-invoice"></i></div>
+            <div class="overflow-hidden min-w-0" style="flex-grow: 1;">
+                <h3 class="fw-bold mb-1 text-truncate" style="font-size: 1.5rem;">{{ user_metrics.my_reports_count }}</h3>
+                <p class="text-secondary small mb-0 text-truncate">My Reports</p>
+                <span class="badge bg-warning bg-opacity-10 text-warning font-monospace mt-1 text-wrap" style="font-size: 10px;">Audit Records</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-lg-6 col-md-6 col-12">
+        <div class="premium-card d-flex align-items-center gap-3" style="border-left: 4px solid #ef4444;">
+            <div class="rounded-3 p-3 bg-danger bg-opacity-10 text-danger fs-3 flex-shrink-0"><i class="fa-solid fa-trash-can"></i></div>
+            <div class="overflow-hidden min-w-0" style="flex-grow: 1;">
+                <h3 class="fw-bold mb-1 text-truncate" style="font-size: 1.4rem;">{{ "%.1f"|format(user_metrics.my_food_waste_history) }} Kg</h3>
+                <p class="text-secondary small mb-0 text-truncate">My Food Waste History</p>
+                <span class="badge bg-danger bg-opacity-10 text-danger font-monospace mt-1 text-wrap" style="font-size: 10px;">Total Logged Waste</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- My Recommendations Quick Link -->
+<div class="alert alert-info border-0 d-flex justify-content-between align-items-center p-3 mb-4" style="background: rgba(0, 242, 254, 0.1);">
+    <div>
+        <i class="fa-solid fa-lightbulb me-2 text-info fs-5"></i>
+        <strong>Operational Optimization:</strong> Align kitchen preparation dynamically with student attendance to minimize wastage.
+    </div>
+    <a href="/predict" class="btn btn-primary btn-sm"><i class="fa-solid fa-wand-magic-sparkles me-1"></i>Run New Forecast</a>
+</div>
+{% endif %}
+
+<!-- System Analytics & Charts Grid in Strict Required Order -->
+<!-- Row 1: Attendance Trend & Students Served & Food Waste Analysis -->
+<div class="row g-4 mb-4">
+    <!-- 1. Attendance Trend -->
+    <div class="col-lg-6 col-md-12">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-chart-line me-2 text-info"></i>Attendance Trend</h5>
+            <div class="chart-container"><canvas id="attendanceTrendChart"></canvas></div>
+        </div>
+    </div>
+
+    <!-- 2. Students Served & Food Waste Analysis -->
+    <div class="col-lg-6 col-md-12">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-chart-column me-2 text-success"></i>Students Served & Food Waste Analysis</h5>
+            <div class="chart-container"><canvas id="studentsWasteAnalysisChart"></canvas></div>
+        </div>
+    </div>
+</div>
+
+<!-- Row 2: Food Waste Type Analysis, Food Cost Loss by Section, Global Waste Benchmark -->
+<div class="row g-4 mb-4">
+    <!-- 3. Food Waste Type Analysis -->
+    <div class="col-lg-4 col-md-6 col-12">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-utensils me-2 text-warning"></i>Food Waste Type Analysis</h5>
+            <div class="chart-container" style="height: 230px;"><canvas id="foodWasteTypeChart"></canvas></div>
+        </div>
+    </div>
+
+    <!-- 4. Food Cost Loss by Section -->
+    <div class="col-lg-4 col-md-6 col-12">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-chart-pie me-2 text-primary"></i>Food Cost Loss by Section</h5>
+            <div class="chart-container" style="height: 230px;"><canvas id="sectionCostLossChart"></canvas></div>
+        </div>
+    </div>
+
+    <!-- 5. Global Waste Benchmark -->
+    <div class="col-lg-4 col-md-12 col-12">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-globe me-2 text-info"></i>Global Waste Benchmark</h5>
+            <div class="chart-container" style="height: 230px;"><canvas id="globalBenchmarkChart"></canvas></div>
+        </div>
+    </div>
+</div>
+
+<!-- Row 3: ML Models Evaluation & Hostel Weekly Menu Schedule -->
+<div class="row g-4 mb-4">
+    <!-- 6. ML Models Evaluation -->
+    <div class="col-lg-5 col-md-12">
+        <div class="premium-card h-100">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-sliders me-2 text-primary"></i>ML Models Evaluation</h5>
+            <p class="text-secondary small">Comparison of Machine Learning regressors trained on <code>Dataset Propely.csv</code>:</p>
+            <div class="table-responsive">
+                <table class="table table-dark table-hover mb-0 align-middle">
+                    <thead>
+                        <tr class="text-secondary small">
+                            <th>Model</th>
+                            <th>MAE</th>
+                            <th>RMSE</th>
+                            <th>R² Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="modelComparisonBody">
+                        <tr><td colspan="4" class="text-center text-secondary py-3">Loading model metrics...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. Hostel Weekly Menu Schedule -->
+    <div class="col-lg-7 col-md-12">
+        <div class="premium-card h-100">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-calendar-week me-2 text-info"></i>Hostel Weekly Menu Schedule</h5>
+            {% if menu_image %}
+            <div class="text-center p-3">
+                <img src="{{ url_for('static', filename=menu_image) }}" alt="Weekly Menu Schedule" class="img-fluid rounded border border-secondary" style="max-height: 250px;">
+            </div>
+            {% elif menu_pdf %}
+            <div class="text-center p-4">
+                <i class="fa-solid fa-file-pdf display-4 text-danger mb-3"></i>
+                <h6 class="fw-bold mb-2">Weekly Menu Schedule (PDF)</h6>
+                <a href="{{ url_for('static', filename=menu_pdf) }}" target="_blank" class="btn btn-primary btn-sm mt-2"><i class="fa-solid fa-eye me-2"></i>Open PDF</a>
+            </div>
+            {% else %}
+            <div class="table-responsive">
+                <table class="table table-dark table-hover mb-0 align-middle">
+                    <thead>
+                        <tr class="text-secondary small">
+                            <th>Day</th>
+                            <th>Breakfast</th>
+                            <th>Lunch</th>
+                            <th>Dinner</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if not menu_list %}
+                        <tr><td colspan="4" class="text-center text-secondary py-3">No custom menu uploaded. Default schedule active.</td></tr>
+                        {% endif %}
+                        {% for row in menu_list %}
+                        <tr>
+                            <td class="fw-bold text-info">{{ row.Day }}</td>
+                            <td>{{ row.Breakfast }}</td>
+                            <td>{{ row.Lunch }}</td>
+                            <td>{{ row.Dinner }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("/api/dashboard_chart_data")
+            .then(res => res.json())
+            .then(data => {
+                const commonOptions = {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { labels: { color: '#94a3b8' } } },
+                    scales: {
+                        x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+                        y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } }
+                    }
+                };
+
+                // 1. Attendance Trend (Line Chart)
+                new Chart(document.getElementById('attendanceTrendChart').getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: data.attendance_labels,
+                        datasets: [{
+                            label: 'Students Logged',
+                            data: data.attendance_values,
+                            borderColor: '#00f2fe',
+                            backgroundColor: 'rgba(0, 242, 254, 0.15)',
+                            fill: true,
+                            tension: 0.3
+                        }]
+                    },
+                    options: commonOptions
+                });
+
+                // 2. Students Served & Food Waste Analysis (Dual-Axis Grouped Bar Chart)
+                new Chart(document.getElementById('studentsWasteAnalysisChart').getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: data.attendance_labels.length === data.waste_labels.length ? data.attendance_labels : data.waste_labels,
+                        datasets: [
+                            {
+                                label: 'Students Served',
+                                data: data.attendance_values,
+                                backgroundColor: '#4facfe',
+                                yAxisID: 'yStudents'
+                            },
+                            {
+                                label: 'Food Waste (Kg)',
+                                data: data.waste_values,
+                                backgroundColor: '#ef4444',
+                                yAxisID: 'yWaste'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { labels: { color: '#94a3b8' } } },
+                        scales: {
+                            x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+                            yStudents: {
+                                type: 'linear',
+                                position: 'left',
+                                title: { display: true, text: 'Students Count', color: '#4facfe' },
+                                ticks: { color: '#94a3b8' },
+                                grid: { color: 'rgba(255,255,255,0.05)' }
+                            },
+                            yWaste: {
+                                type: 'linear',
+                                position: 'right',
+                                title: { display: true, text: 'Food Waste (Kg)', color: '#ef4444' },
+                                ticks: { color: '#94a3b8' },
+                                grid: { drawOnChartArea: false }
+                            }
+                        }
+                    }
+                });
+
+                // 3. Food Waste Type Analysis (Bar Chart for Rice, Dal, Vegetables, Chapati)
+                const wasteTypeData = data.food_waste_types || data.catering_waste;
+                new Chart(document.getElementById('foodWasteTypeChart').getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: Object.keys(wasteTypeData),
+                        datasets: [{
+                            label: 'Waste Weight (Kg)',
+                            data: Object.values(wasteTypeData),
+                            backgroundColor: ['#00f2fe', '#f59e0b', '#10b981', '#ec4899']
+                        }]
+                    },
+                    options: commonOptions
+                });
+
+                // 4. Food Cost Loss by Section (Doughnut Chart for Section A, Section B, Section C, Section D)
+                const sectionData = data.food_cost_sections || data.canteen_sections;
+                new Chart(document.getElementById('sectionCostLossChart').getContext('2d'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: Object.keys(sectionData),
+                        datasets: [{
+                            data: Object.values(sectionData),
+                            backgroundColor: ['#00f2fe', '#3b82f6', '#8b5cf6', '#ec4899'],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { position: 'bottom', labels: { color: '#94a3b8' } } }
+                    }
+                });
+
+                // 5. Global Waste Benchmark (Bar Chart)
+                new Chart(document.getElementById('globalBenchmarkChart').getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: Object.keys(data.global_benchmarks),
+                        datasets: [{
+                            label: 'Waste per Capita (Kg)',
+                            data: Object.values(data.global_benchmarks),
+                            backgroundColor: '#06b6d4'
+                        }]
+                    },
+                    options: commonOptions
+                });
+
+                // 6. ML Models Evaluation Table Population
+                const tbody = document.getElementById('modelComparisonBody');
+                if (data.model_metrics && data.model_metrics.length > 0) {
+                    tbody.innerHTML = '';
+                    data.model_metrics.forEach(m => {
+                        const tr = document.createElement('tr');
+                        const isBest = m.Model.includes('Random Forest') || m.R2 > 0.90;
+                        tr.innerHTML = `
+                            <td class="fw-bold ${isBest ? 'text-info' : 'text-light'}">
+                                ${m.Model} ${isBest ? '<span class="badge bg-info bg-opacity-20 text-info ms-1">Selected</span>' : ''}
+                            </td>
+                            <td>${m.MAE}</td>
+                            <td>${m.RMSE}</td>
+                            <td class="fw-bold text-success">${m.R2}</td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
+                }
+            });
+    });
+</script>
+{% endblock %}

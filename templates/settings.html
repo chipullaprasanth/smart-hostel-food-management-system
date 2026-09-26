@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Hostel - Settings{% endblock %}
+
+{% block page_title %}System Settings{% endblock %}
+{% block page_subtitle %}Manage database configurations, view ML model training versions, and metrics performance.{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+    <!-- Admin Settings & Database Configurations -->
+    <div class="col-md-5">
+        <div class="premium-card mb-4">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-database text-info me-2"></i>Database Connector</h5>
+            <div class="mb-3">
+                <label class="form-label small text-secondary">Active Database Engine</label>
+                <input type="text" class="form-control" value="{% if use_mysql %}MySQL Server (Production Mode){% else %}SQLite 3 (Development Fallback Mode){% endif %}" readonly>
+            </div>
+            <div class="mb-3">
+                <label class="form-label small text-secondary">Host Address</label>
+                <input type="text" class="form-control" value="localhost" readonly>
+            </div>
+            <div class="mb-3">
+                <label class="form-label small text-secondary">Database Schema Name</label>
+                <input type="text" class="form-control" value="hostel_db" readonly>
+            </div>
+        </div>
+
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-user-gear text-info me-2"></i>Operator Configurations</h5>
+            <div class="mb-3">
+                <label class="form-label small text-secondary">Profile Name</label>
+                <input type="text" class="form-control" value="{{ session.get('user') or 'Guest' }}" readonly>
+            </div>
+            <div class="mb-3">
+                <label class="form-label small text-secondary">Operational Role</label>
+                <input type="text" class="form-control" value="{% if session.get('user') == 'admin' %}Lead Administrator{% else %}Standard Viewer{% endif %}" readonly>
+            </div>
+        </div>
+        
+        <div class="premium-card mt-4">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-file-arrow-up text-info me-2"></i>Upload Weekly Menu</h5>
+            <p class="text-secondary small mb-3">Upload a weekly menu schedule file. Supported formats: <code>CSV, PNG, JPG, PDF, DOC, DOCX</code>.</p>
+            <form action="/upload_menu" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <div class="mb-3">
+                    <input type="file" name="menu_file" class="form-control" accept=".csv, .png, .jpg, .jpeg, .pdf, .doc, .docx" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fa-solid fa-upload me-2"></i>Upload Menu Schedule
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Model Versions & Metrics Comparison -->
+    <div class="col-md-7">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-robot text-info me-2"></i>Model Metrics & Performance</h5>
+            <p class="text-secondary small mb-4">Comparison of various regression models trained on the generated dataset of 1200+ historical records:</p>
+            
+            <div class="table-responsive mb-4">
+                <table class="table table-dark table-striped align-middle">
+                    <thead>
+                        <tr class="text-secondary small">
+                            <th>Model Architecture</th>
+                            <th class="text-end">MAE</th>
+                            <th class="text-end">RMSE</th>
+                            <th class="text-end">R² Score</th>
+                            <th>Status Flag</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Linear Regression</td>
+                            <td class="text-end">2.131</td>
+                            <td class="text-end">2.564</td>
+                            <td class="text-end">0.9612</td>
+                            <td><span class="badge bg-secondary bg-opacity-10 text-secondary">Benchmark</span></td>
+                        </tr>
+                        <tr>
+                            <td>Decision Tree Regressor</td>
+                            <td class="text-end">2.663</td>
+                            <td class="text-end">3.465</td>
+                            <td class="text-end">0.9292</td>
+                            <td><span class="badge bg-secondary bg-opacity-10 text-secondary">Benchmark</span></td>
+                        </tr>
+                        <tr class="table-active">
+                            <td class="fw-bold">Random Forest Regressor</td>
+                            <td class="text-end fw-bold">1.979</td>
+                            <td class="text-end fw-bold">2.417</td>
+                            <td class="text-end fw-bold text-info">0.9655</td>
+                            <td><span class="badge bg-success bg-opacity-10 text-success">Selected Best</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="p-3 rounded bg-info bg-opacity-10 border border-info border-opacity-20">
+                <h6 class="fw-bold text-info mb-1"><i class="fa-solid fa-microchip me-2"></i>Active Predictor Version</h6>
+                <p class="text-secondary small mb-0">Model pipeline is loaded from <code>model/best_model.pkl</code>. Standard features are scaled with a StandardScaler pipeline before RandomForest execution.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

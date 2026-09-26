@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Hostel - ML Prediction & Food Recommendation Engine{% endblock %}
+
+{% block page_title %}ML Demand Prediction & Recommendation Engine{% endblock %}
+{% block page_subtitle %}Predict student attendance (500-1000 scale) and compute weather/season/festival tailored food quantities.{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+    <!-- Form Inputs Panel -->
+    <div class="col-lg-7">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-wand-magic-sparkles text-info me-2"></i>Telemetry & Operational Parameters</h5>
+            
+            <form method="POST">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <!-- Interactive Date Selector with Integrated Up/Down Stepper Buttons -->
+                <div class="p-3 mb-4 rounded-3" style="background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.2);">
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                        <div class="d-flex align-items-center gap-2">
+                            <button type="button" id="open-calendar-btn" class="btn btn-info text-white p-2 rounded-3" title="Click to open calendar modal">
+                                <i class="fa-solid fa-calendar-days fs-4"></i>
+                            </button>
+                            <div>
+                                <label for="date-picker-input" class="text-secondary small d-block mb-1">Forecast Date (Click to Pick)</label>
+                                <div class="position-relative" style="width: 185px;">
+                                    <input type="text" id="date-picker-input" name="date" class="form-control form-control-sm text-info fw-bold font-monospace bg-dark border-secondary pe-4" style="font-size: 15px; cursor: pointer; height: 38px;" value="{{ date_info.date_str }}" readonly>
+                                    <div class="d-flex flex-column position-absolute end-0 top-0 bottom-0 px-1 justify-content-center bg-dark rounded-end border-start border-secondary" style="width: 26px;">
+                                        <a href="?date={{ date_info.next_date }}" class="text-info text-decoration-none text-center lh-1 py-1" style="font-size: 11px;" title="Next Day (+1 Day)"><i class="fa-solid fa-chevron-up"></i></a>
+                                        <a href="?date={{ date_info.prev_date }}" class="text-info text-decoration-none text-center lh-1 py-1" style="font-size: 11px;" title="Previous Day (-1 Day)"><i class="fa-solid fa-chevron-down"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="badge bg-secondary ms-1 fs-6" style="padding: 8px 14px;">{{ date_info.day }}, {{ date_info.month }} ({{ date_info.season }})</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="Season" class="form-label small text-secondary">Operating Season</label>
+                        <select id="Season" name="Season" class="form-select">
+                            <option value="Summer" {% if date_info.season == 'Summer' %}selected{% endif %}>Summer Season</option>
+                            <option value="Monsoon" {% if date_info.season == 'Monsoon' %}selected{% endif %}>Monsoon / Rainy Season</option>
+                            <option value="Winter" {% if date_info.season == 'Winter' %}selected{% endif %}>Winter Season</option>
+                            <option value="Spring" {% if date_info.season == 'Spring' %}selected{% endif %}>Spring Season</option>
+                            <option value="Autumn" {% if date_info.season == 'Autumn' %}selected{% endif %}>Autumn Season</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="Festival" class="form-label small text-secondary">Festival / Campus Event</label>
+                        <select id="Festival" name="Festival" class="form-select">
+                            <option value="Normal Day">Normal Academic Day</option>
+                            <option value="Festival Special">Campus Festival / Special Feast</option>
+                            <option value="Exam / Holiday">Exam Season / Minor Holiday</option>
+                        </select>
+                    </div>
+
+                    <!-- Hidden Day and Month for Model -->
+                    <input type="hidden" id="Day" name="Day" value="{{ date_info.day }}">
+                    <input type="hidden" id="Month" name="Month" value="{{ date_info.month }}">
+
+                    <div class="col-md-4">
+                        <label for="Temperature" class="form-label small text-secondary">Temperature (°C)</label>
+                        <input type="number" step="0.1" id="Temperature" name="Temperature" class="form-control" value="28.0" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="Rainfall" class="form-label small text-secondary">Rainfall (mm)</label>
+                        <input type="number" step="0.1" id="Rainfall" name="Rainfall" class="form-control" value="0.0" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="Humidity" class="form-label small text-secondary">Humidity (%)</label>
+                        <input type="number" id="Humidity" name="Humidity" class="form-control" value="65" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="Wind_Speed" class="form-label small text-secondary">Wind Speed (km/h)</label>
+                        <input type="number" step="0.1" id="Wind_Speed" name="Wind_Speed" class="form-control" value="12.0" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="Food_Rating" class="form-label small text-secondary">Mess Food Rating (1-5)</label>
+                        <input type="number" step="0.1" id="Food_Rating" name="Food_Rating" class="form-control" value="4.2" min="1.0" max="5.0" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="Breakfast_Menu" class="form-label small text-secondary">Breakfast Menu</label>
+                        <select id="Breakfast_Menu" name="Breakfast_Menu" class="form-select">
+                            <option value="Idli Sambar">Idli Sambar</option>
+                            <option value="Masala Dosa">Masala Dosa</option>
+                            <option value="Aloo Paratha">Aloo Paratha</option>
+                            <option value="Puri Bhaji">Puri Bhaji</option>
+                            <option value="Poha Upma">Poha Upma</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="Lunch_Menu" class="form-label small text-secondary">Lunch Menu</label>
+                        <select id="Lunch_Menu" name="Lunch_Menu" class="form-select">
+                            <option value="Dal Chawal Sabzi">Dal Chawal Sabzi</option>
+                            <option value="Veg Biryani">Veg Biryani</option>
+                            <option value="Chole Bhature">Chole Bhature</option>
+                            <option value="Rajma Chawal">Rajma Chawal</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="Dinner_Menu" class="form-label small text-secondary">Dinner Menu</label>
+                        <select id="Dinner_Menu" name="Dinner_Menu" class="form-select">
+                            <option value="Roti Green Curry">Roti Green Curry</option>
+                            <option value="Khichdi Kadhi">Khichdi Kadhi</option>
+                            <option value="Dal Fry Jeera Rice">Dal Fry Jeera Rice</option>
+                            <option value="Chicken Tikka Rice">Chicken Tikka Rice</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="Previous_Attendance" class="form-label small text-secondary">Previous Attendance (500–1000)</label>
+                        <input type="number" id="Previous_Attendance" name="Previous_Attendance" class="form-control" value="750" min="100" max="1000" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="Previous_Waste" class="form-label small text-secondary">Previous Waste (kg)</label>
+                        <input type="number" step="0.1" id="Previous_Waste" name="Previous_Waste" class="form-control" value="14.5" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 mt-4 py-2">
+                    <i class="fa-solid fa-microchip me-2"></i>Run Random Forest & Seasonal Recommendation Engine
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Outputs & Recommendations Panel -->
+    <div class="col-lg-5">
+        {% if prediction %}
+        <div class="premium-card text-center mb-4" style="border-color: var(--accent-primary);">
+            <p class="text-secondary small text-uppercase fw-bold mb-1">Predicted Mess Attendance</p>
+            <h1 class="display-4 fw-bold text-info mb-0">{{ prediction.students }}</h1>
+            <p class="text-secondary small mb-0">Students Expected Present (Capacity: 500-1000)</p>
+            <span class="badge bg-success bg-opacity-20 text-success mt-2"><i class="fa-solid fa-check-circle me-1"></i>Optimized Portion Baseline</span>
+        </div>
+
+        {% if recommendation %}
+        <div class="premium-card mb-4">
+            <h6 class="fw-bold text-info mb-3"><i class="fa-solid fa-utensils me-2"></i>Ingredient Portion Predictions</h6>
+            
+            <div class="row g-2 mb-3">
+                <div class="col-6">
+                    <div class="p-2 rounded bg-dark border border-secondary text-center">
+                        <span class="text-secondary small d-block">Rice Quantity</span>
+                        <strong class="text-warning fs-5">{{ recommendation.rice_kg }} Kg</strong>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-2 rounded bg-dark border border-secondary text-center">
+                        <span class="text-secondary small d-block">Dal Quantity</span>
+                        <strong class="text-warning fs-5">{{ recommendation.dal_kg }} Kg</strong>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-2 rounded bg-dark border border-secondary text-center">
+                        <span class="text-secondary small d-block">Curry Quantity</span>
+                        <strong class="text-warning fs-5">{{ recommendation.curry_kg }} Kg</strong>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-2 rounded bg-dark border border-secondary text-center">
+                        <span class="text-secondary small d-block">Chapati Count</span>
+                        <strong class="text-warning fs-5">{{ recommendation.chapati_count }} Pcs</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Best Suitable Seasonal Food Menu Card -->
+        <div class="premium-card" style="border: 1px solid #00f2fe;">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <h6 class="fw-bold text-info mb-0"><i class="fa-solid fa-cloud-sun me-2"></i>Best Suitable Seasonal Menu</h6>
+                <span class="badge bg-info text-dark font-monospace fw-bold">{{ recommendation.season }} Season</span>
+            </div>
+            
+            <div class="p-3 rounded bg-dark border border-secondary mb-3">
+                <p class="text-secondary small mb-1"><i class="fa-solid fa-temperature-half me-2 text-warning"></i><strong>Weather Status:</strong> {{ recommendation.weather_condition }}</p>
+                <hr class="border-secondary my-2">
+                <p class="text-white small mb-1"><strong><i class="fa-solid fa-mug-hot me-2 text-info"></i>Suggested Breakfast:</strong> {{ recommendation.suggested_menu.breakfast }}</p>
+                <p class="text-white small mb-1"><strong><i class="fa-solid fa-bowl-rice me-2 text-success"></i>Suggested Lunch:</strong> {{ recommendation.suggested_menu.lunch }}</p>
+                <p class="text-white small mb-0"><strong><i class="fa-solid fa-utensils me-2 text-warning"></i>Suggested Dinner:</strong> {{ recommendation.suggested_menu.dinner }}</p>
+            </div>
+
+            {% if recommendation.menu_rationale %}
+            <div class="p-2 rounded bg-info bg-opacity-10 text-info border border-info border-opacity-20 small">
+                <i class="fa-solid fa-lightbulb me-1"></i> <strong>Seasonal Rationale:</strong> {{ recommendation.menu_rationale }}
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        {% else %}
+        <div class="premium-card text-center h-100 d-flex flex-column align-items-center justify-content-center p-5">
+            <i class="fa-solid fa-utensils text-secondary display-4 mb-3"></i>
+            <h5 class="fw-bold text-secondary">Awaiting Telemetry Parameters</h5>
+            <p class="text-secondary small">Pick a season, calendar date, and submit telemetry to generate ML predictions and seasonal menu recommendations.</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const fp = flatpickr("#date-picker-input", {
+            dateFormat: "Y-m-d",
+            defaultDate: "{{ date_info.date_str }}",
+            theme: "dark",
+            monthSelectorType: "dropdown",
+            onChange: function(selectedDates, dateStr) {
+                if (dateStr) {
+                    window.location.href = "?date=" + dateStr;
+                }
+            }
+        });
+        document.getElementById("open-calendar-btn").addEventListener("click", function() {
+            fp.open();
+        });
+    });
+</script>
+{% endblock %}

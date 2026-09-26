@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Hostel - Inventory Management{% endblock %}
+
+{% block page_title %}Kitchen Inventory Management{% endblock %}
+{% block page_subtitle %}Review or modify available stock counts and ingredient balances.{% endblock %}
+
+{% block content %}
+<style>
+    .inventory-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+    }
+    @media (max-width: 768px) {
+        .inventory-layout {
+            grid-template-columns: 1fr;
+        }
+    }
+    .inventory-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+    }
+    .inventory-table th, .inventory-table td {
+        padding: 16px;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .inventory-table th {
+        color: var(--text-secondary);
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    .inventory-table td {
+        color: var(--text-primary);
+        font-size: 15px;
+    }
+</style>
+
+<div class="inventory-layout">
+    <div class="glass-card">
+        <h3 style="margin-bottom: 20px; font-weight: 700;">Current Stock Levels</h3>
+        <table class="inventory-table">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Available Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item, qty in items %}
+                <tr>
+                    <td style="font-weight: 600;"><i class="fa-solid fa-box" style="color: var(--accent-primary); margin-right: 8px;"></i> {{ item }}</td>
+                    <td style="font-weight: 700;">{{ qty }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="glass-card" style="height: fit-content;">
+        <h3 style="margin-bottom: 20px; font-weight: 700;">Update Stock Level</h3>
+        <form method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <div class="form-group">
+                <label for="item">Select / Type Food Item</label>
+                <input type="text" id="item" name="item" list="items-datalist" placeholder="e.g. Rice" class="form-control" required>
+                <datalist id="items-datalist">
+                    <option value="Rice">
+                    <option value="Dal">
+                    <option value="Vegetables">
+                    <option value="Cooking Oil">
+                    <option value="Spices">
+                </datalist>
+            </div>
+            
+            <div class="form-group">
+                <label for="quantity">Available Quantity</label>
+                <input type="text" id="quantity" name="quantity" placeholder="e.g. 175 Kg" class="form-control" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fa-solid fa-save"></i> Save Inventory
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

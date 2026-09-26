@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Hostel - Expense Management{% endblock %}
+
+{% block page_title %}Kitchen Expense Management{% endblock %}
+{% block page_subtitle %}Log kitchen food procurement expenses and dynamically track monthly cost savings.{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+    <!-- Expense Form -->
+    <div class="col-md-6">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-receipt text-info me-2"></i>Record Kitchen Expense</h5>
+            
+            <form method="POST">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <!-- Interactive Date Selector with Integrated Up/Down Stepper Buttons -->
+                <div class="p-3 mb-3 rounded-3" style="background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.2);">
+                    <div class="d-flex align-items-center gap-2">
+                        <button type="button" id="open-calendar-btn" class="btn btn-info text-white p-2 rounded-3" title="Click to open interactive calendar modal">
+                            <i class="fa-solid fa-calendar-days fs-4"></i>
+                        </button>
+                        <div>
+                            <label for="date-picker-input" class="text-secondary small d-block mb-1">Expense Date (Click to Pick)</label>
+                            <div class="position-relative" style="width: 175px;">
+                                <input type="text" id="date-picker-input" name="date" class="form-control form-control-sm text-info fw-bold font-monospace bg-dark border-secondary pe-4" style="font-size: 14px; cursor: pointer; height: 38px;" value="{{ date_info.date_str }}" readonly required>
+                                <div class="d-flex flex-column position-absolute end-0 top-0 bottom-0 px-1 justify-content-center bg-dark rounded-end border-start border-secondary" style="width: 26px;">
+                                    <a href="?date={{ date_info.next_date }}" class="text-info text-decoration-none text-center lh-1 py-1" style="font-size: 11px;" title="Next Day (+1 Day)"><i class="fa-solid fa-chevron-up"></i></a>
+                                    <a href="?date={{ date_info.prev_date }}" class="text-info text-decoration-none text-center lh-1 py-1" style="font-size: 11px;" title="Previous Day (-1 Day)"><i class="fa-solid fa-chevron-down"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="amount" class="form-label small text-secondary">Expense Amount (₹)</label>
+                    <input type="number" step="0.01" id="amount" name="amount" placeholder="e.g. 12500.00" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label small text-secondary">Procurement Details / Description</label>
+                    <input type="text" id="description" name="description" placeholder="e.g. Bulk Rice & Dal Procurement for 800 Students" class="form-control" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary w-100 py-2">
+                    <i class="fa-solid fa-save me-2"></i>Save Expense Record
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Financial Summary Cards -->
+    <div class="col-md-6">
+        <div class="premium-card h-100">
+            <h5 class="fw-bold mb-4"><i class="fa-solid fa-chart-pie text-info me-2"></i>Financial Performance Overview</h5>
+            
+            <div class="p-3 mb-3 rounded-3 bg-dark border border-secondary d-flex align-items-center gap-3">
+                <div class="rounded-3 p-3 bg-danger bg-opacity-10 text-danger fs-3"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <div>
+                    <span class="text-secondary small d-block">TOTAL ACCUMULATED EXPENSES</span>
+                    <h3 class="fw-bold mb-0 text-white">₹{{ "%.2f"|format(expense) }}</h3>
+                </div>
+            </div>
+
+            <div class="p-3 mb-3 rounded-3 bg-dark border border-secondary d-flex align-items-center gap-3">
+                <div class="rounded-3 p-3 bg-success bg-opacity-10 text-success fs-3"><i class="fa-solid fa-piggy-bank"></i></div>
+                <div>
+                    <span class="text-secondary small d-block">COMPUTED MONTHLY COST SAVINGS</span>
+                    <h3 class="fw-bold mb-0 text-success">₹{{ "%.2f"|format(savings) }}</h3>
+                </div>
+            </div>
+            
+            <div class="p-3 rounded bg-dark border border-secondary">
+                <p class="text-secondary small mb-0">
+                    <i class="fa-solid fa-info-circle text-info me-1"></i> Cost savings are calculated automatically by comparing ML-optimized portion purchasing against baseline non-optimized hostel operational expenditures (Capacity: 500-1000 Students).
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const fp = flatpickr("#date-picker-input", {
+            dateFormat: "Y-m-d",
+            defaultDate: "{{ date_info.date_str }}",
+            theme: "dark",
+            monthSelectorType: "dropdown",
+            onChange: function(selectedDates, dateStr) {
+                if (dateStr) {
+                    window.location.href = "?date=" + dateStr;
+                }
+            }
+        });
+        document.getElementById("open-calendar-btn").addEventListener("click", function() {
+            fp.open();
+        });
+    });
+</script>
+{% endblock %}

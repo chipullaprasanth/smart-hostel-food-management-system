@@ -1,0 +1,8 @@
+Day,Students_Present
+Monday,70
+Tuesday,68
+Wednesday,72
+Thursday,65
+Friday,75
+Saturday,60
+Sunday,55

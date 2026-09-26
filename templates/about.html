@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Hostel - About Project{% endblock %}
+
+{% block page_title %}About the System{% endblock %}
+{% block page_subtitle %}Understand the project goals, architecture, and technology stack.{% endblock %}
+
+{% block content %}
+<style>
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .about-item h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: var(--accent-primary);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .about-item p {
+        color: var(--text-secondary);
+        line-height: 1.6;
+        font-size: 15px;
+    }
+</style>
+
+<div class="about-section">
+    <div class="glass-card about-item">
+        <h3><i class="fa-solid fa-leaf"></i> Zero Waste Target</h3>
+        <p>
+            The project's primary mission is to eradicate hostel food wastage. By aligning kitchen preparation requirements dynamically with student headcount data, we reduce raw food excess and optimize kitchen inventory efficiency.
+        </p>
+    </div>
+
+    <div class="glass-card about-item">
+        <h3><i class="fa-solid fa-microchip"></i> Telemetry & Predictions</h3>
+        <p>
+            Operating with a python back-end utilizing SQLite databases, the software records history metrics, log details, user registrations, and parses data using linear regression trends to output forecasts. Frontend charts dynamically adapt using Javascript.
+        </p>
+    </div>
+
+    <div class="glass-card about-item">
+        <h3><i class="fa-solid fa-graduation-cap"></i> Senior Enterprise Design</h3>
+        <p>
+            Refactored to meet premium security constraints, clean MVC architecture, dynamic chart visualization models, session check parameters, and database query bindings.
+        </p>
+    </div>
+</div>
+{% endblock %}

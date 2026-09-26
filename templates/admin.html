@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Hostel - Admin Panel{% endblock %}
+
+{% block page_title %}Administration Console{% endblock %}
+{% block page_subtitle %}Platform overview statistics, user counts, and feedback logs.{% endblock %}
+
+{% block content %}
+<style>
+    .admin-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    .admin-card {
+        padding: 24px;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        text-align: center;
+    }
+    .admin-card h2 {
+        font-size: 36px;
+        font-weight: 800;
+        color: var(--accent-primary);
+        margin-bottom: 4px;
+    }
+    .admin-card p {
+        color: var(--text-secondary);
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .feedback-item {
+        background: var(--bg-primary);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 12px;
+    }
+    .feedback-meta {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        font-size: 13px;
+    }
+</style>
+
+<div class="admin-grid">
+    <div class="admin-card">
+        <h2>{{ users }}</h2>
+        <p>Registered User Accounts</p>
+    </div>
+    
+    <div class="admin-card">
+        <h2>{{ feedback }}</h2>
+        <p>Received Feedbacks</p>
+    </div>
+
+    <div class="admin-card">
+        <h2>{{ predictions }}</h2>
+        <p>Total Calculations Logged</p>
+    </div>
+</div>
+
+<div class="row g-4 mb-4">
+    <div class="col-12">
+        <div class="premium-card">
+            <h5 class="fw-bold mb-3"><i class="fa-solid fa-users text-info me-2"></i>Registered User Accounts Registry</h5>
+            <div class="table-responsive">
+                <table class="table table-dark table-hover align-middle mb-0">
+                    <thead>
+                        <tr class="text-secondary small">
+                            <th>User ID</th>
+                            <th>Username</th>
+                            <th>Account Role</th>
+                            <th>Registered Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if not users_list %}
+                        <tr>
+                            <td colspan="4" class="text-center text-secondary py-4">No registered users found.</td>
+                        </tr>
+                        {% endif %}
+                        {% for u in users_list %}
+                        <tr>
+                            <td class="fw-bold text-secondary">#{{ u.id }}</td>
+                            <td class="fw-bold text-white">
+                                <i class="fa-solid fa-user-circle text-info me-2 fs-5"></i>{{ u.username }}
+                            </td>
+                            <td>
+                                {% if u.role == 'admin' %}
+                                <span class="badge bg-warning text-dark"><i class="fa-solid fa-user-shield me-1"></i>ADMIN</span>
+                                {% else %}
+                                <span class="badge bg-info text-dark"><i class="fa-solid fa-user me-1"></i>USER</span>
+                                {% endif %}
+                            </td>
+                            <td class="small text-secondary">{{ u.created_at or 'N/A' }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="premium-card">
+    <h5 class="fw-bold mb-3"><i class="fa-solid fa-comments text-info me-2"></i>Recent User Feedback</h5>
+    
+    {% if not feedback_list %}
+    <p class="text-secondary text-center py-4 mb-0">No feedback logs recorded yet.</p>
+    {% endif %}
+    
+    {% for f in feedback_list %}
+    <div class="feedback-item">
+        <div class="feedback-meta">
+            <span style="font-weight: 600; color: var(--accent-primary);"><i class="fa-solid fa-user"></i> {{ f['username'] }}</span>
+            <span style="color: var(--text-muted);">{{ f['created_at'] }}</span>
+        </div>
+        <p style="color: var(--text-primary); font-size: 14px; line-height: 1.5; margin-bottom: 0;">{{ f['feedback'] }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

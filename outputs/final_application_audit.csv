@@ -1,0 +1,15 @@
+Category,Audit Area,Status,Details
+ML Audit,Step 9 ML Reproducibility & Integrity,PASS,64/64 checks passed; OOF MAE=2.3966; RMSE=2.9871; R2=0.7959
+Application Architecture,Dual ML Model Disambiguation,PASS,Separated Food Waste Ridge Model (Step 7-9) and Web Attendance Forecast Random Forest Model cleanly
+Security,Secret Management & Environment Config,PASS,Hardcoded secret key replaced with os.environ.get('SECRET_KEY') and dev fallback
+Security,Flask Debug Mode Production Control,PASS,debug=False default in production; overridable via FLASK_DEBUG
+Security,Public Registration Role Security,PASS,Public registration strictly forces role='user'; browser role selection removed
+Security,File Upload Security,PASS,/upload_menu secured with secure_filename; 5MB limit; extension whitelist
+Security,CSRF Protection,PASS,Session-backed CSRF token validation added to all state-changing POST endpoints
+Input Validation,Numerical & Date Input Bounds,PASS,Validated temperature; rainfall; humidity; wind speed; attendance; waste; rating; expenses
+Database Audit,SQL Parameterization & Isolation,PASS,Parameterized all queries; user data isolation enforced; SQLite and MySQL compatible
+Requirements Audit,Runtime Dependencies Declaration,PASS,All runtime packages declared in requirements.txt (joblib; pymysql; werkzeug; openpyxl)
+Route Audit,Endpoint & Method Verification,PASS,Audited and verified all 24 Flask routes and HTTP methods
+Template & UI Audit,Jinja & Link Integrity,PASS,Audited all HTML templates; fixed missing tokens; clarified dual model labels
+Testing,End-to-End Application Test Suite,PASS,Ran 18 unit/integration tests successfully; 0 failures
+Documentation,README & Reports Synchronization,PASS,Updated README.md; reports.html; ML_MODEL_REPORT.md with verified architecture

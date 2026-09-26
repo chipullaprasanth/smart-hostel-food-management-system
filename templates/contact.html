@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Hostel - Contact Support{% endblock %}
+
+{% block page_title %}Contact System Support{% endblock %}
+{% block page_subtitle %}Have questions or encountering technical problems? Get in touch with kitchen operators.{% endblock %}
+
+{% block content %}
+<style>
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    .contact-card {
+        padding: 30px;
+        text-align: center;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        transition: var(--transition);
+    }
+    .contact-card:hover {
+        border-color: var(--accent-primary);
+        transform: translateY(-4px);
+    }
+    .contact-card i {
+        font-size: 32px;
+        color: var(--accent-primary);
+        margin-bottom: 16px;
+    }
+    .contact-card h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+    .contact-card p {
+        font-size: 14px;
+        color: var(--text-secondary);
+        line-height: 1.6;
+    }
+</style>
+
+<div class="contact-grid">
+    <div class="contact-card">
+        <i class="fa-solid fa-phone"></i>
+        <h3>Operator Support</h3>
+        <p>Call operational desk for system setup or updates.<br><strong>+1 (555) 019-2834</strong></p>
+    </div>
+    
+    <div class="contact-card">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Email Address</h3>
+        <p>Submit bug requests or custom integration specs.<br><strong>support@hostelsys.org</strong></p>
+    </div>
+
+    <div class="contact-card">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <h3>Hostel Location</h3>
+        <p>Visit primary administration offices during office hours.<br><strong>Sector 12, Tech Innovation Park</strong></p>
+    </div>
+</div>
+{% endblock %}

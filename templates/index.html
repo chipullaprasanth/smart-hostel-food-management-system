@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Hostel - Home{% endblock %}
+
+{% block page_title %}Smart Hostel AI Food Management Portal{% endblock %}
+{% block page_subtitle %}Advanced machine learning demand forecasting and waste minimization console.{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+    <!-- Hero Header -->
+    <div class="col-12">
+        <div class="premium-card text-start p-5" style="background: linear-gradient(135deg, rgba(0, 242, 254, 0.08) 0%, rgba(79, 172, 254, 0.02) 100%);">
+            <h1 class="fw-bold mb-3" style="background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Zero Waste Hostel Kitchen</h1>
+            <p class="text-secondary fs-5 col-lg-8 mb-4">
+                This project implements a complete Machine Learning lifecycle to predict student attendance levels, calculate required food volumes, log waste metrics, and provide dynamic telemetry graphs for hostel administrators.
+            </p>
+            {% if not session.get('user') %}
+            <a href="/login" class="btn btn-primary btn-lg px-4"><i class="fa-solid fa-right-to-bracket me-2"></i> Access Administration</a>
+            {% else %}
+            <a href="/dashboard" class="btn btn-primary btn-lg px-4"><i class="fa-solid fa-gauge-high me-2"></i> Access Dashboard Console</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Quick Navigation Grid -->
+    <div class="col-md-4">
+        <div class="premium-card text-center d-flex flex-column align-items-center p-4">
+            <div class="rounded-circle mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(0, 242, 254, 0.1); color: var(--accent-primary);">
+                <i class="fa-solid fa-brain fs-3"></i>
+            </div>
+            <h4 class="fw-bold mb-2">Demand Predictor</h4>
+            <p class="text-secondary small mb-4">Leverage Random Forest regressions with weather and calendar features to forecast student turnout.</p>
+            <a href="/predict" class="btn btn-secondary w-100">Launch Predictor</a>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="premium-card text-center d-flex flex-column align-items-center p-4">
+            <div class="rounded-circle mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(0, 242, 254, 0.1); color: var(--accent-primary);">
+                <i class="fa-solid fa-chart-line fs-3"></i>
+            </div>
+            <h4 class="fw-bold mb-2">Waste Analytics</h4>
+            <p class="text-secondary small mb-4">Log prepared vs consumed weights to analyze dynamic weekly and monthly waste ratios.</p>
+            <a href="/waste" class="btn btn-secondary w-100">Analyze Wastage</a>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="premium-card text-center d-flex flex-column align-items-center p-4">
+            <div class="rounded-circle mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(0, 242, 254, 0.1); color: var(--accent-primary);">
+                <i class="fa-solid fa-file-invoice fs-3"></i>
+            </div>
+            <h4 class="fw-bold mb-2">Reports & Telemetry</h4>
+            <p class="text-secondary small mb-4">Generate certified PDF summaries and export history parameters into excel spreadsheets.</p>
+            <a href="/reports" class="btn btn-secondary w-100">Download Reports</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
