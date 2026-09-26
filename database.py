@@ -647,10 +647,16 @@ def save_waste_record(date, prepared, consumed, waste, rice_waste=0.0, dal_waste
     with get_connection() as conn:
         cursor = conn.cursor()
         param = "%s" if USE_MYSQL else "?"
-        cursor.execute(
-            f"INSERT INTO waste_records (user_id, date, prepared, consumed, waste, rice_waste, dal_waste, vegetable_waste, chapati_waste) VALUES ({param}, {param}, {param}, {param}, {param}, {param}, {param}, {param}, {param})",
-            (user_id, date, float(prepared), float(consumed), float(waste), float(rice_waste), float(dal_waste), float(vegetable_waste), float(chapati_waste))
-        )
+        try:
+            cursor.execute(
+                f"INSERT INTO waste_records (user_id, date, prepared, consumed, waste, rice_waste, dal_waste, vegetable_waste, chapati_waste) VALUES ({param}, {param}, {param}, {param}, {param}, {param}, {param}, {param}, {param})",
+                (user_id, date, float(prepared), float(consumed), float(waste), float(rice_waste), float(dal_waste), float(vegetable_waste), float(chapati_waste))
+            )
+        except Exception:
+            cursor.execute(
+                f"INSERT INTO waste_records (user_id, date, prepared, consumed, waste) VALUES ({param}, {param}, {param}, {param}, {param})",
+                (user_id, date, float(prepared), float(consumed), float(waste))
+            )
         conn.commit()
 
 def get_waste_records(user_id=None, is_admin=False, limit=15):
@@ -658,10 +664,16 @@ def get_waste_records(user_id=None, is_admin=False, limit=15):
         cursor = conn.cursor()
         param = "%s" if USE_MYSQL else "?"
         limit_val = int(limit)
-        if is_admin:
-            cursor.execute(f"SELECT w.id, w.user_id, w.date, w.prepared, w.consumed, w.waste, w.rice_waste, w.dal_waste, w.vegetable_waste, w.chapati_waste, u.username FROM waste_records w LEFT JOIN users u ON w.user_id = u.id ORDER BY w.date DESC LIMIT {param}", (limit_val,))
-        else:
-            cursor.execute(f"SELECT id, user_id, date, prepared, consumed, waste, rice_waste, dal_waste, vegetable_waste, chapati_waste FROM waste_records WHERE user_id = {param} ORDER BY date DESC LIMIT {param}", (user_id, limit_val))
+        try:
+            if is_admin:
+                cursor.execute(f"SELECT w.id, w.user_id, w.date, w.prepared, w.consumed, w.waste, w.rice_waste, w.dal_waste, w.vegetable_waste, w.chapati_waste, u.username FROM waste_records w LEFT JOIN users u ON w.user_id = u.id ORDER BY w.date DESC LIMIT {param}", (limit_val,))
+            else:
+                cursor.execute(f"SELECT id, user_id, date, prepared, consumed, waste, rice_waste, dal_waste, vegetable_waste, chapati_waste FROM waste_records WHERE user_id = {param} ORDER BY date DESC LIMIT {param}", (user_id, limit_val))
+        except Exception:
+            if is_admin:
+                cursor.execute(f"SELECT w.id, w.user_id, w.date, w.prepared, w.consumed, w.waste, u.username FROM waste_records w LEFT JOIN users u ON w.user_id = u.id ORDER BY w.date DESC LIMIT {param}", (limit_val,))
+            else:
+                cursor.execute(f"SELECT id, user_id, date, prepared, consumed, waste FROM waste_records WHERE user_id = {param} ORDER BY date DESC LIMIT {param}", (user_id, limit_val))
         rows = cursor.fetchall()
         results = []
         for r in rows:
