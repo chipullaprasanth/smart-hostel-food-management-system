@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}Smart Hostel - Food Donation{% endblock %}
+
+{% block page_title %}Food Donation Registry{% endblock %}
+{% block page_subtitle %}Allocate surplus hostel food to registered community NGOs and local food kitchens.{% endblock %}
+
+{% block content %}
+<style>
+    .donation-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+    }
+    @media (max-width: 992px) {
+        .donation-layout {
+            grid-template-columns: 1fr;
+        }
+    }
+    .donation-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+    }
+    .donation-table th, .donation-table td {
+        padding: 16px;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .donation-table th {
+        color: var(--text-secondary);
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    .donation-table td {
+        color: var(--text-primary);
+        font-size: 15px;
+    }
+</style>
+
+<div class="donation-layout">
+    <div class="glass-card">
+        <h3 style="margin-bottom: 20px; font-weight: 700;">Recent Donation Dispatches</h3>
+        <div style="overflow-x: auto;">
+            <table class="donation-table">
+                <thead>
+                    <tr>
+                        {% if donations and donations[0].username %}<th>User</th>{% endif %}
+                        <th>NGO / Organization</th>
+                        <th>Food Item Details</th>
+                        <th>Quantity</th>
+                        <th>Registered Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if not donations %}
+                    <tr>
+                        <td colspan="{% if donations and donations[0].username %}5{% else %}4{% endif %}" style="text-align: center; color: var(--text-secondary); padding: 30px;">
+                            No donation dispatches registered yet.
+                        </td>
+                    </tr>
+                    {% endif %}
+                    {% for d in donations %}
+                    <tr>
+                        {% if d.username %}
+                        <td><span class="badge bg-secondary font-monospace"><i class="fa-solid fa-user me-1"></i>{{ d.username }}</span></td>
+                        {% endif %}
+                        <td style="font-weight: 600; color: var(--accent-primary);">
+                            <i class="fa-solid fa-heart" style="color: #ef4444; margin-right: 8px;"></i> {{ d['organization'] }}
+                        </td>
+                        <td>{{ d['food'] }}</td>
+                        <td style="font-weight: 700;">{{ d['quantity'] }}</td>
+                        <td style="font-size: 13px; color: var(--text-secondary);">{{ d['created_at'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="glass-card" style="height: fit-content;">
+        <h3 style="margin-bottom: 20px; font-weight: 700;">Log Excess Food</h3>
+        <form method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <div class="form-group mb-3">
+                <label for="organization" class="form-label small text-secondary">NGO / Target Organization Name</label>
+                <input type="text" id="organization" name="organization" placeholder="e.g. Hope Foundation Network" class="form-control" required>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="food" class="form-label small text-secondary">Food Item Details</label>
+                <input type="text" id="food" name="food" placeholder="e.g. Steamed Basmati Rice & Dal Mix" class="form-control" required>
+            </div>
+
+            <div class="form-group mb-4">
+                <label for="quantity" class="form-label small text-secondary">Quantity (weight/servings)</label>
+                <input type="text" id="quantity" name="quantity" placeholder="e.g. 15 Kg or 30 servings" class="form-control" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary w-100">
+                <i class="fa-solid fa-heart-circle-check"></i> Register Dispatch
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
