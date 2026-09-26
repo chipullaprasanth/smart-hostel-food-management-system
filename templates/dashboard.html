@@ -193,21 +193,21 @@
         </div>
     </div>
 
-    <!-- 4. Food Cost Loss by Section -->
+    <!-- 4. Food Cost Loss by Item -->
     <div class="col-lg-4 col-md-6 col-12">
         <div class="premium-card">
-            <h5 class="fw-bold mb-1"><i class="fa-solid fa-chart-pie me-2 text-primary"></i>Food Cost Loss by Section</h5>
-            <p class="text-secondary small mb-2" style="font-size: 11px;">Monetary loss distribution across hostel mess sections</p>
+            <h5 class="fw-bold mb-1"><i class="fa-solid fa-chart-pie me-2 text-primary"></i>Food Cost Loss by Item</h5>
+            <p class="text-secondary small mb-2" style="font-size: 11px;">Monetary loss distribution across food items (₹)</p>
             <div class="chart-container" style="height: 200px;"><canvas id="sectionCostLossChart"></canvas></div>
             <div class="mt-2 pt-2 border-top border-secondary border-opacity-25">
                 <div class="d-flex flex-wrap gap-2 justify-content-center small" style="font-size: 11px;">
-                    <span class="badge bg-dark border border-secondary text-light"><i class="fa-solid fa-square me-1" style="color: #00f2fe;"></i> Section A</span>
-                    <span class="badge bg-dark border border-secondary text-light"><i class="fa-solid fa-square me-1" style="color: #3b82f6;"></i> Section B</span>
-                    <span class="badge bg-dark border border-secondary text-light"><i class="fa-solid fa-square me-1" style="color: #8b5cf6;"></i> Section C</span>
-                    <span class="badge bg-dark border border-secondary text-light"><i class="fa-solid fa-square me-1" style="color: #ec4899;"></i> Section D</span>
+                    <span class="badge bg-dark border border-secondary text-light"><i class="fa-solid fa-square me-1" style="color: #00f2fe;"></i> Rice</span>
+                    <span class="badge bg-dark border border-secondary text-light"><i class="fa-solid fa-square me-1" style="color: #3b82f6;"></i> Dal</span>
+                    <span class="badge bg-dark border border-secondary text-light"><i class="fa-solid fa-square me-1" style="color: #8b5cf6;"></i> Vegetables</span>
+                    <span class="badge bg-dark border border-secondary text-light"><i class="fa-solid fa-square me-1" style="color: #ec4899;"></i> Chapati</span>
                 </div>
                 <p class="text-secondary text-center mb-0 mt-2" style="font-size: 11px;">
-                    <i class="fa-solid fa-circle-info me-1 text-info"></i>Represents financial cost loss share per hostel dining hall section.
+                    <i class="fa-solid fa-circle-info me-1 text-info"></i>Represents financial cost loss share per food item (Rice, Dal, Vegetables, Chapati).
                 </p>
             </div>
         </div>
@@ -386,14 +386,14 @@
                     options: commonOptions
                 });
 
-                // 4. Food Cost Loss by Section (Doughnut Chart for Section A, Section B, Section C, Section D)
-                const sectionData = data.food_cost_sections || data.canteen_sections;
+                // 4. Food Cost Loss by Item (Doughnut Chart for Rice, Dal, Vegetables, Chapati)
+                const itemCostData = data.food_item_costs || data.food_cost_sections || data.canteen_sections;
                 new Chart(document.getElementById('sectionCostLossChart').getContext('2d'), {
                     type: 'doughnut',
                     data: {
-                        labels: Object.keys(sectionData),
+                        labels: Object.keys(itemCostData),
                         datasets: [{
-                            data: Object.values(sectionData),
+                            data: Object.values(itemCostData),
                             backgroundColor: ['#00f2fe', '#3b82f6', '#8b5cf6', '#ec4899'],
                             borderWidth: 0
                         }]

@@ -715,13 +715,15 @@ def dashboard_chart_data():
             "Chapati": round(total_chap, 1)
         }
             
-    # 4. Hostel Food Cost Loss by Section (Section A, Section B, Section C, Section D)
-    food_cost_sections = {"Section A": 410.0, "Section B": 380.0, "Section C": 450.0, "Section D": 320.0}
+    # 4. Hostel Food Cost Loss by Item (Rice, Dal, Vegetables, Chapati)
+    food_item_costs = {"Rice": 3440.0, "Dal": 2544.0, "Vegetables": 5062.0, "Chapati": 4120.0}
     if os.path.exists("Dataset Propely.csv"):
         try:
             df_prop = pd.read_csv("Dataset Propely.csv")
-            sec_grp = df_prop.groupby("Canteen_Section")["Cost_Loss"].sum().round(1)
-            food_cost_sections = {f"Section {k}": float(v) for k, v in sec_grp.to_dict().items()}
+            cat_map = {"Soup": "Dal", "Meat": "Chapati"}
+            df_prop['Category_Clean'] = df_prop['Food_Category'].replace(cat_map)
+            item_grp = df_prop.groupby("Category_Clean")["Cost_Loss"].sum().round(1)
+            food_item_costs = {k: float(v) for k, v in item_grp.to_dict().items()}
         except Exception:
             pass
 
@@ -748,9 +750,10 @@ def dashboard_chart_data():
         'total_expense': total_expense,
         'savings': savings,
         'food_waste_types': food_waste_types,
-        'food_cost_sections': food_cost_sections,
+        'food_item_costs': food_item_costs,
+        'food_cost_sections': food_item_costs, # Backward compatibility alias
         'catering_waste': food_waste_types, # Backward compatibility alias
-        'canteen_sections': food_cost_sections, # Backward compatibility alias
+        'canteen_sections': food_item_costs, # Backward compatibility alias
         'global_benchmarks': global_benchmarks,
         'model_metrics': model_metrics
     })
